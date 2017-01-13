@@ -1,0 +1,370 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html class="no-js" xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://www.facebook.com/2008/fbml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Tin tức</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" />
+    <link rel="SHORTCUT ICON" href="/vnt_upload/File/Image/Untitled-2.png" type="image/x-icon" />
+    <link rel="icon" href="/vnt_upload/File/Image/Untitled-2.png" type="image/gif" />
+    <link href="js/bootstrap/bootstrap.css" rel="stylesheet" type="text/css" />
+    <link href="skins/default/style/screen.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="skins/default/style/font-awesome/css/font-awesome.min.css" />
+    <link href="skins/default/style/dropdown.css" rel="stylesheet" type="text/css" />
+    <link href="js/colorbox/css/colorbox.css" rel="stylesheet" type="text/css" />
+    <link href="js/jquery_alerts/jquery.alerts.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="js/mmenu/jquery.mmenu.all.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href="js/owl-carousel/owl.carousel.css" type="text/css" media="screen" />
+    <script language="javascript">
+        var ROOT = "/";
+        var DIR_IMAGE = "/skins/default/images";
+        var cmd = "vnTRUST";
+        var facebook_appId = "805937266142547";
+        var mem_id = 0;
+        var responsiveSwitchBreakpoint = 1024;
+    </script>
+    <script type="text/javascript" src="js/responsive-switch.min.js"></script>
+    <script type="text/javascript" src="js/modernizr.custom.js"></script>
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/jquery-migrate-1.0.0.js"></script>
+    <script type="text/javascript" src="js/bootstrap/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/core.js"></script>
+    <script type="text/javascript" src="js/javascript.js"></script>
+    <script type="text/javascript" src="js/floater_xlib.js"></script>
+    <script type="text/javascript" src="js/jquery.cookie.js"></script>
+    <script type="text/javascript" src="js/colorbox/colorbox-min.js"></script>
+    <script type="text/javascript" src="js/jquery_alerts/jquery.alerts.js"></script>
+    <script type="text/javascript" src="js/mmenu/jquery.mmenu.min.all.js"></script>
+    <script type="text/javascript" src="js/owl-carousel/owl.carousel.min.js"></script>
+    <script id='ext_javascript'></script>
+    <script>
+        $(document).ready(function () {
+            MainContentW = 1000;
+            LeftBannerW = 120;
+            RightBannerW = 120;
+            LeftAdjust = 20;
+            RightAdjust = 20;
+            TopAdjust = 10;
+            $(".rs-link").bind("mousedown click", function () {
+                if (window.screen.width >= 1024) {
+                    alert("Try it on a mobile device (< 1024px wide) to see the what happens!");
+                    return false;
+                }
+            });
+        });
+    </script>
+
+    <link rel="stylesheet" href="modules/news/css/news.css" type="text/css" />
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#testimonials_owl').owlCarousel({
+                navigation: true, // Show next and prev buttons
+                slideSpeed: 300,
+                paginationSpeed: 400,
+                singleItem: true,
+                pagination: false
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <div id="vnt-wrapper">
+        <div class="header_mobile">
+            <div id="dl-menu-mobile" class="container nav-fly-bound nav-fly-bound-mtb dl-menuwrapper">
+                <a class="dl-trigger toggle-fly glyphicon glyphicon-align-justify" href="#mmenu"></a>
+
+                <div class="logo-top">
+                    <a href='index.html' target='_self' title='Xuân tình mobile'><img src='vnt_upload/weblink/logo.png' width='260' alt='Xuân tình mobile' class='png' /></a>
+                </div>
+                <i class="icon-search fa fa-search fa-2x">
+                </i>
+            </div>
+        </div>
+
+        <header class="header">
+            <div id="vnt-header" class="container">
+                <div class="row">
+                    <div class="logo col-md-3 col-sm-3 col-xs-12"><a onmousedown="return rwt(this,'advertise',1)" href='/' target='_self' title='Xuân tình mobile'><img src='vnt_upload/weblink/logo.png' width='260' alt='Xuân tình mobile' class='png' /></a></div>
+                    <div class="headert_search col-md-3 col-sm-3 col-xs-12">
+                        <div class="box_search">
+                            <form id="formSearch" name="formSearch" method="post" action="" autocomplete="off">
+                                <input name="do_search" value="1" type="hidden" />
+                                <input name="keyword" id="search-keyword" type="text" class="text_search" placeholder="Bạn muốn tìm gì ?" value="" autocomplete="off" onkeydown="CheckTimer()" onkeyup="SuggestSearch(event);" />
+                                <input type="hidden" id="fpc_id" name="fpc_id" />
+                                <span class="input-group-btn">
+                                    <button id="do_submit" name="do_submit" type="submit" class="btn_search" value="Tìm kiếm"></button>
+                                </span>
+                            </form>
+                            <div id="SuggestSearch"></div>
+                            <div class="clear"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="div_menu">
+                <div id="vnt-menutop" class="header_nav">
+                    <div class="container">
+                        <div class="menutop row">
+                            <ul class="dropdown">
+                                <li id="nav_home"><a href="index.html" class="nav_main_item current">Trang chủ</a></li>
+                                <li><a href="danhsach.html" target="_self">Điện thoại</a></li>
+                                <li><a href="danhsach.html" target="_self">Máy dùng rồi</a></li>
+                                <li><a href="phukien.html" target="_self">Phụ kiện</a></li>
+                                <li><a href="tintuc.html" target="_self">Tin tức</a></li>
+                                <li><a href="banggia.html" target="_self">Bảng giá</a></li>
+                                <li><a href="khuyenmai.html" target="_self">Khuyến mãi<span class="saleoff">sale off</span></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <div id="vnt-container" class="container">
+            <div class="navation row"><a href="index.html" class="home">Trang chủ</a> &nbsp;/&nbsp;  <span>Tin tức</span></div>
+
+            <div id="vnt-content">
+                <div class="row row-tin-tuc">
+                    <div class="column Column1 col-md-8 grid-first15 nopadding">
+                        <div class="box_mid">
+                            <div class="mid-title">
+                                <div class="titleL"><h1>TIN TỨC</h1></div>
+                                <div class="titleR"></div>
+                                <div class="clear"></div>
+                            </div>
+                            <div class="mid-content">
+                                <div id="List_View" class="paging-default">
+                                    <div class="clearfix"></div>
+                                    <div class="col news-all-list" style="height: 500px">
+                                        <h2>
+                                            <a href="chitiettintuc.html">Samsung chính thức tung ra phiên bản Android 7.0 Nougat vào tuần tới</a>
+                                        </h2>
+                                        <span class="note">105 lượt xem | 1484150940</span>
+                                        <a href="chitiettintuc.html">
+                                            <img src="vnt_upload/news/01_2017/11/thumbs/(500x333)_fw_android_7.0_s7.jpg" alt='Samsung chính thức tung ra phiên bản Android 7.0 Nougat vào tuần tới' title='Samsung chính thức tung ra phiên bản Android 7.0 Nougat vào tuần tới' />
+                                        </a><div class="short">Samsung đã tung ra phiên bản thử nghiệm Android 7.0 Nougat cho người dùng Galaxy S7 và S7 Edge vào tháng 11 và chương trình này cũng đã kết thúc vào cuối năm trước. Phiên bản Android 7.0 Nougat chính thức cũng đã được Samsung lên kế hoạch tung ra trong tháng này, và có vẻ như thời điểm mà bản cập nhật này ra mắt đã đến.</div>
+                                        <a class="news-view-more" href="chitiettintuc.html">» Xem chi tiết «</a>
+                                    </div>
+                                    <div class="col news-all-list" style="height: 500px">
+                                        <h2>
+                                            <a href="chitiettintuc.html">Lấy lại mọi thứ, Samsung đặt con số kì vọng không ngờ lên Galaxy S8</a>
+                                        </h2>
+                                        <span class="note">550 lượt xem | 1484068080</span>
+                                        <a href="chitiettintuc.html">
+                                            <img src="vnt_upload/news/01_2017/11/thumbs/(500x333)_fw_ldkds.jpg" alt='Lấy lại mọi thứ, Samsung đặt con số kì vọng không ngờ lên Galaxy S8' title='Lấy lại mọi thứ, Samsung đặt con số kì vọng không ngờ lên Galaxy S8' />
+                                        </a>
+                                        <div class="short">
+                                            Sau thất bại đáng tiếc của Galaxy Note 7, giờ đây Samsung tập trung và kì vọng hoàn toàn vào chiếc flatship tiếp theo của mình, Samsung Galaxy S8. Chính vì lẽ đó nhà sản xuất đến từ Hàn Quốc đã đặt ra con số tiêu thụ sản phẩm khá cao. Liệu Samsung sẽ lấy lại được vị thế bá chủ công nghệ nhờ Galaxy S8?
+                                        </div>
+                                        <a class="news-view-more" href="chitiettintuc.html">» Xem chi tiết «</a>
+                                    </div><div class="col news-all-list" style="height: 500px">
+                                        <h2>
+                                            <a href="chitiettintuc.html">Bất ngờ khi Samsung nâng cấp Android 7.0 cho dòng sản phẩm giá tầm trung</a>
+                                        </h2>
+                                        <span class="note">2081 lượt xem | 1484067480</span>
+                                        <a href="chitiettintuc.html">
+                                            <img src="vnt_upload/news/01_2017/10/thumbs/(500x333)_fw_lklj.jpg" alt='Bất ngờ khi Samsung nâng cấp Android 7.0 cho dòng sản phẩm giá tầm trung' title='Bất ngờ khi Samsung nâng cấp Android 7.0 cho dòng sản phẩm giá tầm trung' />
+                                        </a><div class="short">
+                                            Tin mừng dành cho người dùng sản phẩm tầm trung của Samsung, khi nhà sản xuất sẽ dự định nâng cấp Android 7.0 cho Galaxy A5 (2016). Khi mà hệ điều hành này sẽ xuất hiện trên siêu phẩm tiếp theo được công bố vào tháng 4 của Samsung
+                                        </div>
+                                        <a class="news-view-more" href="chitiettintuc.html">» Xem chi tiết «</a>
+                                    </div>
+                                    <div class="col news-all-list" style="height: 500px">
+                                        <h2><a href="chitiettintuc.html">LG G6 sẽ ra mắt sớm với tham vọng đánh bại Samsung Galaxy S8</a> </h2>
+                                        <span class="note">791 lượt xem | 1484064960</span><a href="chitiettintuc.html">
+                                            <img src="vnt_upload/news/01_2017/10/thumbs/(500x333)_fw_pts_2.jpg" alt='LG G6 sẽ ra mắt sớm với tham vọng đánh bại Samsung Galaxy S8' title='LG G6 sẽ ra mắt sớm với tham vọng đánh bại Samsung Galaxy S8' />
+                                        </a>
+                                        <div class="short">
+                                            MWC - Mobile World Congress là một trong những sự kiện về điện thoại lớn nhất thế giới, cũng như mọi năm, MWC 2017 sẽ diễn ra tại Barcalona vào ngày 27 tháng 2. Và có vẻ như LG sẽ ra mắt chiếc flagship năm nay của mình là LG G6 tại sự kiện này cùng với hàng loạt nhà sản xuất khác như HTC,...
+                                        </div>
+                                        <a class="news-view-more" href="chitiettintuc.html">» Xem chi tiết «</a>
+                                    </div>
+                                    <div class="col news-all-list" style="height: 500px">
+                                        <h2>
+                                            <a href="chitiettintuc.html">Apple sẽ hợp tác với Carl Zeiss để sản xuất kính AR?</a>
+                                        </h2>
+                                        <span class="note">237 lượt xem | 1484063640</span>
+                                        <a href="chitiettintuc.html"><img src="vnt_upload/news/01_2017/10/thumbs/(500x333)_fw_pts_1.jpg" alt='Apple sẽ hợp tác với Carl Zeiss để sản xuất kính AR?' title='Apple sẽ hợp tác với Carl Zeiss để sản xuất kính AR?' /></a>
+                                        <div class="short">
+                                            Có vẻ như Apple đang thực sự muốn dấn sân vào sân chơi của thực tế ảo, và trên đó chính là kính tăng cường thực tế AR (Augmented Reality). Khi xuất hiện một&nbsp;nguồn tin tiết lộ từ nội bộ của Carl Zeiss cho biết công ty này đang cùng với Apple phát triển một chiếc kính AR.
+                                        </div>
+                                        <a class="news-view-more" href="chitiettintuc.html">» Xem chi tiết «</a>
+                                    </div><div class="col news-all-list" style="height: 500px">
+                                        <h2><a href="chitiettintuc.html">LG G6 sẽ được trang bị màn hình góc siêu rộng và siêu tiết kiệm pin</a> </h2><span class="note">625 lượt xem | 1484062680</span><a href="/lg-g6-se-duoc-trang-bi-man-hinh-goc-sieu-rong-va-sieu-tiet-kiem-pin">
+                                            <img src="vnt_upload/news/01_2017/10/thumbs/(500x333)_fw_xtmobile-lg-g6_3.jpg" alt='LG G6 sẽ được trang bị màn hình góc siêu rộng và siêu tiết kiệm pin' title='LG G6 sẽ được trang bị màn hình góc siêu rộng và siêu tiết kiệm pin' />
+                                        </a><div class="short">
+                                            LG G6 sẽ được trang bị màn hình LCD góc rất rộng, có thể nó sẽ có kích thước "siêu rộng" 18:9 thay vì 16:9 đang phổ biến trên các smartphone hiện nay. &nbsp;Từ thông tin này chúng ta có thể nói rằng LG sẽ cố gắng kéo dài phần màn hình trên và dưới ra, giúp tỷ lệ màn hình ở mặt trước cao hơn.
+                                        </div>
+                                        <a class="news-view-more" href="chitiettintuc.html">» Xem chi tiết «</a>
+                                    </div>
+                                    <div class="col news-all-list" style="height: 500px">
+                                        <h2>
+                                            <a href="chitiettintuc.html">Trợ lý ảo thông minh Bixby của Samsung chính thức xuất hiện</a>
+                                        </h2><span class="note">644 lượt xem | 1483999500</span><a href="chitiettintuc.html">
+                                            <img src="vnt_upload/news/01_2017/10/thumbs/(500x333)_fw_pts.jpg" alt='Trợ lý ảo thông minh Bixby của Samsung chính thức xuất hiện' title='Trợ lý ảo thông minh Bixby của Samsung chính thức xuất hiện' />
+                                        </a>
+                                        <div class="short">
+                                            Có lẽ các thông tin về chiếc siêu phẩm Galaxy S8 hiện tại đang nóng hơn bao giờ hết, khi cách đây không lâu dường như đã xuất hiện thiết kế chính xác của chiếc Galaxy S8 này. Vào ngày hôm nay, trợ lý ảo Bixby được cho rằng sẽ được trang bị trên Galaxy S8 đã xuất hiện trên website của Samsung.
+                                        </div>
+                                        <a class="news-view-more" href="chitiettintuc.html">» Xem chi tiết «</a>
+                                    </div>
+                                    <div class="col news-all-list" style="height: 500px">
+                                        <h2>
+                                            <a href="chitiettintuc.html">7 tính năng đáng mong chờ nhất trên dòng Galaxy A (2017) mà Samsung không muốn cho bạn biết</a>
+                                        </h2><span class="note">547 lượt xem | 1483963980</span>
+                                        <a href="chitiettintuc.html">
+                                            <img src="vnt_upload/news/01_2017/09/thumbs/(500x333)_fw_hinh_nen_nen_galaxy_a_2017.jpg" alt='7 tính năng đáng mong chờ nhất trên dòng Galaxy A (2017) mà Samsung không muốn cho bạn biết' title='7 tính năng đáng mong chờ nhất trên dòng Galaxy A (2017) mà Samsung không muốn cho bạn biết' />
+                                        </a>
+                                        <div class="short">
+                                            Mới đây, sự ra mắt của bộ ba hoàn hảo Galaxy A (2017) đã khiến cho giới công nghệ ít nhiều phải ngạc nhiên vì sự “thay da đổi thịt” đáng kể của nó. Những chuyển biến về thiết kế, hàng loạt những tính năng mới mẻ cùng sự thay đổi tuyệt diệu của camera khiến cho bộ ba Galaxy A3 (2017), A5 (2017) và A7 (2017) ...
+                                        </div>
+                                        <a class="news-view-more" href="chitiettintuc.html">» Xem chi tiết «</a>
+                                    </div><div class="col news-all-list" style="height: 500px">
+                                        <h2>
+                                            <a href="chitiettintuc.html">
+                                                Thuộc lòng 7 mẹo “siêu dễ” dưới đây để smartphone của bạn tiết kiệm được cả khối 3G
+                                            </a>
+                                        </h2>
+                                        <span class="note">643 lượt xem | 1483948920</span><a href="chitiettintuc.html">
+                                            <img src="vnt_upload/news/01_2017/09/thumbs/(500x333)_fw_save_3g_data_on_smartphone.jpg" alt='Thuộc lòng 7 mẹo “siêu dễ” dưới đây để smartphone của bạn tiết kiệm được cả khối 3G' title='Thuộc lòng 7 mẹo “siêu dễ” dưới đây để smartphone của bạn tiết kiệm được cả khối 3G' />
+                                        </a>
+                                        <div class="short">
+                                            Giờ đây khi có một chiếc smartphone trong tay, bạn sẽ dễ dàng hơn để moi móc mọi góc nhìn của thế giới thông qua internet. Điều này khiến dữ liệu 3G trở thành một yếu tố khá quan trọng để giúp bạn truy cập internet mọi lúc nơi. Thế nhưng, để tiết kiệm dữ liệu 3G là cả một vấn đề khiến người dùng phải ...
+                                        </div>
+                                        <a class="news-view-more" href="chitiettintuc.html">» Xem chi tiết «</a>
+                                    </div><div class="col news-all-list" style="height: 500px">
+                                        <h2>
+                                            <a href="chitiettintuc.html">Xiaomi Mi 6 hé lộ điểm AnTuTu cao kỷ lục, vượt xa cả iPhone 7 Plus</a>
+                                        </h2>
+                                        <span class="note">2338 lượt xem | 1483933620</span><a href="chitiettintuc.html">
+                                            <img src="vnt_upload/news/01_2017/09/thumbs/(500x333)_fw_Antutu_Mi_6.jpg" alt='Xiaomi Mi 6 hé lộ điểm AnTuTu cao kỷ lục, vượt xa cả iPhone 7 Plus' title='Xiaomi Mi 6 hé lộ điểm AnTuTu cao kỷ lục, vượt xa cả iPhone 7 Plus' />
+                                        </a>
+                                        <div class="short">
+                                            Mới đây, trang mạng xã hội Weibo đã bất ngờ để lộ điểm số Antutu cao kỷ lục của Mi 6 – chiếc smartphone đầy mong đợi của họ nhà Mi dự kiến sẽ được trình làng vào tháng 2/2017. Một chiếc smartphone cao cấp với mức giá tầm trung thế này hứa hẹn sẽ là tâm điểm chú ý không kém phần quan trọng trong thời ...
+                                        </div>
+                                        <a class="news-view-more" href="chitiettintuc.html">» Xem chi tiết «</a>
+                                    </div>
+                                </div>
+                                <div class="clear"></div>
+                                <div class="pagination">
+                                    &nbsp;
+                                    <span class="pagecur">1</span>&nbsp;
+                                    <a href='tintuc.html' class='pagelink'>2</a>&nbsp;
+                                    <a href='tin-tuc.html' class='pagelink'>3</a>&nbsp;
+                                    <a href='tin-tuc.html' class='btnPage'><b>&rsaquo;</b></a>&nbsp;
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+            </div>
+
+            <div id="vnt-footer">
+                <div class="info_footer">
+                    <div class="container">
+                        <div class="menu_mail">
+                            <div class="row">
+                                <div class="box_address_footer">
+                                    <div class="title_address"><span style="line-height: 1.6em;">&nbsp;</span>THÔNG TIN CỬA HÀNG</div>
+                                    <div class="content">
+                                        <p><span style="line-height: 1.6em;">&nbsp;</span><strong style="line-height: 20.8px; color: rgb(255, 102, 0);">&nbsp; &nbsp; &nbsp;</strong><span style="line-height: 1.6em;">Địa chỉ: KTX Khu B, ấp Tân Lập, phường Đông Hoà, thị xã Dĩ An, tỉnh Bình Dương &nbsp;&nbsp;</span></p>
+                                        <p><span style="line-height: 1.6em;">&nbsp;</span><strong style="line-height: 20.8px; color: rgb(255, 102, 0);">&nbsp; &nbsp; &nbsp;</strong><span style="line-height: 1.6em;">Số điện thoại:  &nbsp;</span><a href="tel:0164 9456 397" style="line-height: 1.6em;">0164 9456 397</a>&nbsp;(Mr. Quang)</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="div_copyright">
+                            <span class="copyright">Copyright © 2016 <b>Điện thoại G7Mobile</b></span>
+                            <p class="note_slogan_footer">G7Mobile - Điện thoại giá rẻ chất lượng tốt</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="call_us hidden-md hidden-lg">
+                <a href="tel:01649456397"></a>
+            </div>
+            <a class="back-top" title="Lên trên" href="javascript:void(0);">
+                <span>Lên trên</span>
+            </a>
+
+            <div id="dlding" class="none">
+                Bạn vui lòng chờ trong giây lát...
+            </div>
+
+        </div>
+        <nav id="mmenu">
+            <ul class="dropdown">
+                <li><a href="index.html" target="_self">Trang chủ</a></li>
+                <li>
+                    <a href="danhsach.html" target="_self">Điện thoại</a>
+                    <ul>
+                        <li class="first"><a href="danhsach.html" target="_self"><span>LG</span></a></li>
+                        <li><a href="danhsach.html" target="_self"><span>Samsung</span></a></li>
+                        <li><a href="danhsach.html" target="_self"><span>Apple</span></a></li>
+                        <li><a href="danhsach.html" target="_self"><span>HTC</span></a></li>
+                        <li><a href="danhsach.html" target="_self"><span>SKY</span></a></li>
+                        <li><a href="danhsach.html" target="_self"><span>Xiaomi</span></a></li>
+                        <li><a href="danhsach.html" target="_self"><span>Oppo</span></a></li>
+                        <li><a href="danhsach.html" target="_self"><span>Sony</span></a></li>
+                        <li><a href="danhsach.html" target="_self"><span>Asus</span></a></li>
+                        <li><a href="danhsach.html" target="_self"><span>Casio</span></a></li>
+                        <li><a href="danhsach.html" target="_self"><span>Luna</span></a></li>
+                    </ul>
+                </li>
+                <li><a href="danhsach.html" target="_self">Máy dùng rồi</a></li>
+                <li><a href="phukien.html" target="_self">Phụ kiện</a></li>
+                <li><a href="#" target="_self">Tin tức</a></li>
+                <li><a href="khuyenmai.html" target="_self">Khuyến mãi</a></li>
+                <li><a href="banggia.html" target="_self">Bảng giá</a></li>
+            </ul>
+        </nav>
+        <div id="floating_banner_left" style="overflow: hidden; position: absolute; top: 0px; ">
+            <div id="floating_banner_left_content"></div>
+        </div>
+        <div id="floating_banner_right" style="overflow: hidden; position: absolute; top: 0px;">
+            <div id="floating_banner_right_content"></div>
+        </div>
+
+        <!--LenDauTrang-->
+        <script type="text/javascript">
+            $(window).load(function () { initLoaded(); });
+            var slideTime = 700;
+            var rootWidth = 1170;
+            var floatAtBottom = false;
+            function Ad_floating_init() {
+                xMoveTo('floating_banner_right', rootWidth - (rootWidth - screen.width), 0);
+                xMoveTo('floating_banner_left', rootWidth - (screen.width), 0);
+                winOnResize(); // set initial position
+                xAddEventListener(window, 'resize', winOnResize, false);
+                xAddEventListener(window, 'scroll', winOnScroll, false);
+            }
+            function winOnResize() {
+                checkScreenWidth();
+                winOnScroll(); // initial slide
+            }
+            function winOnScroll() {
+                var y = xScrollTop();
+                if (y <= 135) y = 135;
+                if (floatAtBottom) {
+                    y += xClientHeight() - xHeight('floating_banner_left');
+                }
+                xSlideTo('floating_banner_left', (screen.width - rootWidth) / 2 - (110 + 15), y, slideTime);
+                xSlideTo('floating_banner_right', (screen.width + rootWidth) / 2 - 2, y, slideTime);
+            }
+
+            function checkScreenWidth() {
+                if (screen.width <= 1230) {
+                    document.getElementById('floating_banner_left').style.display = 'none';
+                    document.getElementById('floating_banner_right').style.display = 'none';
+                }
+            }
+            Ad_floating_init();
+        </script>
+    </div>
+</body>
+</html>

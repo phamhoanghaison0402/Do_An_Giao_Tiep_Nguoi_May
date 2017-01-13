@@ -1,0 +1,85 @@
+.jcarousel-skin-pro
+{
+    position: relative;
+    width: 100%;
+}
+.jcarousel-skin-pro .jcarousel {
+    position: relative;
+    overflow: hidden;
+    margin: 0 auto;
+    width: 1220px;
+    z-index: 15;
+}
+
+.jcarousel-skin-pro ul {
+    width: 20000em;
+    position: relative;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.jcarousel-skin-pro li {
+    float: left;
+    margin: 0 20px 0 0;
+    padding: 0;
+}
+
+*[dir=rtl] .jcarousel-skin-pro li {
+    float: right;
+    margin: 0 0 0 20px;
+}
+.jca-btn
+{
+    background: url(../images/control-s.png) no-repeat left top;
+    display: block;
+    top: 40%;
+    position: absolute;
+    margin-top: -28px;
+    text-indent: -9999em;
+    height: 55px;
+    width: 55px;
+    z-index: 10;
+}
+.jca-btn.prev
+{
+    background-position: 0 0;
+    left: -15px;
+}
+.jca-btn.prev:hover
+{
+    background-position: 0 -55px;
+}
+.jca-btn.next
+{
+    background-position: -55px 0;
+    right: -15px;
+}
+.jca-btn.next:hover
+{
+    background-position: -55px -55px;
+}
+.wrapp-order
+{
+    background-color: #fff;
+    padding-top: 90px;
+    margin-bottom: 60px;
+    position: relative;
+    width: 100%;
+}
+.wrapp-order .title
+{
+    background: #000;
+    color: #fff;
+    font-family: Calibri;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+    height: 40px;
+    line-height: 40px;
+    left: -10px;
+    top: 16px;
+    position: absolute;
+    width: 187px;
+}

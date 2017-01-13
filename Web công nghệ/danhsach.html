@@ -1,0 +1,494 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html class="no-js" xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://www.facebook.com/2008/fbml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Danh sách sản phẩm</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" />
+    <link rel="SHORTCUT ICON" src="vnt_upload/File/Image/Untitled-2.png" type="image/x-icon" />
+    <link rel="icon" src="vnt_upload/File/Image/Untitled-2.png" type="image/gif" />
+    <link href="js/bootstrap/bootstrap.css" rel="stylesheet" type="text/css" />
+    <link href="skins/default/style/screen.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="skins/default/style/font-awesome/css/font-awesome.min.css" />
+    <link href="skins/default/style/dropdown.css" rel="stylesheet" type="text/css" />
+    <link href="js/colorbox/css/colorbox.css" rel="stylesheet" type="text/css" />
+    <link href="js/jquery_alerts/jquery.alerts.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="js/mmenu/jquery.mmenu.all.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href="js/owl-carousel/owl.carousel.css" type="text/css" media="screen" />
+    <script language="javascript">
+        var ROOT = "/";
+        var DIR_IMAGE = "/skins/default/images";
+        var cmd = "vnTRUST";
+        var facebook_appId = "805937266142547";
+        var mem_id = 0;
+        var responsiveSwitchBreakpoint = 1024;
+    </script>
+    <script type="text/javascript" src="js/responsive-switch.min.js"></script>
+    <script type="text/javascript" src="js/modernizr.custom.js"></script>
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/jquery-migrate-1.0.0.js"></script>
+    <script type="text/javascript" src="js/bootstrap/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/core.js"></script>
+    <script type="text/javascript" src="js/javascript.js"></script>
+    <script type="text/javascript" src="js/floater_xlib.js"></script>
+    <script type="text/javascript" src="js/jquery.cookie.js"></script>
+    <script type="text/javascript" src="js/colorbox/colorbox-min.js"></script>
+    <script type="text/javascript" src="js/jquery_alerts/jquery.alerts.js"></script>
+    <script type="text/javascript" src="js/mmenu/jquery.mmenu.min.all.js"></script>
+    <script type="text/javascript" src="js/owl-carousel/owl.carousel.min.js"></script>
+    <script id='ext_javascript'></script>
+    <script>
+        $(document).ready(function () {
+            MainContentW = 1000;
+            LeftBannerW = 120;
+            RightBannerW = 120;
+            LeftAdjust = 20;
+            RightAdjust = 20;
+            TopAdjust = 10;
+
+            $(".rs-link").bind("mousedown click", function () {
+                if (window.screen.width >= 1024) {
+                    alert("Try it on a mobile device (< 1024px wide) to see the what happens!");
+                    return false;
+                }
+            });
+        });
+    </script>
+    <link rel="stylesheet" href="modules/product/css/product.css" type="text/css" />
+    <script type="text/javascript" src="modules/product/js/product.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#testimonials_owl').owlCarousel({
+                navigation: true,
+                slideSpeed: 300,
+                paginationSpeed: 400,
+                singleItem: true,
+                pagination: false
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <div id="vnt-wrapper">
+        <div class="header_mobile">
+            <div id="dl-menu-mobile" class="container nav-fly-bound nav-fly-bound-mtb dl-menuwrapper">
+                <a class="dl-trigger toggle-fly glyphicon glyphicon-align-justify" href="#mmenu"></a>
+
+                <div class="logo-top">
+                    <a href='index.html' target='_self' title='Xuân tình mobile'><img src='vnt_upload/weblink/logo.png' width='260' alt='Xuân tình mobile' class='png' /></a>
+                </div>
+                <i class="icon-search fa fa-search fa-2x">
+                </i>
+            </div>
+        </div>
+
+        <header class="header">
+            <div id="vnt-header" class="container">
+                <div class="row">
+                    <div class="logo col-md-3 col-sm-3 col-xs-12"><a onmousedown="return rwt(this,'advertise',1)" href='/' target='_self' title='Xuân tình mobile'><img src='vnt_upload/weblink/logo.png' width='260' alt='Xuân tình mobile' class='png' /></a></div>
+                    <div class="headert_search col-md-3 col-sm-3 col-xs-12">
+                        <div class="box_search">
+                            <form id="formSearch" name="formSearch" method="post" action="" autocomplete="off">
+                                <input name="do_search" value="1" type="hidden" />
+                                <input name="keyword" id="search-keyword" type="text" class="text_search" placeholder="Bạn muốn tìm gì ?" value="" autocomplete="off" onkeydown="CheckTimer()" onkeyup="SuggestSearch(event);" />
+                                <input type="hidden" id="fpc_id" name="fpc_id" />
+                                <span class="input-group-btn">
+                                    <button id="do_submit" name="do_submit" type="submit" class="btn_search" value="Tìm kiếm"></button>
+                                </span>
+                            </form>
+                            <div id="SuggestSearch"></div>
+                            <div class="clear"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="div_menu">
+                <div id="vnt-menutop" class="header_nav">
+                    <div class="container">
+                        <div class="menutop row">
+                            <ul class="dropdown">
+                                <li id="nav_home"><a href="index.html" class="nav_main_item current">Trang chủ</a></li>
+                                <li><a href="danhsach.html" target="_self">Điện thoại</a></li>
+                                <li><a href="danhsach.html" target="_self">Máy dùng rồi</a></li>
+                                <li><a href="phukien.html" target="_self">Phụ kiện</a></li>
+                                <li><a href="tintuc.html" target="_self">Tin tức</a></li>
+                                <li><a href="banggia.html" target="_self">Bảng giá</a></li>
+                                <li><a href="khuyenmai.html" target="_self">Khuyến mãi<span class="saleoff">sale off</span></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <div id="vnt-container" class="container">
+            <div class="navation row"><a href="index.html" class="home">Trang chủ</a>  <span> &nbsp;/&nbsp; </span> <a href="#">Điện thoại</a></div>
+            <section class="newshot-block row">
+                <div class="col-md-6 col-sm-6 col-xs-12 block">
+                    <div class="block-inner">
+                        <a class='table' href='#' target='_self' title='LG V10: Điện thoại thời trang'>
+                            <div class='inner'>
+                                <h3>LG V10: Điện thoại thời trang</h3>
+                                <span></span>
+                                <i class='fa fa-angle-right'></i>
+                            </div>
+                        </a><figure><div class="frame"><span> </span></div><img src="vnt_upload/weblink/banner/v10_1.png" alt="LG V10: Điện thoại thời trang" /> </figure>
+                    </div>
+                </div><div class="col-md-6 col-sm-6 col-xs-12 block last">
+                    <div class="block-inner">
+                        <a class='table' href='danhsach.html' target='_self' title='Chuyên các dòng Samsung độc nhất'>
+                            <div class='inner'>
+                                <h3>Chuyên các dòng Samsung độc nhất</h3>
+                                <span></span>
+                                <i class='fa fa-angle-right'></i>
+                            </div>
+                        </a><figure><div class="frame"><span> </span></div><img src="vnt_upload/weblink/banner/DSC_8642.jpg" alt="Chuyên các dòng Samsung độc nhất" /> </figure>
+                    </div>
+                </div>
+            </section>
+
+            <div id="vnt-content">
+                <div class="main row">
+                    <div class="sort">
+                        <div class="filter-bound">
+                            <div class="filter">
+                                <div class='box_phanloai'>
+                                    <div class='box_title'>
+                                        <a class='crfselected'>Mức giá</a>
+                                    </div><div class="box_content">
+                                        <ul class="boxc_ul">
+                                            <li><a href='#' ref='nofollow'>Dưới 3 triệu</a></li>
+                                            <li><a href='#' ref='nofollow'>Từ 3 triệu - 5 triệu</a></li>
+                                            <li><a href='#' ref='nofollow'>Từ 5 triệu - 7 triệu</a></li>
+                                            <li><a href='#' ref='nofollow'>Từ 7 triệu - 9 triệu</a></li>
+                                            <li><a href='#' ref='nofollow'>Từ 9 triệu - 12 triệu</a></li>
+                                            <li><a href='#' ref='nofollow'>Từ 12 triệu - 15 triệu</a></li>
+                                            <li><a href='#' ref='nofollow'>Trên 15 triệu</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class='box_category_sort'>
+                                    <div class='box_title'><a class='crfselected'>Hãng sản xuất</a></div><div class="box_content">
+                                        <ul class="boxc_ul">
+                                            <li><a href="#">LG</a></li>
+                                            <li><a href="#">SAMSUNG</a></li>
+                                            <li><a href="#">Apple</a></li>
+                                            <li><a href="#">HTC</a></li>
+                                            <li><a href="#">SKY</a></li>
+                                            <li><a href="#">Xiaomi</a></li>
+                                            <li><a href="#">OPPO</a></li>
+                                            <li><a href="#">SONY</a></li>
+                                            <li><a href="#">ASUS</a></li>
+                                            <li><a href="#">Casio</a></li>
+                                            <li><a href="#">LUNA</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="box_search_adv">
+                                    <div class="box_title"><a class="moresearch crfselected" href="javascript:void(0)">Tìm nâng cao</a></div>
+                                </div>
+                                <div class="box_aspect"><a href="#" class="item_radio">Mới</a><a href="#" class="item_radio">Cũ</a></div>
+                                <div class='box_sort'>
+                                    <div class='box_title'><a class='crfselected'>Sắp xếp theo</a></div><div class='box_content'><ul class='boxc_ul'><li class='selected'><a href='#'>Sản phẩm mới</a></li><li><a href='#'>Giá giảm dần</a></li><li><a href='#'>Giá tăng dần</a></li></ul></div>
+                                </div>
+                                <div class="clear"></div>
+                            </div>
+
+                            <div class="showfeature fullfeature">
+                                <div class="row">
+                                    <form method="post" action="/samsung" class="search_adv_form">
+                                        <div class="list_radio list_price_search_adv col-md-2 col-sm-2 col-xs-12">
+                                            <div class="title_s_adv">
+                                                <label>
+                                                    <input type="radio" checked="checked" class="radio" name="list_price" id="all_price" value="" />
+                                                    <i>Tất cả <b>MỨC GIÁ</b></i>
+                                                </label>
+                                            </div>
+                                            <p><label> <input class="radio" value="3" type="radio" name="list_price" /><i>Dưới 3 triệu</i></label></p>
+                                            <p><label><input class="radio" value="5" type="radio" name="list_price" /><i>Dưới 5 triệu</i></label></p>
+                                            <p><label><input class="radio" value="7" type="radio" name="list_price" /><i>Dưới 7 triệu</i></label></p>
+                                            <p><label><input class="radio" value="9" type="radio" name="list_price" /><i>Dưới 9 triệu</i></label></p>
+                                            <p><label><input class="radio" value="12" type="radio" name="list_price" /><i>Dưới 12 triệu</i></label></p>
+                                            <p><label><input class="radio" value="16-max" type="radio" name="list_price" /><i>Trên 12 triệu</i></label></p>
+                                        </div>
+                                        <div class="list_radio list_cat_search_adv col-md-4 col-sm-4 col-xs-12">
+                                            <div class="title_s_adv">
+                                                <label>
+                                                    <input checked="checked" type="radio" class="radio" name="catID" value="1" />
+                                                    <i>Tất cả <b>HÃNG SẢN XUẤT</b></i>
+                                                </label>
+                                            </div>
+                                            <p><label><input class="radio" value="56" type="radio" name="catID" /><i>LG</i></label></p>
+                                            <p><label><input class="radio" value="56" type="radio" name="catID" /><i>SAMSUNG</i></label></p>
+                                            <p><label><input class="radio" value="96" type="radio" name="catID" /><i>Apple</i></label></p>
+                                            <p><label><input class="radio" value="64" type="radio" name="catID" /><i>HTC</i></label></p>
+                                            <p><label><input class="radio" value="62" type="radio" name="catID" /><i>SKY</i></label></p>
+                                            <p><label><input class="radio" value="73" type="radio" name="catID" /><i>Xiaomi</i></label></p>
+                                            <p><label><input class="radio" value="77" type="radio" name="catID" /><i>OPPO</i></label></p>
+                                            <p><label><input class="radio" value="63" type="radio" name="catID" /><i>SONY</i></label></p>
+                                            <p><label><input class="radio" value="76" type="radio" name="catID" /><i>ASUS</i></label></p>
+                                            <p><label><input class="radio" value="79" type="radio" name="catID" /><i>Casio</i></label></p>
+                                            <p><label><input class="radio" value="98" type="radio" name="catID" /><i>LUNA</i></label></p>
+                                        </div>
+                                        <div class="list_radio list_screen_search_adv col-md-2 col-sm-2 col-xs-12">
+                                            <div class="title_s_adv">
+                                                <label>
+                                                    <input checked="checked" type="radio" class="radio" name="screen" value="0" /><i>Tất cả <b>Màn hình</b></i>
+                                                </label>
+                                            </div>
+                                            <p><label><input class="radio" value="1" type="radio" name="screen" /><i>Dưới 3 inch</i></label></p>
+                                            <p><label><input class="radio" value="2" type="radio" name="screen" /><i>4 - 5 inch</i></label></p>
+                                            <p><label><input class="radio" value="3" type="radio" name="screen" /><i>5 - 6 inch</i></label></p>
+                                            <p><label><input class="radio" value="4" type="radio" name="screen" /><i>Trên 6 inch</i></label></p>
+                                        </div>
+                                        <div class="list_radio list_os_search_adv col-md-2 col-sm-2 col-xs-12">
+                                            <div class="title_s_adv"><label><input checked="checked" type="radio" class="radio" name="osID" value="" /><i>Tất cả <b>HỆ ĐIỀU HÀNH</b></i></label></div>
+                                            <p><label><input class="radio" value="10" type="radio" name="osID" /><i>Android</i></label></p><p><label><input class="radio" value="11" type="radio" name="osID" /><i>IOS</i></label></p>
+                                            <p><label><input class="radio" value="30" type="radio" name="osID" /><i>Blackberry</i></label></p><p><label><input class="radio" value="13" type="radio" name="osID" /><i>Windowphone</i></label></p>
+                                            <p><label><input class="radio" value="31" type="radio" name="osID" /><i>Hệ Điều Hành Khác</i></label></p>
+                                        </div>
+                                        <div class="list_radio list_option_search_adv col-md-2 col-sm-2 col-xs-12">
+                                            <div class="title_s_adv">
+                                                <label>
+                                                    <b>Tính năng nổi bật</b>
+                                                </label>
+                                            </div>
+                                            <p><label><input align="absmiddle" class='checkbox-inline' type="checkbox" name="option_search[]" id="option_search" value="1" align='absmiddle' /><i>Chống nước</i></label></p>
+                                            <p><label><input align="absmiddle" class='checkbox-inline' type="checkbox" name="option_search[]" id="option_search" value="13" align='absmiddle' /><i>Chụp hình đẹp</i></label></p>
+                                            <p><label><input align="absmiddle" class='checkbox-inline' type="checkbox" name="option_search[]" id="option_search" value="14" align='absmiddle' /><i>Màn hình siêu nét</i></label></p>
+                                            <p><label><input align="absmiddle" class='checkbox-inline' type="checkbox" name="option_search[]" id="option_search" value="15" align='absmiddle' /><i>Chống va đập</i></label></p>
+                                            <p><label><input align="absmiddle" class='checkbox-inline' type="checkbox" name="option_search[]" id="option_search" value="5" align='absmiddle' /><i>Pin Khủng</i></label></p>
+                                            <p><label><input align="absmiddle" class='checkbox-inline' type="checkbox" name="option_search[]" id="option_search" value="6" align='absmiddle' /><i>Camera tự sướng</i></label></p>
+                                            <p><label><input align="absmiddle" class='checkbox-inline' type="checkbox" name="option_search[]" id="option_search" value="16" align='absmiddle' /><i>Lướt Web/Facebook</i></label></p>
+                                            <p><label><input align="absmiddle" class='checkbox-inline' type="checkbox" name="option_search[]" id="option_search" value="10" align='absmiddle' /><i>2 SIM</i></label></p>
+                                        </div>
+                                        <div class="div_btn_search_adv">
+                                            <a href="javascript:void(0)" title="Đóng bảng tìm kiếm nâng cao" onclick="closeAdvFilter();">[x] Đóng</a>
+                                            <input name="do_search" value="1" type="hidden" />
+                                            <input id="f_search" class="btn_search more" type="submit" name="search" value="Tìm kiếm" />
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="search-fast-bound">
+                            <div class="search-fast">
+                                <span>Tìm nhanh:</span>
+                                <a href="#">iPhone 6s Plus</a>
+                                <a href="#">LG</a>
+                                <a href="#">SAMSUNG</a>
+                                <a href="#">SKY</a>
+                                <a href="#">SONY</a>
+                                <a href="#">HTC</a>
+                                <a href="#">IPhone 6 Plus</a>
+                                <a href="#">IPhone 6</a>
+                                <a href="#">IPhone 5-5S-5C</a>
+                                <a href="#">IPhone 4s</a>
+                                <a href="#">Xiaomi</a>
+                                <a href="#">Meizu</a>
+                            </div>
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+
+                    <div id="List_Product" class="grid-bound grid-bound-home">
+                        <div class='item1 nopadding product-grid'>
+                            <div class='boxItem'>
+                                <span class="icon-product" style="background: #f70707; border: 1px solid #080000; color:#080000;">HOT</span>
+                                <img src="vnt_upload/product/Hinh_DT/Iphone/iphone-6/thumbs/(300x300)_crop_apple-iphone-6-gold-8.jpg" />
+                                <h3><a href="chitiet.html">IPhone 6 16G</a></h3>
+                                <p class="price">5,690,000 đ<a href="chitiet.html"></a></p>
+                            </div>
+                        </div><div class='item1 nopadding product-grid'>
+                            <div class='boxItem'>
+                                <span class="icon-product" style="background: #c20202; border: 1px solid #ffffff; color:#ffffff;">NEW</span>
+                                <img src="vnt_upload/product/Hinh_DT/Iphone/iphone_6s/thumbs/(300x300)_crop_iphone-6s-plus-2.png" />
+                                <h3><a href="chitiet.html">IPhone 6s 16GB</a></h3>
+                                <p class="price">8,990,000 đ</p>
+                            </div>
+                        </div><div class='item1 nopadding product-grid'>
+                            <div class='boxItem'>
+                                <span class="icon-product" style="background: #c20202; border: 1px solid #ffffff; color:#ffffff;">NEW</span>
+                                <img src="vnt_upload/product/dienthoai2016/LG/LG_Urbane_2/thumbs/(300x300)_crop_lg_urbane_2_1.jpg" alt='LG Watch Urbane 2nd EDITION ( LTE )' title='LG Watch Urbane 2nd EDITION ( LTE )' />
+                                <h3><a href="chitiet.html" title='LG Watch Urbane 2nd EDITION ( LTE )'>LG Watch Urbane 2nd EDITION ( LTE )</a> </h3>
+                                <p class="price">4,990,000 đ</p>
+                            </div>
+                        </div><div class='item1 nopadding product-grid'>
+                            <div class='boxItem'>
+                                <span class="icon-product" style="background: #f70707; border: 1px solid #080000; color:#080000;">HOT</span>
+                                <img src="vnt_upload/product/dienthoai2016/blackberry/thumbs/(300x300)_crop_bb.jpg" alt='BlackBerry Passport' title='BlackBerry Passport' />
+                                <h3><a href="chitiet.html" title='BlackBerry Passport'>BlackBerry Passport</a> </h3>
+                                <p class="price">4,290,000 đ</p>
+                            </div>
+                        </div><div class='item1 nopadding product-grid'>
+                            <div class='boxItem'>
+                                <span class="icon-product" style="background: #eb1010; border: 1px solid #fcf7fc; color:#fcf7fc;">Giảm Giá</span>
+                                <img src="vnt_upload/product/dienthoai2016/blackberry/thumbs/(300x300)_crop_white.jpg" alt='BlackBerry Passport Màu Trắng' title='BlackBerry Passport Màu Trắng' />
+                                <h3><a href="chitiet.html" title='BlackBerry Passport Màu Trắng'>BlackBerry Passport Màu Trắng</a> </h3>
+                                <p class="price">4,790,000 đ</p>
+                            </div>
+                        </div><div class='item1 nopadding product-grid'>
+                            <div class='boxItem'>
+                                <span class="icon-product" style="background: #ed0909; border: 1px solid #f7f2f2; color:#f7f2f2;">NGUYÊN SEALBOX</span>
+                                <img src="vnt_upload/product/dienthoai2016/blackberry/thumbs/(300x300)_crop_Sans_titre-1_1.jpg" alt='BlackBerry Passport Mới 100% Nguyên Sealbox' title='BlackBerry Passport Mới 100% Nguyên Sealbox' />
+                                <h3><a href="chitiet.html" title='BlackBerry Passport Mới 100% Nguyên Sealbox'>BlackBerry Passport Mới 100% Nguyên Sealbox</a> </h3>
+                                <p class="price">4,390,000 đ</p>
+                            </div>
+                        </div><div class='item1 nopadding product-grid'>
+                            <div class='boxItem'>
+                                <span class="icon-product" style="background: #c20202; border: 1px solid #ffffff; color:#ffffff;">NEW</span>
+                                <img src="vnt_upload/product/dienthoai2016/blackberry/thumbs/(300x300)_crop_Sans_titre-1_1.jpg" alt='BlackBerry Passport Bản Quốc Tế (qwerty)' title='BlackBerry Passport Bản Quốc Tế (qwerty)' />
+                                <h3><a href="chitiet.html" title='BlackBerry Passport Bản Quốc Tế (qwerty)'>BlackBerry Passport Bản Quốc Tế (qwerty)</a> </h3>
+                                <p class="price">4,590,000 đ</p>
+                            </div>
+                        </div><div class='item1 nopadding product-grid'>
+                            <div class='boxItem'>
+                                <span class="icon-product" style="background: #c20202; border: 1px solid #ffffff; color:#ffffff;">NEW</span>
+                                <img src="vnt_upload/product/dienthoai2016/blackberry/thumbs/(300x300)_crop_silver.jpg" alt='BlackBerry Passport Silver Edition' title='BlackBerry Passport Silver Edition' />
+                                <h3><a href="chitiet.html" title='BlackBerry Passport Silver Edition'>BlackBerry Passport Silver Edition</a> </h3>
+                                <p class="price">5,990,000 đ</p>
+                            </div>
+                        </div><div class='item1 nopadding product-grid'>
+                            <div class='boxItem'>
+                                <img src="vnt_upload/product/Hinh_DT/Iphone/iphone_5s/thumbs/(300x300)_crop_iphone-5s-grey.jpg" alt='Iphone 5s World 16G (99%-likenew)' title='Iphone 5s World 16G (99%-likenew)' />
+                                <h3><a href="chitiet.html" title='Iphone 5s World 16G (99%-likenew)'>Iphone 5s World 16G (99%-likenew)</a> </h3>
+                                <p class="price">4,590,000 đ</p>
+                            </div>
+                        </div><div class='item1 nopadding product-grid'>
+                            <div class='boxItem'>
+                                <span class="icon-product" style="background: #eb1010; border: 1px solid #fcf7fc; color:#fcf7fc;">Giảm Giá</span>
+                                <img src="vnt_upload/product/dienthoai2016/IPhone_7/thumbs/(300x300)_crop_iphone_7_plus.png" alt='iPhone 7 Plus 256GB - Bản Hàn Quốc' title='iPhone 7 Plus 256GB - Bản Hàn Quốc' />
+                                <h3><a href="chitiet.html" title='iPhone 7 Plus 256GB - Bản Hàn Quốc'>iPhone 7 Plus 256GB - Bản Hàn Quốc</a> </h3>
+                                <p class="price">22,100,000 đ</p>
+                            </div>
+                        </div><div class='item1 nopadding product-grid'>
+                            <div class='boxItem'>
+                                <span class="icon-product" style="background: #c20202; border: 1px solid #ffffff; color:#ffffff;">NEW</span>
+                                <img src="vnt_upload/product/dienthoai2016/IPhone_7/thumbs/(300x300)_crop_iphone_7_plus.png" alt='iPhone 7 Plus 128GB - Bản Hàn Quốc' title='iPhone 7 Plus 128GB - Bản Hàn Quốc' />
+                                <h3><a href="chitiet.html" title='iPhone 7 Plus 128GB - Bản Hàn Quốc'>iPhone 7 Plus 128GB - Bản Hàn Quốc</a> </h3>
+                                <p class="price">21,690,000 đ</p>
+                            </div>
+                        </div><div class='item1 nopadding product-grid'>
+                            <div class='boxItem'>
+                                <span class="icon-product" style="background: #eb1010; border: 1px solid #fcf7fc; color:#fcf7fc;">Giảm Giá</span>
+                                <img src="vnt_upload/product/dienthoai2016/IPhone_7/thumbs/(300x300)_crop_iphone_7_plus.png" alt='iPhone 7 Plus 32GB - Bản Hàn Quốc' title='iPhone 7 Plus 32GB - Bản Hàn Quốc' />
+                                <h3><a href="chitiet.html" title='iPhone 7 Plus 32GB - Bản Hàn Quốc'>iPhone 7 Plus 32GB - Bản Hàn Quốc</a> </h3>
+                                <p class="price">18,990,000 đ</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="pagination">&nbsp;<span class="pagecur">1</span>&nbsp;<a href='#' class='pagelink'>2</a>&nbsp;<a href='#' class='pagelink'>3</a>&nbsp;<a href='#' class='btnPage'><b>&rsaquo;</b></a></div>
+                </div>
+                <div class="clear"></div>
+            </div>
+        </div>
+
+        <div id="vnt-footer">
+            <div class="info_footer">
+                <div class="container">
+                    <div class="menu_mail">
+                        <div class="row">
+                            <div class="box_address_footer">
+                                <div class="title_address"><span style="line-height: 1.6em;">&nbsp;</span>THÔNG TIN CỬA HÀNG</div>
+                                <div class="content">
+                                    <p><span style="line-height: 1.6em;">&nbsp;</span><strong style="line-height: 20.8px; color: rgb(255, 102, 0);">&nbsp; &nbsp; &nbsp;</strong><span style="line-height: 1.6em;">Địa chỉ: KTX Khu B, ấp Tân Lập, phường Đông Hoà, thị xã Dĩ An, tỉnh Bình Dương &nbsp;&nbsp;</span></p>
+                                    <p><span style="line-height: 1.6em;">&nbsp;</span><strong style="line-height: 20.8px; color: rgb(255, 102, 0);">&nbsp; &nbsp; &nbsp;</strong><span style="line-height: 1.6em;">Số điện thoại:  &nbsp;</span><a href="tel:0164 9456 397" style="line-height: 1.6em;">0164 9456 397</a>&nbsp;(Mr. Quang)</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="div_copyright">
+                        <span class="copyright">Copyright © 2016 <b>Điện thoại G7Mobile</b></span>
+                        <p class="note_slogan_footer">G7Mobile - Điện thoại giá rẻ chất lượng tốt</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="call_us hidden-md hidden-lg">
+            <a href="tel:01649456397"></a>
+        </div>
+        <a class="back-top" title="Lên trên" href="javascript:void(0);">
+            <span>Lên trên</span>
+        </a>
+
+        <div id="dlding" class="none">
+            Bạn vui lòng chờ trong giây lát...
+        </div>
+
+    </div>
+    <nav id="mmenu">
+        <ul class="dropdown">
+            <li><a href="index.html" target="_self">Trang chủ</a></li>
+            <li>
+                <a href="danhsach.html" target="_self">Điện thoại</a>
+                <ul>
+                    <li class="first"><a href="danhsach.html" target="_self"><span>LG</span></a></li>
+                    <li><a href="danhsach.html" target="_self"><span>Samsung</span></a></li>
+                    <li><a href="danhsach.html" target="_self"><span>Apple</span></a></li>
+                    <li><a href="danhsach.html" target="_self"><span>HTC</span></a></li>
+                    <li><a href="danhsach.html" target="_self"><span>SKY</span></a></li>
+                    <li><a href="danhsach.html" target="_self"><span>Xiaomi</span></a></li>
+                    <li><a href="danhsach.html" target="_self"><span>Oppo</span></a></li>
+                    <li><a href="danhsach.html" target="_self"><span>Sony</span></a></li>
+                    <li><a href="danhsach.html" target="_self"><span>Asus</span></a></li>
+                    <li><a href="danhsach.html" target="_self"><span>Casio</span></a></li>
+                    <li><a href="danhsach.html" target="_self"><span>Luna</span></a></li>
+                </ul>
+            </li>
+            <li><a href="danhsach.html" target="_self">Máy dùng rồi</a></li>
+            <li><a href="phukien.html" target="_self">Phụ kiện</a></li>
+            <li><a href="tintuc.html" target="_self">Tin tức</a></li>
+            <li><a href="khuyenmai.html" target="_self">Khuyến mãi</a></li>
+            <li><a href="banggia.html" target="_self">Bảng giá</a></li>
+        </ul>
+    </nav>
+    <div id="floating_banner_left" style="overflow: hidden; position: absolute; top: 0px; ">
+        <div id="floating_banner_left_content"></div>
+    </div>
+    <div id="floating_banner_right" style="overflow: hidden; position: absolute; top: 0px;">
+        <div id="floating_banner_right_content"></div>
+    </div>
+
+    <!--LenDauTrang-->
+    <script type="text/javascript">
+        $(window).load(function () { initLoaded(); });
+        var slideTime = 700;
+        var rootWidth = 1170;
+        var floatAtBottom = false;
+        function Ad_floating_init() {
+            xMoveTo('floating_banner_right', rootWidth - (rootWidth - screen.width), 0);
+            xMoveTo('floating_banner_left', rootWidth - (screen.width), 0);
+            winOnResize(); // set initial position
+            xAddEventListener(window, 'resize', winOnResize, false);
+            xAddEventListener(window, 'scroll', winOnScroll, false);
+        }
+        function winOnResize() {
+            checkScreenWidth();
+            winOnScroll(); // initial slide
+        }
+        function winOnScroll() {
+            var y = xScrollTop();
+            if (y <= 135) y = 135;
+            if (floatAtBottom) {
+                y += xClientHeight() - xHeight('floating_banner_left');
+            }
+            xSlideTo('floating_banner_left', (screen.width - rootWidth) / 2 - (110 + 15), y, slideTime);
+            xSlideTo('floating_banner_right', (screen.width + rootWidth) / 2 - 2, y, slideTime);
+        }
+
+        function checkScreenWidth() {
+            if (screen.width <= 1230) {
+                document.getElementById('floating_banner_left').style.display = 'none';
+                document.getElementById('floating_banner_right').style.display = 'none';
+            }
+        }
+        Ad_floating_init();
+    </script>
+</body>
+</html>

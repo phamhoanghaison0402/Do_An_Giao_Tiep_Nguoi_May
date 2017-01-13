@@ -1,0 +1,71 @@
+//~~tv:template.20150914
+//~~tc:initial template add 
+
+//tealium universal tag - utag.sender.12036 ut4.0.201511051551, Copyright 2015 Tealium.com Inc. All Rights Reserved.
+try {
+  (function (id, loader) {
+    var u = {};
+    utag.o[loader].sender[id] = u;
+
+    // Please do not modify
+    if (utag.ut === undefined) { utag.ut = {}; }
+    // Start Tealium loader 4.35
+    if (utag.ut.loader === undefined) { u.loader = function (o) { var b, c, l, a = document; if (o.type === "iframe") { b = a.createElement("iframe"); o.attrs = o.attrs || { "height" : "1", "width" : "1", "style" : "display:none" }; for( l in utag.loader.GV(o.attrs) ){ b.setAttribute( l, o.attrs[l] ); } b.setAttribute("src", o.src); }else if (o.type=="img"){ utag.DB("Attach img: "+o.src); b=new Image();b.src=o.src; return; }else{ b = a.createElement("script");b.language="javascript";b.type="text/javascript";b.async=1;b.charset="utf-8"; for( l in utag.loader.GV(o.attrs) ){ b[l] = o.attrs[l]; } b.src = o.src; } if(o.id){b.id=o.id}; if (typeof o.cb=="function") { if(b.addEventListener) { b.addEventListener("load",function(){o.cb()},false); }else { /* old IE support */ b.onreadystatechange=function(){if(this.readyState=='complete'||this.readyState=='loaded'){this.onreadystatechange=null;o.cb()}}; } } l = o.loc || "head"; c = a.getElementsByTagName(l)[0]; if (c) { utag.DB("Attach to "+l+": "+o.src); if (l == "script") { c.parentNode.insertBefore(b, c); } else { c.appendChild(b) } } } } else { u.loader = utag.ut.loader; }
+    // End Tealium loader
+    // Start Tealium typeOf 4.35
+    if (utag.ut.typeOf === undefined) { u.typeOf = function(e) {return ({}).toString.call(e).match(/\s([a-zA-Z]+)/)[1].toLowerCase();};} else { u.typeOf = utag.ut.typeOf; }
+    // End Tealium typeOf
+
+    u.ev = {"view" : 1};
+    u.scriptrequested = false;
+
+      u.map={};
+  u.extend=[];
+
+
+    u.send = function (a, b) {
+      if (u.ev[a] || u.ev.all !== undefined) {
+        //##UTENABLEDEBUG##utag.DB("send:##UTID##");
+
+        var c, d, e, f;
+
+        u.data = {
+          "site_id" : "45729",
+          "qsp_delim" : "&",
+          "kvp_delim" : "=",
+          "base_url" : (('https:' == document.location.protocol) ? 'https://ssl' : 'http://cdn') + '.luckyorange.com/w.js'
+        };
+
+        // Start tag-scoped extensions
+        
+        // End tag-scoped extensions
+
+        window.__wtw_lucky_site_id = parseInt( u.data.site_id );
+
+        c = [];
+
+        // Start Mapping
+        for (d in utag.loader.GV(u.map)) {
+          if (b[d] !== undefined && b[d] !== "") {
+            e = u.map[d].split(",");
+            for (f = 0; f < e.length; f++) {
+              u.data[e[f]] = b[d];
+            }
+          }
+        }
+        // End Mapping
+
+        if (!u.scriptrequested) {
+          u.scriptrequested = true;
+          u.loader({"type": "script",  "src": u.data.base_url, "cb": null, "loc": "script", "id": 'utag_107' });
+        }
+
+        //##UTENABLEDEBUG##utag.DB("send:##UTID##:COMPLETE");
+      }
+    };
+    utag.o[loader].loader.LOAD(id);
+  }("107", "luckyvitamin.luckyvitamin"));
+} catch (error) {
+  utag.DB(error);
+}
+//end tealium universal tag

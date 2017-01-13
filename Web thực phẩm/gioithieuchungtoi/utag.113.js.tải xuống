@@ -1,0 +1,88 @@
+//~~tv:20011.image.20160309
+//~~tc: Removing URI API Polyfill
+
+//tealium universal tag - utag.sender.20011.image ut4.0.201608152247, Copyright 2016 Tealium.com Inc. All Rights Reserved.
+try {
+  (function (id, loader) {
+    var u = {"id" : id};
+    utag.o[loader].sender[id] = u;
+    // Please do not modify
+    if (utag.ut === undefined) { utag.ut = {}; }
+    // Start Tealium loader 4.35
+    var match = /ut\d\.(\d*)\..*/.exec(utag.cfg.v);
+    if (utag.ut.loader === undefined || !match || parseInt(match[1]) < 35) { u.loader = function (o) { var b, c, l, a = document; if (o.type === "iframe") { b = a.createElement("iframe"); o.attrs = o.attrs || { "height" : "1", "width" : "1", "style" : "display:none" }; for( l in utag.loader.GV(o.attrs) ){ b.setAttribute( l, o.attrs[l] ); } b.setAttribute("src", o.src); }else if (o.type=="img"){ utag.DB("Attach img: "+o.src); b=new Image();b.src=o.src; return; }else{ b = a.createElement("script");b.language="javascript";b.type="text/javascript";b.async=1;b.charset="utf-8"; for( l in utag.loader.GV(o.attrs) ){ b[l] = o.attrs[l]; } b.src = o.src; } if(o.id){b.id=o.id}; if (typeof o.cb=="function") { if(b.addEventListener) { b.addEventListener("load",function(){o.cb()},false); }else { /* old IE support */ b.onreadystatechange=function(){if(this.readyState=='complete'||this.readyState=='loaded'){this.onreadystatechange=null;o.cb()}}; } } l = o.loc || "head"; c = a.getElementsByTagName(l)[0]; if (c) { utag.DB("Attach to "+l+": "+o.src); if (l == "script") { c.parentNode.insertBefore(b, c); } else { c.appendChild(b) } } } } else { u.loader = utag.ut.loader; }
+    // End Tealium loader
+
+    u.ev = {"view" : 1};
+
+    u.rp = function (a, b) {
+      if (typeof a != "undefined" && a.indexOf(u.t) > 0) {
+        a = a.replace(/@@([^@]+)@@/g, function (m, d) {
+          if (b[d]) {
+            return encodeURIComponent(b[d]);
+          } else {
+            return '';
+          }
+        });
+      }
+      return a;
+    };
+
+      u.map={};
+  u.extend=[];
+
+
+    u.send = function (a, b) {
+      if (u.ev[a] || u.ev.all !== undefined) {
+        utag.DB("send:113");
+        utag.DB(b);
+
+        var c;
+
+        u.t = "@@";
+        u.i = [];
+        u.p = [
+          "https://gcm.optimove.events/setCookie?optimove_id=@@customer_id@@",
+          "https://cm.g.doubleclick.net/pixel?google_nid=optimove_dmp&google_cm&tenant_id=93154676-80a1-4f64-b11c-e83b4c0154d2",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ];
+        u.delim = "";
+        u.cachebust = "disabled";
+        u.cachevar = "" || "_rnd";
+
+        // Start tag-scoped extensions
+        
+        // End tag-scoped extensions
+
+        for (c = 0; c < u.p.length; c++) {
+          if (u.p[c] != "") {
+            var x = u.rp(u.p[c], b);
+            if (x != "") {
+              if (u.cachebust == "enabled" && x.indexOf(u.cachevar) < 0) {
+                if (x.indexOf("?") < 0) {
+                  u.delim = "?";
+                } else {
+                  u.delim = "&";
+                }
+                x += u.delim + u.cachevar + "=" + Math.random();
+              }
+              var img = new Image();
+              img.src = x;
+              u.i.push(img);
+            }
+          }
+        }
+      }
+    };
+    utag.o[loader].loader.LOAD(id);
+  }("113", "luckyvitamin.luckyvitamin"));
+} catch (error) {
+  utag.DB(error);
+}
+//end tealium universal tag
+

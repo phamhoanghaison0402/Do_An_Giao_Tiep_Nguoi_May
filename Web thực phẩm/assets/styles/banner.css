@@ -1,0 +1,249 @@
+/* Skitter styles */
+#banner-main
+{
+    overflow: hidden;
+    position: relative;
+    height: 540px;
+    width: 100%;
+    z-index: 5;
+    margin-bottom: 35px;
+}
+.banner
+{
+    width: 1600px;
+    height: 540px;
+    position: absolute;
+    margin-left: -800px;
+    left: 50%;
+    top: 0;
+}
+.banner .box_skitter
+{
+    position: relative;
+    height: 100%;
+    width: 100%;
+    z-index: 9; /*background: #F0F0F0;*/
+}
+.banner .box_skitter ul
+{
+    display: none;
+}
+.banner .box_skitter .container_skitter
+{
+    overflow: hidden;
+    position: relative;
+}
+.banner .box_skitter .image
+{
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+.banner .box_skitter .image img
+{
+    display: none;
+    top: 0;
+    left: 0;
+    position: absolute;
+}
+.banner .box_skitter .box_clone
+{
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    display: none;
+    z-index: 8;
+}
+.banner .box_skitter .box_clone img
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 8;
+}
+
+.banner .box_skitter .prev_button
+{
+    position: absolute;
+    top: 50%;
+    left: 35px;
+    z-index: 100;
+    width: 42px;
+    height: 42px;
+    overflow: hidden;
+    text-indent: -9999em;
+    margin-top: -25px;
+    background: url(../images/prev.png) no-repeat left top;
+}
+
+.banner .box_skitter .next_button
+{
+    position: absolute;
+    top: 50%;
+    right: 35px;
+    z-index: 100;
+    width: 42px;
+    height: 42px;
+    overflow: hidden;
+    text-indent: -9999em;
+    margin-top: -25px;
+    background: url(../images/next.png) no-repeat left top;
+}
+/**
+ * Example for dimenions:
+ */
+.banner .box_skitter_large
+{
+    height: 100%;
+    width: 100%;
+    z-index: 9;
+}
+/*kich thuoc khung slide show, th
+.box_skitter_small
+{
+    width: 200px;
+    height: 200px;
+}
+*/
+
+/*--- Banner ---*/
+
+a img, img
+{
+    border: 0;
+}
+.banner .label_skitter
+{
+    z-index: 150;
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    display: none;
+    width: 740px;
+    height: 328px;
+}
+.banner .banner-list .img-banner
+{
+    bottom: 0;
+    right: 0;
+    position: absolute;
+}
+.new-banner .banner .label_skitter
+{
+    height: 100%;
+    left: 0;
+    top: 0;
+    position: absolute;
+    width: 100%;
+}
+.banner .label_skitter .img-banner-new
+{
+    background: url(../images/bg-new.png) no-repeat left top;
+    color: #fff;
+    font-size: 18px;
+    font-weight: bold;
+    height: 68px;
+    top: 20px;
+    left: 95px;
+    padding-top: 35px;
+    padding-left: 5px;
+    position: absolute;
+    text-transform: uppercase;
+    text-align: center;
+    width: 100px;
+}
+.banner .label_skitter .img-banner-new span
+{
+    display: block;
+    font-size: 14px;
+    padding-left: 20px;
+    padding-bottom: 2px;
+    text-align: center;
+}
+.banner .label_skitter .name-banner
+{
+    color: #666;
+    display: block;
+    font-size: 18px;
+    left: 25px;
+    top: 175px;
+    position: absolute;
+    text-transform: uppercase;
+}
+.banner .label_skitter .name-banner span
+{
+    display: block;
+}
+.banner .label_skitter .name-banner .name-banner-1, .banner .label_skitter .name-banner .name-banner-2
+{
+    color: #272526;
+    display: inline;
+    font-size: 22px;
+    font-weight: bold;
+}
+.banner .label_skitter .name-banner .name-banner-2
+{
+    font-size: 18px;
+}
+.banner .label_skitter .more-detail
+{
+    background: url(../images/bg-button-banner-left.png) no-repeat left top;
+    height: 25px;
+    bottom: 33px;
+    left: 25px;
+    padding-left: 15px;
+    position: absolute;
+}
+.banner .label_skitter .more-detail a
+{
+    background: url(../images/bg-button-banner-right.png) no-repeat right top;
+    color: #fff;
+    display: block;
+    font-size: 12px;
+    float: left;
+    line-height: 25px;
+    padding-right: 15px;
+    text-decoration: none;
+}
+/* =Dots
+-------------------------------------------------------------- */
+.box_skitter .info_slide_dots
+{
+    position: absolute;
+    bottom: 15px;
+    left: 0;
+    z-index: 151;
+    padding: 0;
+    width: 100%;
+    padding-left: 180px;
+    /*top: 470px;
+    text-align: center;*/
+}
+
+.box_skitter .info_slide_dots .image_number
+{
+    background: url(../images/banner-pager-1.png) no-repeat left top;
+    display: inline-block;
+    margin: 0 3px;
+    cursor: pointer;
+    width: 19px;
+    height: 19px;
+    text-indent: -9999em;
+    overflow: hidden;
+    border-radius: 50%;
+}
+
+.box_skitter .info_slide_dots .image_number:hover
+{
+    background-position: 0 -19px;
+}
+
+.box_skitter .info_slide_dots .image_number_select, .box_skitter .info_slide_dots .image_number_select:hover
+{
+    background-position: 0 -19px;
+}
+
+

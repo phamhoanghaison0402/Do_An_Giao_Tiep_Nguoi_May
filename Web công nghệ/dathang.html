@@ -1,0 +1,396 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html class="no-js" xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://www.facebook.com/2008/fbml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Đặt hàng</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" />
+    <link rel="SHORTCUT ICON" src="vnt_upload/File/Image/Untitled-2.png" type="image/x-icon" />
+    <link rel="icon" src="vnt_upload/File/Image/Untitled-2.png" type="image/gif" />
+    <link href="js/bootstrap/bootstrap.css" rel="stylesheet" type="text/css" />
+    <link href="skins/default/style/screen.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="skins/default/style/font-awesome/css/font-awesome.min.css" />
+    <link href="skins/default/style/dropdown.css" rel="stylesheet" type="text/css" />
+    <link href="js/colorbox/css/colorbox.css" rel="stylesheet" type="text/css" />
+    <link href="js/jquery_alerts/jquery.alerts.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="js/mmenu/jquery.mmenu.all.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href="js/owl-carousel/owl.carousel.css" type="text/css" media="screen" />
+    <script language="javascript">
+        var ROOT = "/";
+        var DIR_IMAGE = "/skins/default/images";
+        var cmd = "vnTRUST";
+        var facebook_appId = "805937266142547";
+        var mem_id = 0;
+        var responsiveSwitchBreakpoint = 1024;
+    </script>
+    <script type="text/javascript" src="js/responsive-switch.min.js"></script>
+    <script type="text/javascript" src="js/modernizr.custom.js"></script>
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/jquery-migrate-1.0.0.js"></script>
+    <script type="text/javascript" src="js/bootstrap/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/core.js"></script>
+    <script type="text/javascript" src="js/javascript.js"></script>
+    <script type="text/javascript" src="js/floater_xlib.js"></script>
+    <script type="text/javascript" src="js/jquery.cookie.js"></script>
+    <script type="text/javascript" src="js/colorbox/colorbox-min.js"></script>
+    <script type="text/javascript" src="js/jquery_alerts/jquery.alerts.js"></script>
+    <script type="text/javascript" src="js/mmenu/jquery.mmenu.min.all.js"></script>
+    <script type="text/javascript" src="js/owl-carousel/owl.carousel.min.js"></script>
+    <script id='ext_javascript'></script>
+    <script>
+        $(document).ready(function () {
+
+            MainContentW = 1000;
+            LeftBannerW = 120;
+            RightBannerW = 120;
+            LeftAdjust = 20;
+            RightAdjust = 20;
+            TopAdjust = 10;
+            $(".rs-link").bind("mousedown click", function () {
+                if (window.screen.width >= 1024) {
+                    alert("Try it on a mobile device (< 1024px wide) to see the what happens!");
+                    return false;
+                }
+            });
+        });
+    </script>
+    <link rel="stylesheet" href="modules/product/css/product.css" type="text/css" />
+    <link rel="stylesheet" href="js/bootstrap/bootstrapValidator.css" type="text/css" />
+    <script type="text/javascript" src="modules/product/js/product.js"></script>
+    <script type="text/javascript" src="js/bootstrap/bootstrapValidator.js"></script>
+    <script type="text/javascript">
+
+        $(document).ready(function () {
+            $('#testimonials_owl').owlCarousel({
+                navigation: true,
+                slideSpeed: 300,
+                paginationSpeed: 400,
+                singleItem: true,
+                pagination: false
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <div id="vnt-wrapper">
+        <div class="header_mobile">
+            <div id="dl-menu-mobile" class="container nav-fly-bound nav-fly-bound-mtb dl-menuwrapper">
+                <a class="dl-trigger toggle-fly glyphicon glyphicon-align-justify" href="#mmenu"></a>
+
+                <div class="logo-top">
+                    <a href='index.html' target='_self' title='Xuân tình mobile'><img src='vnt_upload/weblink/logo.png' width='260' alt='Xuân tình mobile' class='png' /></a>
+                </div>
+                <i class="icon-search fa fa-search fa-2x">
+                </i>
+            </div>
+        </div>
+
+        <header class="header">
+            <div id="vnt-header" class="container">
+                <div class="row">
+                    <div class="logo col-md-3 col-sm-3 col-xs-12"><a onmousedown="return rwt(this,'advertise',1)" href='/' target='_self' title='Xuân tình mobile'><img src='vnt_upload/weblink/logo.png' width='260' alt='Xuân tình mobile' class='png' /></a></div>
+                    <div class="headert_search col-md-3 col-sm-3 col-xs-12">
+                        <div class="box_search">
+                            <form id="formSearch" name="formSearch" method="post" action="" autocomplete="off">
+                                <input name="do_search" value="1" type="hidden" />
+                                <input name="keyword" id="search-keyword" type="text" class="text_search" placeholder="Bạn muốn tìm gì ?" value="" autocomplete="off" onkeydown="CheckTimer()" onkeyup="SuggestSearch(event);" />
+                                <input type="hidden" id="fpc_id" name="fpc_id" />
+                                <span class="input-group-btn">
+                                    <button id="do_submit" name="do_submit" type="submit" class="btn_search" value="Tìm kiếm"></button>
+                                </span>
+                            </form>
+                            <div id="SuggestSearch"></div>
+                            <div class="clear"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="div_menu">
+                <div id="vnt-menutop" class="header_nav">
+                    <div class="container">
+                        <div class="menutop row">
+                            <ul class="dropdown">
+                                <li id="nav_home"><a href="index.html" class="nav_main_item current">Trang chủ</a></li>
+                                <li><a href="danhsach.html" target="_self">Điện thoại</a></li>
+                                <li><a href="danhsach.html" target="_self">Máy dùng rồi</a></li>
+                                <li><a href="phukien.html" target="_self">Phụ kiện</a></li>
+                                <li><a href="tintuc.html" target="_self">Tin tức</a></li>
+                                <li><a href="banggia.html" target="_self">Bảng giá</a></li>
+                                <li><a href="khuyenmai.html" target="_self">Khuyến mãi<span class="saleoff">sale off</span></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <div id="vnt-container" class="container">
+            <div class="navation row"><a href="index.html" class="home">Trang chủ</a> <span>&nbsp;/&nbsp;</span><span>Đặt hàng</span></div>
+            
+            <div id="vnt-content">
+                <div class="row">
+                    <div class="box_mid">
+                        <div class="mid-title">
+                            <div class="titleL">Thông tin đặt hàng</div>
+                            <div class="titleR"></div>
+                            <div class="clear"></div>
+                        </div>
+                        <div class="mid-content">
+
+                            <script language="JavaScript" type="text/javascript">
+
+                                jQuery(document).ready(function () {
+                                    //valid form
+                                    jQuery('#installmentForm').bootstrapValidator({
+                                        message: 'This value is not valid',
+                                        feedbackIcons: {
+                                            valid: 'glyphicon glyphicon-ok',
+                                            invalid: 'glyphicon glyphicon-remove',
+                                            validating: 'glyphicon glyphicon-refresh'
+                                        },
+                                        excluded: ':disabled',
+                                        fields: {
+                                            'color_id': {
+                                                validators: {
+                                                    notEmpty: {
+                                                        message: 'Vui lòng chọn màu sắc'
+                                                    },
+                                                },
+                                                trigger: 'change keyup',
+                                            },
+                                            'd_name': {
+                                                validators: {
+                                                    notEmpty: {
+                                                        message: 'Không được để trống'
+                                                    }
+                                                }
+                                            },
+                                            'd_phone': {
+                                                validators: {
+                                                    notEmpty: {
+                                                        message: 'Không được để trống'
+                                                    },
+                                                    regexp: {
+                                                        regexp: /^[0-9]+$/,
+                                                        message: 'Chỉ dùng số'
+                                                    },
+                                                    stringLength: {
+                                                        min: 10,
+                                                        max: 11,
+                                                        message: '10 hoặc 11 số'
+                                                    }
+                                                }
+                                            },
+                                            'd_email': {
+                                                validators: {
+                                                    notEmpty: {
+                                                        message: 'Không được để trống'
+                                                    },
+                                                    emailAddress: {
+                                                        message: 'Không đúng định dạng email'
+                                                    }
+                                                }
+                                            },
+                                        }
+                                    });
+
+
+                                    $("input[id='pick-label']").click(function () {
+                                        $("#city").hide();
+                                        $("#address").hide();
+                                        $("#address_store").show();
+
+                                    });
+
+                                    $("input[id='delivery-label']").click(function () {
+                                        $("#city").show();
+                                        $("#address").show();
+                                        $("#address_store").hide();
+
+                                    });
+
+
+                                });
+                            </script>
+                            <div class="order">
+                                <form action="" method="post" name="f_confirm" class="form-horizontal" id="installmentForm">
+
+
+                                    <div class="col-md-4 col-sm-4 col-xs-12">
+                                        <div class="img" style="text-align: center;padding-bottom: 25px;"><img src="vnt_upload/product/dienthoai2016/IPhone_7/thumbs/(200x200)_crop_iphone_7.png" alt='iPhone 7 128GB - Hàng Chính Hãng FPT' title='iPhone 7 128GB - Hàng Chính Hãng FPT' /></div>
+
+                                        <div class="promotion"></div>
+                                    </div>
+                                    <div class="col-md-8 col-sm-8 col-xs-12">
+
+                                        <h3 class="p_name">iPhone 7 128GB - Hàng Chính Hãng FPT</h3>
+                                        <div class="price_total"><strong>Giá:</strong> <span id="price" class="price">21,190,000 đ</span></div>
+                                        <div class="product-color"><div class="tit_color">Chọn màu :</div><ul class="color-list-show"><li id="color_id_2"><i id="thumb_2" class="item_color tooltips" style="display:inline-block; width:23px; height:23px; background:#ED008C"></i></li><li id="color_id_9"><i id="thumb_9" class="item_color tooltips" style="display:inline-block; width:23px; height:23px; background:#838383"></i></li><li id="color_id_12"><i id="thumb_12" class="item_color tooltips" style="display:inline-block; width:23px; height:23px; background:#333333"></i></li><li id="color_id_14"><i id="thumb_14" class="item_color tooltips" style="display:inline-block; width:23px; height:23px; background:#e3e3e3"></i></li><li id="color_id_22"><i id="thumb_22" class="item_color tooltips" style="display:inline-block; width:23px; height:23px; background:#f0d87a"></i></li></ul></div><div class="row_input form-group input_color">
+                                            <input type="hidden" value="" name="color_id" id="color_id" />
+                                        </div>
+                                        <div class="font_err"></div>
+                                        <div class="row_input form-group">
+                                            <input name="d_name" id="order_name" class="form-control" placeholder="Họ tên của bạn (Bắt buộc)" type="text" value="" />
+                                        </div>
+
+                                        <div class="row_input form-group">
+                                            <input name="d_phone" id="order_phone" class="form-control" placeholder="Số di động (bắt buộc)" type="text" value="" />
+                                        </div>
+
+                                        <div class="row_input form-group">
+                                            <input name="d_email" id="order_email" class="form-control" placeholder="Email (Bắt buộc)" type="text" value="" />
+                                        </div>
+                                        <h3 class="title_cart">Phương thức nhận hàng</h3>
+                                        <div class="row_input padding-bottom-10">
+                                            <label class="mt-radio padding-right-20">
+                                                <input type="radio" checked=checked name="where_get" id="delivery-label" value="at_home" />
+                                                <span class="lbl pointer padding-8">Nhận tại nhà</span>
+                                            </label>
+                                            <label class="mt-radio">
+                                                <input type="radio" name="where_get" id="pick-label" value="at_store" />
+                                                <span class="lbl pointer padding-8">Nhận tại cửa hàng</span>
+                                            </label>
+                                        </div>
+                                        <div id="city" class="row_input form-group">
+                                            <select class="form-control" name="d_city">
+                                                <option value="Hồ Chí Minh">Hồ Chí Minh</option>
+                                                <option value="Đà Nẵng">Bình Dương</option>
+                                                <option value="Nơi khác">Nơi khác</option>
+                                            </select>
+                                        </div>
+                                        <div id="address_store" class="row_input form-group hidden_store">
+                                            <h3 class="title_list_store">Hệ thống cửa hàng G7Mobile</h3>
+                                            <div class="radio">
+                                                <label><input type="radio" name="store_address" checked=checked value="KTX Khu B, Dĩ An, Bình Dương" />KTX Khu B, Dĩ An, Bình Dương</label>
+                                            </div>
+                                            <div class="radio">
+                                                <label><input type="radio" name="store_address" value="ĐH CNTT, Thủ Đức, TPHCM" />ĐH CNTT, Thủ Đức, TPHCM</label>
+                                            </div>
+                                        </div>
+                                        <div id="address" class="row_input form-group">
+                                            <input name="d_address" id="order_address" class="form-control" placeholder="Địa chỉ ( COD - trả tiền khi giao hàng)" type="text" value="" />
+                                        </div>
+
+                                        <div class="row_input form-group">
+                                            <textarea name="note" id="note" rows="3" class="form-control" style="width:100%" placeholder="Yêu cầu khác"></textarea>
+                                        </div>
+
+                                        <p style="text-align:center">
+                                            <input type="hidden" value="472" name="p_id" id="p_id" />
+                                            <button type="submit" class="btn-tragop" name="btnConfirm" style="padding:10px 0">Xác nhận</button>
+                                        </p>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+       
+        <div id="vnt-footer">
+            <div class="info_footer">
+                <div class="container">
+                    <div class="menu_mail">
+                        <div class="row">
+                            <div class="box_address_footer">
+                                <div class="title_address"><span style="line-height: 1.6em;">&nbsp;</span>THÔNG TIN CỬA HÀNG</div>
+                                <div class="content">
+                                    <p><span style="line-height: 1.6em;">&nbsp;</span><strong style="line-height: 20.8px; color: rgb(255, 102, 0);">&nbsp; &nbsp; &nbsp;</strong><span style="line-height: 1.6em;">Địa chỉ: KTX Khu B, ấp Tân Lập, phường Đông Hoà, thị xã Dĩ An, tỉnh Bình Dương &nbsp;&nbsp;</span></p>
+                                    <p><span style="line-height: 1.6em;">&nbsp;</span><strong style="line-height: 20.8px; color: rgb(255, 102, 0);">&nbsp; &nbsp; &nbsp;</strong><span style="line-height: 1.6em;">Số điện thoại:  &nbsp;</span><a href="tel:0164 9456 397" style="line-height: 1.6em;">0164 9456 397</a>&nbsp;(Mr. Quang)</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="div_copyright">
+                        <span class="copyright">Copyright © 2016 <b>Điện thoại G7Mobile</b></span>
+                        <p class="note_slogan_footer">G7Mobile - Điện thoại giá rẻ chất lượng tốt</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="call_us hidden-md hidden-lg">
+            <a href="tel:01649456397"></a>
+        </div>
+        <a class="back-top" title="Lên trên" href="javascript:void(0);">
+            <span>Lên trên</span>
+        </a>
+
+        <div id="dlding" class="none">
+            Bạn vui lòng chờ trong giây lát...
+        </div>
+
+    </div>
+    <nav id="mmenu">
+        <ul class="dropdown">
+            <li><a href="index.html" target="_self">Trang chủ</a></li>
+            <li>
+                <a href="danhsach.html" target="_self">Điện thoại</a>
+                <ul>
+                    <li class="first"><a href="danhsach.html" target="_self"><span>LG</span></a></li>
+                    <li><a href="danhsach.html" target="_self"><span>Samsung</span></a></li>
+                    <li><a href="danhsach.html" target="_self"><span>Apple</span></a></li>
+                    <li><a href="danhsach.html" target="_self"><span>HTC</span></a></li>
+                    <li><a href="danhsach.html" target="_self"><span>SKY</span></a></li>
+                    <li><a href="danhsach.html" target="_self"><span>Xiaomi</span></a></li>
+                    <li><a href="danhsach.html" target="_self"><span>Oppo</span></a></li>
+                    <li><a href="danhsach.html" target="_self"><span>Sony</span></a></li>
+                    <li><a href="danhsach.html" target="_self"><span>Asus</span></a></li>
+                    <li><a href="danhsach.html" target="_self"><span>Casio</span></a></li>
+                    <li><a href="danhsach.html" target="_self"><span>Luna</span></a></li>
+                </ul>
+            </li>
+            <li><a href="danhsach.html" target="_self">Máy dùng rồi</a></li>
+            <li><a href="phukien.html" target="_self">Phụ kiện</a></li>
+            <li><a href="tintuc.html" target="_self">Tin tức</a></li>
+            <li><a href="khuyenmai.html" target="_self">Khuyến mãi</a></li>
+            <li><a href="banggia.html" target="_self">Bảng giá</a></li>
+        </ul>
+    </nav>
+    <div id="floating_banner_left" style="overflow: hidden; position: absolute; top: 0px; ">
+        <div id="floating_banner_left_content"></div>
+    </div>
+    <div id="floating_banner_right" style="overflow: hidden; position: absolute; top: 0px;">
+        <div id="floating_banner_right_content"></div>
+    </div>
+
+    <!--LenDauTrang-->
+    <script type="text/javascript">
+        $(window).load(function () { initLoaded(); });
+        var slideTime = 700;
+        var rootWidth = 1170;
+        var floatAtBottom = false;
+        function Ad_floating_init() {
+            xMoveTo('floating_banner_right', rootWidth - (rootWidth - screen.width), 0);
+            xMoveTo('floating_banner_left', rootWidth - (screen.width), 0);
+            winOnResize(); // set initial position
+            xAddEventListener(window, 'resize', winOnResize, false);
+            xAddEventListener(window, 'scroll', winOnScroll, false);
+        }
+        function winOnResize() {
+            checkScreenWidth();
+            winOnScroll(); // initial slide
+        }
+        function winOnScroll() {
+            var y = xScrollTop();
+            if (y <= 135) y = 135;
+            if (floatAtBottom) {
+                y += xClientHeight() - xHeight('floating_banner_left');
+            }
+            xSlideTo('floating_banner_left', (screen.width - rootWidth) / 2 - (110 + 15), y, slideTime);
+            xSlideTo('floating_banner_right', (screen.width + rootWidth) / 2 - 2, y, slideTime);
+        }
+
+        function checkScreenWidth() {
+            if (screen.width <= 1230) {
+                document.getElementById('floating_banner_left').style.display = 'none';
+                document.getElementById('floating_banner_right').style.display = 'none';
+            }
+        }
+        Ad_floating_init();
+    </script>
+</body>
+</html>

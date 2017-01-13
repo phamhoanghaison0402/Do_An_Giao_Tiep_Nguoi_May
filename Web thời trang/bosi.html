@@ -1,0 +1,504 @@
+﻿
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>HCI  - Thời trang công sở cực HOT !</title>
+    <link rel="icon" type="image/vnd.microsoft.icon" href="/fav.png" />
+    <link rel="stylesheet" href="assets/user/css/styles.css" />
+    <link rel="stylesheet" href="assets/user/css/mobile.css" />
+    <link rel="stylesheet" type="text/css" href="assets/user/css/font-awesome.min.css" />
+    <script src="assets/user/js/jquery-1.11.1.min.js"></script>
+</head>
+<body>
+    <script>
+        window.fbAsyncInit = function () {
+            FB.init({
+                appId: '996466857053404',
+                xfbml: true,
+                version: 'v2.3'
+            });
+        };
+
+        (function (d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) {
+                return;
+            }
+            js = d.createElement(s);
+            js.id = id;
+            js.src = "/connect.facebook.net/vi_VN/sdk.js";
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+    </script>
+    <div class="wp_header">
+        <script src="assets/user/js/jquery.bpopup.min.js"></script>
+        <div id="facebox" style="width: 370px;padding: 10px;display: none;">
+            <div style="background:#ff6a2a; height:30px; font-size:13px; color:#fff; font-weight:bold;">
+                <div style="width:224px; padding:10px 14px;float: left;" align="left" id="faceboxTitle">Đăng nhập dành cho khách sỉ</div>
+                <a href="javascript:;" style="float: right;" class="close"><img src="assets/user/img/fancy_closebox.png" title="close" class="close_image" /></a>
+            </div>
+            <div class="main_form">
+                <form method="post" id="formLogin">
+                    <div class="error_div" style="display: none;">
+                        Số điện thoại không đúng hoặc tài khoản đã bị khoá
+                    </div>
+                    <fieldset>
+                        <p><label>Số điện thoại:</label><input type="text" class="text-long" id="loginPhone" /></p>
+                        <div style="padding-left:3px; float:left; width:120px;"><input class="g-button g-button-submit" name="btnLogin" id="btnLogin" value="&nbsp;&nbsp; Đăng nhập &nbsp;&nbsp;" type="submit" /></div>
+                        <a style="color: blue;text-decoration: underline;line-height: 30px;" href="#">Chưa có tài khoản</a>
+                    </fieldset>
+                </form>
+            </div>
+        </div>
+        <script>
+            function myConfirmation() {
+                if ($('.textSHOPPINGcart').text().trim() != '0đ') {
+                    //                    return 'Hiện tại giỏ hàng bạn đang có sản phẩm, bạn có muốn thoát hay không?';
+                }
+
+            }
+            window.onbeforeunload = myConfirmation;
+            $("body").on('click', 'a.login', function () {
+                $('#facebox').bPopup({ positionStyle: 'fixed' });
+            });
+            $('.close_image').click(function () {
+                $('.b-modal').click();
+            });
+            $("#btnLogin").click(function () {
+                var phone = $('#loginPhone').val();
+                if (phone) {
+                    $.post('/auth/login', { phone: phone }, function (result) {
+                        if (result == 1) {
+                            location.reload();
+                        } else {
+                            $('.error_div').fadeIn();
+                        }
+                    });
+                }
+                return false;
+            });
+        </script>
+        <div class="header_top">
+            <div class="content_wp ">
+                <div class="marquee" style="overflow: hidden;">
+                    <marquee style="width: 100%" direction="left">
+                        Shop giao hàng toàn quốc từ 3-5 ngày . Thanh toán khi nhận hàng
+                    </marquee>
+                </div>
+                <div class="user_action">
+
+                    <a href="#">Đăng ký</a>
+                    <img style=" margin: 7px 1px 5px 15px;" src="assets/user/images/reg_icon.png" />
+                    <a class="login btnlogin">Đăng nhập </a>
+                    <img style="margin-top: 9px;margin-right: 4px;" src="assets/user/images/login_icon_1.png" />
+
+                </div>
+            </div>
+        </div>
+        <div class="header_main">
+            <div class="content_wp tr">
+                <div class="left td">
+                    <a href="#" class="logo"><img alt="Logo hci.vn" src="assets/user/images/logo.png"></a>
+                </div>
+                <div class="right td">
+                    <div class="tr">
+                        <div class="search_box td">
+                            <form action="/tim-kiem">
+                                <div class="search">
+                                    <div class="right_search ">
+                                        <span class="noselect">TẤT CẢ</span>
+                                    </div>
+
+                                    <input name="q" placeholder="BẠN MUỐN TÌM GÌ HÔM NAY?">
+                                    <!--<input  name="danh-muc" value="tat-ca" type="hidden">-->
+                                    <img class="search_icon" src="assets/user/images/search_icon.png">
+                                    <div class="search_botton noselect">TÌM KIẾM NGAY</div>
+                                </div>
+                            </form>
+                            <div class="seach_keyword">Từ khóa đang HOT: Đầm công sở | Đầm xòe | Đầm ren | Sơ mi nữ | Đầm suông | đầm cao cấp</div>
+                        </div>
+                        <div class="check_order td">
+                            <a href="#"><img src="assets/user/images/check_order.png"></a>
+                        </div>
+                        <div class="cart_content td">
+                            <a href="#">
+                                <div class="cart_item cart">
+                                    <img src="assets/user/images/cart.png"> GIỎ HÀNG
+                                </div>
+                            </a>
+                            <div style="color: #545454;padding: 5px 0;" class="cart_item">Hiện có (0) sản phẩm</div>
+                            <div style="color: #f8682c;" class="cart_item">Tổng: 0 VND</div>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+        <div class="header_bottom">
+            <div class="content_wp">
+                <ul class="menus">
+                    <li class="dcs ">
+                        <img src="assets/user/images/dcs.png" alt="Đầm công sở" />
+                        <a href="#"
+                           title="Đầm công sở">Đầm công sở</a>
+                    </li>
+                    <li class="ddp ">
+                        <img src="assets/user/images/ddp.png" alt="Đầm dạo phố - dự tiệc" />
+                        <a href="#"
+                           title="Đầm dạo phố - dự tiệc">Đầm dạo phố - dự tiệc</a>
+                    </li>
+                    <li class="asm ">
+                        <img src="assets/user/images/asm.png" alt="Áo sơ mi" />
+                        <a href="#"
+                           title="Áo sơ mi">Áo sơ mi</a>
+                    </li>
+                    <li class="db ">
+                        <img src="assets/user/images/db.png" alt="Đồ bộ" />
+                        <a href="#"
+                           title="Đồ bộ">Đồ bộ</a>
+                    </li>
+                    <li class="ak ">
+                        <img src="assets/user/images/ak.png" alt="Áo khoác" />
+                        <a href="#"
+                           title="Áo khoác">Áo khoác</a>
+                    </li>
+                    <li class="so ">
+                        <img src="assets/user/images/so.png" alt="Sale off" />
+                        <a href="#"
+                           title="Sale off">Sale off</a>
+                    </li>
+
+                </ul>
+                <img class="right_menu" src="assets/user/images/right_menu.png" />
+            </div>
+        </div>
+    </div>
+    <div class="wp_mobile border_mobile">
+        <div class="header_mobile tr">
+            <a class="td menu_icon">
+                <img src="assets/user/images/menu.png" />
+            </a>
+            <div class="td" style="text-align: center;">
+                <a href="#" class="logo"><img alt="logo hci" style="margin-top: 5px;height: 40px" src="assets/user/images/logo.png" /></a>
+            </div>
+            <div class="td" style="float: right;">
+                <a href="#" title="giỏ hàng">
+                    <div class="cart_mobile">
+                        <span></span>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="menu_mobile" style="z-index: 99999;">
+            <img class="close_menu" src="assets/user/images/close.png" alt="đóng menu" />
+            <div class="search_mobile">
+                <form action="/kiem-tra-don-hang.html">
+                    <input name="phone" placeholder="Nhập số điện thoại để kiểm tra dơn hàng"
+                           onkeyup="if (/\D/g.test(this.value))
+                                           this.value = this.value.replace(/\D/g, '')"
+                           onfocus="if (this.value == 'Nhập số điện thoại để tra cứu đơn hàng') {
+                                           this.value = ''
+                                       }"
+                           onblur="if (this.value == '') {
+                                           this.value = 'Nhập số điện thoại để tra cứu đơn hàng'
+                                       }" />
+                    <img src="assets/user/images/search_icon_mobile.png" alt="tìm kiếm" />
+                </form>
+
+            </div>
+            <ul class="clearfix">
+                <li>
+                    <a href="#"
+                       title="Đầm công sở">
+                        <img src="assets/user/images/dcs_mobile.png"
+                             alt="Đầm công sở" />
+                        <span>Đầm công sở</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#"
+                       title="Đầm dạo phố - dự tiệc">
+                        <img src="assets/user/images/ddp_mobile.png"
+                             alt="Đầm dạo phố - dự tiệc" />
+                        <span>Đầm dạo phố - dự tiệc</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#"
+                       title="Áo sơ mi">
+                        <img src="assets/user/images/asm_mobile.png"
+                             alt="Áo sơ mi" />
+                        <span>Áo sơ mi</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#"
+                       title="Đồ bộ">
+                        <img src="assets/user/images/db_mobile.png"
+                             alt="Đồ bộ" />
+                        <span>Đồ bộ</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#"
+                       title="Áo khoác">
+                        <img src="assets/user/images/ak_mobile.png"
+                             alt="Áo khoác" />
+                        <span>Áo khoác</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#"
+                       title="Sale off">
+                        <img src="assets/user/images/so_mobile.png"
+                             alt="Sale off" />
+                        <span>Sale off</span>
+                    </a>
+                </li>
+            </ul>
+            <img src="assets/user/images/phone_mobile.png" alt="điện thoại đặt hàng" />
+        </div>
+
+    </div>
+    <div class="header_height"></div>
+
+    <div class="container">
+        <div class="content_wp">
+            <div class="main_form">
+                <form id="form_order_fill_info" method="post" action="http://HCI.vn/bo-si.html#main" class="jNice" novalidate="novalidate">
+                    <div style="background:#81aa44; height:30px; font-size:13px; color:#fff; font-weight:bold;">
+                        <div style=" width:200px; padding:10px 14px;" align="left" id="faceboxTitle">Đăng ký mua sỉ</div>
+                    </div>
+                    <fieldset>
+                        <p><label>Họ tên:</label><input type="text" class="text-long" name="fullname"></p>
+                        <p><label>Số điện thoại:</label><input type="text" class="text-long" name="phonenumber"></p>
+                        <p><label>Email :</label><input type="text" class="text-long" name="email"></p>
+                        <p><label>Địa chỉ nhận hàng:</label><input type="text" class="text-long" name="address" id="address"></p>
+                        <p>
+                            <label>Tỉnh/Thành phố <span>*</span></label>
+                            <select name="city" id="rq_province" class="text-long">
+                                <option value="">Tỉnh/Thành phố</option>
+                                <option value="24">TP.Hồ Chí Minh</option>
+                                <option value="19">Hà Nội</option>
+                                <option value="2">An Giang</option>
+                                <option value="1">Bà Rịa - Vũng Tàu</option>
+                                <option value="3">Bắc Giang</option>
+                                <option value="5">Bắc Kạn</option>
+                                <option value="6">Bạc Liêu</option>
+                                <option value="7">Bắc Ninh</option>
+                                <option value="8">Bến Tre</option>
+                                <option value="9">Bình Dương</option>
+                                <option value="12">Bình Định</option>
+                                <option value="10">Bình Phước</option>
+                                <option value="11">Bình Thuận</option>
+                                <option value="13">Cà Mau</option>
+                                <option value="14">Cần Thơ</option>
+                                <option value="15">Cao Bằng</option>
+                                <option value="59">Đà Nẵng</option>
+                                <option value="60">Đắk Lắk</option>
+                                <option value="61">Đăk Nông</option>
+                                <option value="64">Điện Biên</option>
+                                <option value="62">Đồng Nai</option>
+                                <option value="63">Đồng Tháp</option>
+                                <option value="16">Gia Lai</option>
+                                <option value="17">Hà Giang</option>
+                                <option value="18">Hà Nam</option>
+                                <option value="65">Hà Tây</option>
+                                <option value="20">Hà Tĩnh</option>
+                                <option value="21">Hải Dương</option>
+                                <option value="22">Hải Phòng</option>
+                                <option value="23">Hậu Giang</option>
+                                <option value="25">Hòa Bình</option>
+                                <option value="26">Huế</option>
+                                <option value="27">Hưng Yên</option>
+                                <option value="28">Khánh Hòa</option>
+                                <option value="29">Kiên Giang</option>
+                                <option value="30">Kon Tum</option>
+                                <option value="31">Lai Châu</option>
+                                <option value="32">Lâm Đồng</option>
+                                <option value="33">Lạng Sơn</option>
+                                <option value="34">Lào Cai</option>
+                                <option value="35">Long An</option>
+                                <option value="36">Nam Định</option>
+                                <option value="37">Nghệ An</option>
+                                <option value="38">Ninh Bình</option>
+                                <option value="39">Ninh Thuận</option>
+                                <option value="40">Phú Thọ</option>
+                                <option value="41">Phú Yên</option>
+                                <option value="42">Quảng Bình</option>
+                                <option value="43">Quảng Nam</option>
+                                <option value="44">Quảng Ngãi</option>
+                                <option value="45">Quảng Ninh</option>
+                                <option value="46">Quảng Trị</option>
+                                <option value="47">Sóc Trăng</option>
+                                <option value="48">Sơn La</option>
+                                <option value="49">Tây Ninh</option>
+                                <option value="50">Thái Bình</option>
+                                <option value="51">Thái Nguyên</option>
+                                <option value="52">Thanh Hóa</option>
+                                <option value="53">Tiền Giang</option>
+                                <option value="54">Trà Vinh</option>
+                                <option value="55">Tuyên Quang</option>
+                                <option value="56">Vĩnh Long</option>
+                                <option value="57">Vĩnh Phúc</option>
+                                <option value="58">Yên Bái</option>
+
+                            </select>
+                        </p>
+                        <p>
+                            <label>Quận/Huyện <span>*</span></label>
+                            <select id="rq_district" name="district" class="text-long">
+                                <option value="">-Chọn Quận/huyện-</option>
+                            </select>
+                        </p>
+                        <div style="padding-left:3px; float:left; width:120px;"><input class="g-button g-button-submit" name="submit" id="btnReg" value="   Đăng ký   " type="submit"></div>
+                    </fieldset>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div style="clear: both"></div>
+    <div id="footers">
+        <div style="background-color:  #2c2c2c;height: 10px;"></div>
+        <div class="footer_info">
+            <div class="content_wp clearfix">
+                <div class="footer_block shop_info">
+                    <h3>THÔNG TIN HCI SHOP</h3>
+                    <ul>
+                        <li class="show_mobile">
+                            <img src="assets/user/images/_shipping.png" alt="Giao hàng toàn quôc" />
+                            <a>Giao hàng toàn quôc</a>
+                        </li>
+                        <li class="show_mobile">
+                            <img src="assets/user/images/_payment.png" alt="Thanh toán tại nhà" />
+                            <a>Thanh toán tại nhà</a>
+                        </li>
+                        <li>
+                            <img src="assets/user/images/location.png" alt="địa chỉ" />
+                            <a target="_blank" href="#">Mua hàng: 77 Bắc Hải, P.15, Q.10, TPHCM</a>
+                        </li>
+                        <li>
+                            <img src="assets/user/images/phone.png" alt="Số điện thoại" />
+                            <a>Hotline: 1900 6835</a>
+                        </li>
+                        <li>
+                            <img src="assets/user/images/email.png" alt="Email liên hệ hci" />
+                            <a>Email: hotro@HCI.vn</a>
+                        </li>
+
+                        <li>
+                            <img src="assets/user/images/clock.png" alt="Thời gian làm việc" />
+                            <a>Thời gian làm việc: T2 – T7 Từ 8h00 – 17h00</a>
+                        </li>
+
+                    </ul>
+                    <img src="assets/user/images/dathongbao.png" style="max-width: 150px;" />
+                </div>
+                <div class="footer_block links">
+                    <h3>HƯỚNG DẪN MUA HÀNG</h3>
+                    <ul>
+                        <li><a title="Chính sách bảo mật" href="#">Chính sách bảo mật</a></li>
+                        <li><a title="Quy chế hoạt động" href="#">Quy chế hoạt động</a></li>
+                        <li><a title="Tài khoản giao dịch" href="#">Tài khoản giao dịch</a></li>
+                        <li><a title="Đổi hàng trong 7 ngày" href="#">Đổi hàng trong 7 ngày</a></li>
+                        <li><a title="Chính sách khách hàng sỉ" href="#">Chính sách khách hàng sỉ</a></li>
+
+                    </ul>
+                </div>
+                <div class="footer_block contact">
+                    <h3>Bản đồ</h3>
+                    <iframe style="height:225px;width:100%;border:2px solid rgb(204, 126, 94);" frameborder="0" src="https://www.google.com/maps/embed/v1/place?q=77+Bắc+Hải,+Ho+Chi+Minh+City,+Ho+Chi+Minh,+Vietnam&key=AIzaSyAN0om9mFmy1QN6Wf54tXAowK4eT0ZUPrU"></iframe>
+
+                </div>
+
+            </div>
+        </div>
+        <div style="background-color:  #2c2c2c;height: 10px;"></div>
+        <div style="background-color:  #0e0e0e;height: 53px;">
+            <div class="content_wp">
+                <p style="font-size: 12px;line-height: 53px;color: #616161;float: left;">
+                    Copyright © 2014 HCI.vn - All rights reserved.
+                </p>
+                <img style="float: right;margin-top: 15px;" src="assets/user/images/payment_method.png" alt="Phương thức thanh toán" />
+            </div>
+        </div>
+    </div>
+
+    <div id="viewedList">
+    </div>
+    <script type="text/javascript">
+        /* <![CDATA[ */
+        var google_conversion_id = 967541545;
+        var google_custom_params = window.google_tag_params;
+        var google_remarketing_only = true;
+        /* ]]> */
+
+    </script>
+    <script type="text/javascript" src="/www.googleadservices.com/pagead/conversion.js"></script>
+    <noscript>
+        <div style="display:inline;">
+            <img height="1" width="1" style="border-style:none;" alt="" src="//googleads.g.doubleclick.net/pagead/viewthroughconversion/967541545/?value=0&amp;guid=ON&amp;script=0" />
+        </div>
+    </noscript>
+    <script>
+        $(".header_mobile  .menu_icon").click(function () {
+            if ($('.menu_mobile').css("display") == "block") {
+                $('.menu_mobile').slideUp();
+            } else {
+                $('.menu_mobile').slideDown();
+            }
+
+        });
+        $(".close_menu").click(function () {
+            $('.menu_mobile').slideUp();
+        })
+    </script>
+    <script>
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r;
+            i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date();
+            a = s.createElement(o),
+                    m = s.getElementsByTagName(o)[0];
+            a.async = 1;
+            a.src = g;
+            m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+        ga('create', 'UA-49604974-1', 'hci.vn');
+        ga('send', 'pageview');
+
+    </script>
+    <!-- Facebook Pixel Code -->
+    <script>
+        !function (f, b, e, v, n, t, s) {
+            if (f.fbq)
+                return;
+            n = f.fbq = function () {
+                n.callMethod ?
+                        n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+            };
+            if (!f._fbq)
+                f._fbq = n;
+            n.push = n;
+            n.loaded = !0;
+            n.version = '2.0';
+            n.queue = [];
+            t = b.createElement(e);
+            t.async = !0;
+            t.src = v;
+            s = b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t, s)
+        }(window,
+                document, 'script', '//connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '371553289708869');
+        fbq('track', "PageView");</script>
+    <noscript>
+        <img height="1" width="1" style="display:none"
+             src="https://www.facebook.com/tr?id=371553289708869&ev=PageView&noscript=1" />
+    </noscript>
+    <!-- End Facebook Pixel Code -->
+</body>
+</html>

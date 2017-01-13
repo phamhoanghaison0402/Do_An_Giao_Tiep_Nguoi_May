@@ -1,0 +1,2205 @@
+﻿<!DOCTYPE html>
+<html style="height: 100%;">
+<head id="ctl00_ctl00_ctl00_Head1">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Serif" rel="stylesheet">
+    <script src="./danhsachsanpham/utag.js.tải xuống" type="text/javascript" async=""></script>
+    <script id="facebook-jssdk" src="./danhsachsanpham/all.js.tải xuống"></script>
+
+    <script type="text/javascript" src="./danhsachsanpham/custom.js.tải xuống" charset="utf-8" async=""></script>
+    <script type="text/javascript" src="./danhsachsanpham/jquery-1.8.3_and_plugins.js.tải xuống"></script>
+    <script type="text/javascript" src="./danhsachsanpham/jquery.cookie.js.tải xuống"></script>
+    <link media="all" rel="stylesheet" href="./danhsachsanpham/all.css">
+    <link media="all" rel="stylesheet" href="./danhsachsanpham/omnica.css">
+    <link media="print" rel="stylesheet" type="text/css" href="./danhsachsanpham/print.css">
+    <link media="all" rel="stylesheet" href="./danhsachsanpham/jquery-ui.css">
+    <link media="all" rel="stylesheet" href="./danhsachsanpham/magiczoomplus.css">
+    <script type="text/javascript" src="./danhsachsanpham/jquery-ui.min.js.tải xuống"></script>
+    <script type="text/javascript" src="./danhsachsanpham/jquery.main.js.tải xuống"></script>
+    <script type="text/javascript" src="./danhsachsanpham/jquery.main.plugins.js.tải xuống"></script>
+    <script type="text/javascript" src="./danhsachsanpham/omnica.js.tải xuống"></script>
+    <script type="text/javascript" src="./danhsachsanpham/openclose.js.tải xuống"></script>
+    <script type="text/javascript" src="./danhsachsanpham/typekit.min.js.tải xuống"></script>
+    <link rel="icon" type="image/png" href="https://www.luckyvitamin.com/images/favicon.ico">
+    <link href="https://www.luckyvitamin.com/images/favicon.ico" rel="shortcut icon">
+
+    <title>
+        Danh sách sản phẩm
+    </title>
+
+    <link id="ctl00_ctl00_ctl00_mybuysstyles" href="./danhsachsanpham/styles.css" type="text/css" rel="stylesheet">
+    <script type="text/javascript" src="./danhsachsanpham/setup.js.tải xuống"></script>
+
+    <script type="text/javascript" src="./danhsachsanpham/nxt-ac-js-1.2-min.js.tải xuống"></script>
+    <!--<link type="text/css" rel="stylesheet" charset="UTF-8" href="./danhsachsanpham/translateelement.css">-->
+    <script type="text/javascript" charset="UTF-8" src="./danhsachsanpham/main_vi.js.tải xuống"></script>
+    <link type="text/css" rel="stylesheet" href="./danhsachsanpham/offers.css">
+    <link rel="stylesheet" type="text/css" href="./danhsachsanpham/visitor.css">
+    <style>
+        #myList li {
+            display: none;
+            /*padding: 10px;
+        border-width: 0 1px 1px 0;
+        border-style: solid;
+        border-color: #fff;
+        box-shadow: 0 1px 1px #ccc;
+        margin-bottom: 5px;
+        background-color: #f1f1f1;*/
+        }
+
+        /*#loadMore {
+            color: green;
+            cursor: pointer;
+        }*/
+
+        /*#loadMore:hover {
+                color: black;
+            }*/
+
+        #showLess {
+            color: red;
+            cursor: pointer;
+        }
+
+            #showLess:hover {
+                color: black;
+            }
+
+        #loadMore {
+            cursor: pointer;
+            padding: 10px;
+            text-align: center;
+            /*background-color: #33739E;*/
+            /*color: #fff;*/
+            /*border-width: 0 1px 1px 0;*/
+            /*border-style: solid;*/
+            /*border-color: #fff;*/
+            /*box-shadow: 0 1px 1px #ccc;*/
+            font-size:15px;
+            transition: all 600ms ease-in-out;
+            -webkit-transition: all 600ms ease-in-out;
+            -moz-transition: all 600ms ease-in-out;
+            -o-transition: all 600ms ease-in-out;
+        }
+
+            #loadMore:hover {
+                background-color: #fff;
+                color: #33739E;
+            }
+    </style>
+
+    <style>
+        #scrolltop {
+            display: none;
+        }
+
+        #rocketmeluncur {
+            position: fixed;
+            bottom: 50px;
+            z-index: 7;
+            display: none;
+            visibility: hidden;
+            width: 26px;
+            height: 48px;
+            right: 25px;
+            background: url(https://1.bp.blogspot.com/-UR9I7YEuEUY/VXIJn8MrBPI/AAAAAAAAKRE/qZObHBd5zIo/s1600/rocket.png) 50% 0 no-repeat;
+            opacity: 0;
+            -webkit-transition: visibility .6s cubic-bezier(.6,.04,.98,.335),opacity .6s cubic-bezier(.6,.04,.98,.335),-webkit-transform .6s cubic-bezier(.6,.04,.98,.335);
+            -moz-transition: visibility .6s cubic-bezier(.6,.04,.98,.335),opacity .6s cubic-bezier(.6,.04,.98,.335),-moz-transform .6s cubic-bezier(.6,.04,.98,.335);
+            transition: visibility .6s cubic-bezier(.6,.04,.98,.335),opacity .6s cubic-bezier(.6,.04,.98,.335),transform .6s cubic-bezier(.6,.04,.98,.335);
+        }
+
+            #rocketmeluncur i {
+                display: block;
+                margin-top: 48px;
+                height: 14px;
+                background: url(https://1.bp.blogspot.com/-UR9I7YEuEUY/VXIJn8MrBPI/AAAAAAAAKRE/qZObHBd5zIo/s1600/rocket.png) 50% -48px no-repeat;
+                opacity: .5;
+                -webkit-transition: -webkit-transform .2s;
+                -moz-transition: -moz-transform .2s;
+                transition: transform .2s;
+                -webkit-transform-origin: 50% 0;
+                -moz-transform-origin: 50% 0;
+                transform-origin: 50% 0;
+            }
+
+            #rocketmeluncur:hover {
+                background-position: 50% -62px;
+            }
+
+                #rocketmeluncur:hover i {
+                    background-position: 50% 100%;
+                    -webkit-animation: flaming .7s infinite;
+                    -moz-animation: flaming .7s infinite;
+                    animation: flaming .7s infinite;
+                }
+
+            #rocketmeluncur.showrocket {
+                visibility: visible;
+                opacity: 1;
+            }
+
+            #rocketmeluncur.launchrocket {
+                background-position: 50% -62px;
+                opacity: 0;
+                -webkit-transform: translateY(-800px);
+                -moz-transform: translateY(-800px);
+                -ms-transform: translateY(-800px);
+                transform: translateY(-800px);
+                pointer-events: none;
+            }
+
+                #rocketmeluncur.launchrocket i {
+                    background-position: 50% 100%;
+                    -webkit-transform: scale(1.4,3.2);
+                    -moz-transform: scale(1.4,3.2);
+                    transform: scale(1.4,3.2);
+                }
+    </style>
+
+    <script>
+        $(document).ready(function () {
+            size_li = $("#myList li").size();
+            x = 3;
+            $('#myList li:lt(' + x + ')').show();
+            $('#loadMore').click(function () {
+                x = (x + 5 <= size_li) ? x + 5 : size_li;
+                $('#myList li:lt(' + x + ')').show();
+            });
+            $('#showLess').click(function () {
+                x = (x - 5 < 0) ? 3 : x - 5;
+                $('#myList li').not(':lt(' + x + ')').hide();
+            });
+        });
+    </script>
+    
+    <link rel="stylesheet" href="css/style1.css" />   
+   
+    <script src="imagess/mootools-1.js" type="text/javascript"></script>
+    <link rel="stylesheet" href="imagess/image-hover.css" type="text/css">
+</head>
+<body class="lucky ajax-list ajax-list-enabled" style="position: relative; min-height: 100%; top: 0px;">  
+    
+    <form name="aspnetForm" method="post" action="#" id="aspnetForm">
+
+        <script src="./danhsachsanpham/WebResource.axd" type="text/javascript"></script>
+        <script src="./danhsachsanpham/formvalidate.js.tải xuống" type="text/javascript"></script>
+        <script src="./danhsachsanpham/core.js(1).tải xuống" type="text/javascript"></script>
+        <script type="text/javascript">
+            //<![CDATA[
+            function isPostback(){return false; }
+            function cdnInUse(){return false; }
+            function rewritePathForCDN(relativePath){
+                if(cdnInUse()){
+                    return cdnPath() + relativePath;
+                } else{
+                    return relativePath;
+                }
+            }
+            //]]>
+        </script>
+        <script src="./danhsachsanpham/ScriptResource.axd" type="text/javascript"></script>
+        <script src="./danhsachsanpham/ScriptResource(1).axd" type="text/javascript"></script>
+        <script src="./danhsachsanpham/product.js.tải xuống" type="text/javascript"></script>
+   
+        <div id="wrapper" class="page listing-page products-listview dropdowns-initialised" style="padding-top: 215px">
+            <div class="wrapper-content">
+                <div class="wrapper-content-holder">
+                    <header id="header" class="noPrintFriendly" style="margin-top: 0px;">
+                        <!--hàng 1-->
+                        <div class="promo-line noPrintFriendly">
+                            <div class="holder">
+                                <div align="center" id="topiccontent" style="100%; color: white;">
+                                    <div id="swbanner3">
+                                        <a href="#">
+                                            <img src="images/SeaweedGWP_Sitewide.png"  width="975" height="24" border="0">
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!--hàng 2-->
+                        <div class="header-panel noPrintFriendly">
+                            <div class="holder">
+                                <ul class="listing"></ul>
+                                <div class="user-account" id="userAccDiv">
+                                    <div class="user-block">
+                                        <p>
+                                            <a href="#" class="myAccLink">
+                                                Xin chào!
+                                            </a>
+                                        </p>
+                                        <p><a href="#" class="myAccLink"><span class="info">Tài khoản</span></a></p>
+                                    </div>
+                                    <div class="menu">
+                                        <a id="ctl00_ctl00_signinLink" class="signinLink" href="#">Đăng nhập</a>
+                                        <p style="font-size: 12px; border-bottom: 1px solid #dddddd; padding-bottom: 10px;">
+                                            Khách hàng mới?
+                                            <a href="#" style="border-bottom: 1px solid #464646; color: #464646;"> Đăng ký</a>
+                                        </p>
+                                        <ul>
+                                            <li><a href="#">Tài khoản của tôi</a></li>
+                                            <li><a href="#">Lịch sử mua sắm</a></li>
+                                            <li><a href="#">Quà thưởng của tôi</a></li>
+                                            <li><a href="#">Sản phẩm yêu thích</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!--hàng 3-->
+                        <div class="header-holder noPrintFriendly">
+                            <div class="header-frame">
+                                <div class="header-block">
+
+                                    <strong class="logo">
+                                        <a href="danhsachsanpham.html" id="ctl00_ctl00_aHome">
+                                            <img class="show-larger" src="images/logo.png" height="116" width="234" alt="lucky vitamin">
+                                            <img class="show-smaller" src="images/logo-smaller.png" height="75" width="202" alt="lucky vitamin">
+                                        </a>
+                                    </strong>
+
+                                    <nav class="nav-bar">
+                                        <ul class="navigation">
+                                            <li>
+                                                <span>Giới thiệu</span>
+                                                <div class="drop">
+                                                    <div class="holder">
+                                                        <ul class="list">
+                                                            <li><a href="gioithieuchungtoi.html">Về chúng tôi</a></li>
+                                                            <li><a href="#">Cam kết</a></li>
+                                                            <li><a href="lienhe.html">Liên hệ</a></li>
+                                                            <li><a href="#">Dịch vụ khách hàng</a></li>
+                                                            <li><a href="#">Cẩm nang sức khỏe</a></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+
+                                            </li>
+                                            <li>
+                                                <span>Thương hiệu</span>
+                                                <div class="drop">
+                                                    <div class="holder">
+                                                        <ul class="list">
+                                                            <li><a href="danhsachsanpham.html">Nutrilite</a></li>
+                                                            <li><a href="danhsachsanpham.html">Herbalife</a></li>
+                                                            <li><a href="danhsachsanpham.html">Vision</a></li>
+                                                            <li><a href="danhsachsanpham.html">Good Health</a></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <span>Thực phẩm</span>
+                                                <div class="drop">
+                                                    <div class="holder">
+                                                        <ul class="list">
+                                                            <li><a href="#">Chống lão hóa</a></li>
+                                                            <li><a href="#">Tăng cơ</a></li>
+                                                            <li><a href="#">Giảm cân</a></li>
+                                                            <li><a href="#">Trắng da</a></li>
+                                                            <li><a href="#">Trị nám</a></li>
+                                                            <li><a href="#">Tim mạch</a></li>
+                                                            <li><a href="#">Gan</a></li>
+                                                            <li><a href="#">Hô hấp</a></li>
+                                                            <li><a href="#">Tiêu hóa</a></li>
+                                                            <li><a href="#">Hệ thần kinh</a></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </nav>
+
+                                    <div class="header-block-holder">
+
+                                        <div id="ctl00_ctl00_pnlSearchForm" class="search-form">
+                                            <fieldset>
+                                                <span class="submit-holder">
+                                                    <input type="submit" name="ctl00$ctl00$btnSearch" value="Tìm" id="ctl00_ctl00_btnSearch" />
+                                                </span><span class="ico"></span>
+                                                <div class="input-holder">
+                                                    <input name="ctl00$ctl00$search" type="text" id="ctl00_ctl00_search" accesskey="4" placeholder="Hôm nay bạn tìm gì?" autocomplete="off" class="LoNotSensitive" />
+                                                </div>
+                                            </fieldset>
+                                        </div>
+                                        <div class="free-shipping-block">
+                                            <div id="divNoFreeShipping">
+                                                <div>
+                                                    <span class="title" style="padding:5px">Free Shipping</span>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div id="miniCartBlock" class="cart-block litMiniCart">
+
+                                            <div class="cartblock-holder">
+                                                <a href="#" class="icon-cart"><span class="counter lblMiniCartItemCount">1</span></a><div class="drop-cart-wrap-main">
+                                                    <div id="ActiveMiniCart" class="drop">
+                                                        <div class="holder">
+                                                            <span class="head">
+                                                                <mark><label class="lblMiniCartItemCount">1</label><label class="lblMiniCartItems"> sản phẩm</label></mark> trong giỏ hàng
+                                                            </span>
+                                                            <!--<span class="title">Most Recently Added:</span>-->
+                                                            <div class="item">
+                                                                <div class="img-box cartitem-image"><a href="#"><img src="./danhsachsanpham/sanpham/2.jpg" alt=""></a></div>
+                                                                <div class="text">
+                                                                    <span class="tag manufacturerName">Herbalife</span><h1 class="productTitle"><a href="#">Beauty Power Drink – 300g</a></h1>
+                                                                    <div class="update-form"><label for="txtQuantity" class=" label-active">Số lượng : </label>
+                                                                    <div class="input-holder parent-active"><input id="hfShopCartRecID" type="hidden" value="39128245">
+                                                                       
+                                                                        <span class="input-placeholder-text" style="color: rgb(84, 88, 90); position: absolute; display: none;"></span>
+                                                                        <input id="txtQuantity" name="txtQuantity" type="text" value="2" class=" text-active">
+                                                                        <img src="./danhsachsanpham/ajax-loader.gif" id="miniCart-AjaxLoader" style="margin-left:-18px; margin-top:3px;">
+                                                                    </div>
+                                                                    <span style="cursor:pointer; font-size:12px;" class="update updateQty_MiniCart buttonView">Cập nhật</span>
+                                                                    <span class="removeItem_MiniCart" style="cursor:pointer; clear:both; position: absolute; margin-left: -95px; margin-top: 49px; font-size: 15px;">Xóa</span>
+                                                                    <input class="hidden" type="submit" value="Submit"><span class="price">500,000đ</span></div>
+                                                                </div>
+                                                                
+                                                            </div>
+                                                            <div class="subtotal-row"><a href="#" class="btn-view add-loading"><i class="ico"></i><span class="text">Xem giỏ hàng</span></a><span class="head">Tổng tiền</span>
+                                                            <span class="count lblMiniCartSubtotal">750,000 đ</span></div>
+                                                            <div class="info-row">
+                                                                <p class="pyousaved">Bạn tiết kiệm được: <em class="amount">750,000 đ</em></p>
+                                                                
+                                                                <div id="divMiniCart_FreeShippingEarned" class="ribbon earned">
+                                                                    <div class="holder">
+                                                                        <p>FREE Shipping! </p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    
+                                                </div>
+                                            </div>
+
+                                            <a href="#" id="topCheckoutBtn" class="cart-btn"><span class="holder">Thanh toán </span></a>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                                <nav id="nav">
+                                    <div class="nav-bar top-bar">
+                                        <ul id="shop-nav">
+                                            <li class="big-drop">
+                                                <a href="#"><span>Giới Thiệu</span></a><div class="drop">
+                                                    <div class="holder">
+                                                        <div class="head-main">
+                                                            <h1>LUCKY VITAMIN</h1>
+                                                        </div>
+                                                        <div class="brands-block">
+                                                            <ul class="brands-list">
+                                                                <li>
+                                                                    <a href="gioithieuchungtoi.html">
+                                                                        <div class="img" id="img-1">
+                                                                            <img src="images/Category/top_depts/2975.jpg_-466878619.jpg" width="220" height="150" style="margin-left:20px">
+                                                                        </div>
+                                                                    </a>
+                                                                    <h2>
+                                                                        <a href="gioithieuchungtoi.html" style="margin-left:0px">Chúng tôi</a>
+                                                                    </h2>
+                                                                </li>
+
+                                                                <li>
+                                                                    <a>
+                                                                        <div class="img" id="img-2">
+                                                                            <img src="images/Category/top_depts/1X.jpg_-466878619.jpg" width="220" height="150">
+                                                                        </div>
+                                                                    </a>
+                                                                    <h2><a href="#" style="margin-left:-27px">Cam kết</a></h2>
+                                                                </li>
+
+                                                                <li>
+                                                                    <a href="lienhe.html">
+                                                                        <div class="img" id="img-2">
+
+                                                                            <img src="images/gioithieu/lienhe.png" width="220" height="150">
+                                                                        </div>
+                                                                    </a>
+                                                                    <h2><a href="lienhe.html" style=" margin-left:-27px">Liên hệ</a></h2>
+                                                                </li>
+
+                                                                <li>
+                                                                    <a>
+                                                                        <div class="img" id="img-2">
+
+                                                                            <img src="images/gioithieu/services.png" width="220" height="150">
+                                                                        </div>
+                                                                    </a>
+                                                                    <h2><a href="#" style="margin-left:-27px">Dịch vụ</a></h2>
+                                                                </li>
+
+                                                                <li>
+                                                                    <a>
+                                                                        <div class="img" id="img-2">
+
+                                                                            <img src="images/gioithieu/camnang.png" width="220" height="150">
+                                                                        </div>
+                                                                    </a>
+                                                                    <h2><a href="#" style="margin-left:-27px">Cẩm nang sức khỏe</a></h2>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                </div>
+                                            </li>
+                                            <li class="big-drop">
+                                                <a href="#"><span>Thương Hiệu</span></a>
+                                                <div class="drop">
+                                                    <div class="holder">
+                                                        <div class="drop-holder">
+                                                            <div class="slide">
+                                                                <div class="head-main">
+                                                                    <h1>THƯƠNG HIỆU NỔI TIẾNG</h1>
+                                                                </div>
+                                                                <div class="brands-block">
+                                                                    <ul class="brands-list">
+                                                                        <li>
+                                                                            <a >
+                                                                                <div class="img" id="img-1">
+                                                                                    <img src="images/brand/nutrilite1.jpg" width="220" height="150">
+                                                                                </div>
+                                                                            </a>
+                                                                            <h2>
+                                                                            <a href="#" style="margin-left:-27px">Nutrilite</a>
+                                                                            </h2>
+                                                                        </li>
+
+                                                                        <li>
+                                                                            <a href="danhsachsanpham.html">
+                                                                                <div class="img" id="img-2">
+                                                                                    <img src="images/brand/herbalife.jpg" width="220" height="150">
+                                                                                </div>
+                                                                            </a>
+                                                                            <h2><a href="danhsachsanpham.html" style="margin-left:-27px">Herbalife</a></h2>
+                                                                        </li>
+
+                                                                        <li>
+                                                                            <a>
+                                                                                <div class="img" id="img-2">
+                                                                                  
+                                                                                    <img src="images/brand/vision.jpg" width="220" height="150">
+                                                                                </div>
+                                                                            </a>
+                                                                            <h2><a href="#" style="margin-left:-27px">Vision</a></h2>
+                                                                        </li>
+
+                                                                        <li>
+                                                                            <a>
+                                                                                <div class="img" id="img-2">
+                                                                                   
+                                                                                    <img src="images/brand/goodhealth1.jpg" width="220" height="150">
+                                                                                </div>
+                                                                            </a>
+                                                                            <h2><a href="#" style="margin-left:-27px">Good Health</a></h2>
+                                                                        </li>
+                                                                       
+                                                                      
+                                                                    </ul>
+                                                                </div>
+
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="big-drop">
+                                                <a href="#"><span>Chữa bệnh</span></a><div class="drop">
+                                                    <div class="holder">
+                                                        <div class="drop-holder">
+                                                            <div class="head-main">
+                                                                <h1>CHỮA BỆNH THẦN KỲ</h1>
+                                                            </div>
+                                                            <div class="thumbnail-block">
+                                                                <ul class="thumbnail-list">
+                                                                    <li>
+                                                                        <a>
+                                                                            <div class="imgholder">
+                                                                                <div class="outer1 circle"></div>
+                                                                                <div class="outer2 circle"></div>
+                                                                                <figure>
+                                                                                    <img src="images/benh/timmach.jpg" />
+                                                                                    <figcaption class="caption">Tim mạch</figcaption>
+                                                                                </figure>
+                                                                            </div>
+                                                                        </a>
+                                                                    </li>
+
+                                                                    <li>
+                                                                        <a>
+                                                                            <div class="imgholder">
+                                                                                <div class="outer1 circle"></div>
+                                                                                <div class="outer2 circle"></div>
+                                                                                <figure>
+                                                                                    <img src="images/benh/gan3.jpg" />
+                                                                                    <figcaption class="caption">Gan</figcaption>
+                                                                                </figure>
+                                                                            </div>
+                                                                        </a>
+                                                                    </li>
+                                                                    
+                                                                    <li>
+                                                                        <a>
+                                                                            <div class="imgholder">
+                                                                                <div class="outer1 circle"></div>
+                                                                                <div class="outer2 circle"></div>
+                                                                                <figure>
+                                                                                    <img src="images/benh/phoi.png" />
+                                                                                    <figcaption class="caption">Hô hấp</figcaption>
+                                                                                </figure>
+                                                                            </div>
+                                                                        </a>
+                                                                    </li>
+                                                                    
+                                                                    <li>
+                                                                        <a>
+                                                                            <div class="imgholder">
+                                                                                <div class="outer1 circle"></div>
+                                                                                <div class="outer2 circle"></div>
+                                                                                <figure>
+                                                                                    <img src="images/benh/tieuhoa.jpg" />
+                                                                                    <figcaption class="caption">Tiêu hóa</figcaption>
+                                                                                </figure>
+                                                                            </div>
+                                                                        </a>
+                                                                    </li>
+
+                                                                    <li>
+                                                                        <a>
+                                                                            <div class="imgholder">
+                                                                                <div class="outer1 circle"></div>
+                                                                                <div class="outer2 circle"></div>
+                                                                                <figure>
+                                                                                    <img src="images/benh/thankinh.jpg" />
+                                                                                    <figcaption class="caption">Hệ thần kinh</figcaption>
+                                                                                </figure>
+                                                                            </div>
+                                                                        </a>
+                                                                    </li>
+                                                                    
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="big-drop">
+                                                <a href="#"><span>Thực Phẩm Làm Đẹp</span></a><div class="drop">
+                                                    <div class="holder">
+                                                        <div class="drop-holder">
+                                                            <div class="head-main">
+                                                                <h1>
+                                                                    LÀM ĐẸP THẦN TỐC
+                                                                </h1>
+                                                            </div>
+                                                            <div class="thumbnail-block">
+                                                                <ul class="thumbnail-list">
+                                                                    <li>
+                                                                        <a >
+                                                                            <div class="imgholder">
+                                                                                <div class="outer1 circle"></div>
+                                                                                <div class="outer2 circle"></div>
+                                                                                <figure>
+                                                                                    <img src="images/lamdep/laohoa.jpg" />
+                                                                                    <figcaption class="caption">Chống lão hóa</figcaption>
+                                                                                </figure>
+                                                                            </div>
+                                                                        </a>
+                                                                    </li>
+                                                                    <li>
+                                                                        <a>
+                                                                            <div class="imgholder">
+                                                                                <div class="outer1 circle"></div>
+                                                                                <div class="outer2 circle"></div>
+                                                                                <figure>
+                                                                                    <img src="images/lamdep/trinam.jpg" />
+                                                                                    <figcaption class="caption">Trị nám da</figcaption>
+                                                                                </figure>
+                                                                            </div>
+                                                                        </a>
+                                                                    </li>
+                                                                    <li>
+                                                                        <a>
+                                                                            <div class="imgholder">
+                                                                                <div class="outer1 circle"></div>
+                                                                                <div class="outer2 circle"></div>
+                                                                                <figure>
+                                                                                    <img src="images/lamdep/tangco.jpg" />
+                                                                                    <figcaption class="caption">Tăng cơ</figcaption>
+                                                                                </figure>
+                                                                            </div>
+                                                                        </a>
+                                                                    </li>
+                                                                    <li>
+                                                                        <a>
+                                                                            <div class="imgholder">
+                                                                                <div class="outer1 circle"></div>
+                                                                                <div class="outer2 circle"></div>
+                                                                                <figure>
+                                                                                    <img src="images/lamdep/giamcan.jpg" />
+                                                                                    <figcaption class="caption">Giảm cân</figcaption>
+                                                                                </figure>
+                                                                            </div>
+                                                                        </a>
+                                                                    </li>
+                                                                    <li>
+                                                                        <a>
+                                                                            <div class="imgholder">
+                                                                                <div class="outer1 circle"></div>
+                                                                                <div class="outer2 circle"></div>
+                                                                                <figure>
+                                                                                    <img src="images/lamdep/trangda.jpg" />
+                                                                                    <figcaption class="caption">Trắng da</figcaption>
+                                                                                </figure>
+                                                                            </div>
+                                                                        </a>
+                                                                    </li>
+                                                                    <li>
+                                                                        <a>
+                                                                            <div class="imgholder">
+                                                                                <div class="outer1 circle"></div>
+                                                                                <div class="outer2 circle"></div>
+                                                                                <figure>
+                                                                                    <img src="images/lamdep/colagen.jpg" />
+                                                                                    <figcaption class="caption">Dưỡng ẩm da</figcaption>
+                                                                                </figure>
+                                                                            </div>
+                                                                        </a>
+                                                                    </li>
+                                                                  
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="big-drop">
+                                                <a href="#"><span>Thực Phẩm Quý</span></a><div class="drop">
+                                                    <div class="holder">
+                                                        <div class="drop-holder">
+                                                            <div class="head-main">
+                                                                <h1>
+                                                                    THỰC PHẨM QUÝ HIẾM
+                                                                </h1>
+                                                            </div>
+                                                            <div class="thumbnail-block">
+                                                                <ul class="thumbnail-list">
+                                                                    <li>
+                                                                        <a>
+                                                                            <div class="imgholder">
+                                                                                <div class="outer1 circle"></div>
+                                                                                <div class="outer2 circle"></div>
+                                                                                <figure>
+                                                                                    <img src="images/tpquy/dongtrunghathao2.jpg" />
+                                                                                    <figcaption class="caption">Đông trùng</figcaption>
+                                                                                </figure>
+                                                                            </div>
+                                                                        </a>
+                                                                    </li>
+
+                                                                    <li>
+                                                                        <a>
+                                                                            <div class="imgholder">
+                                                                                <div class="outer1 circle"></div>
+                                                                                <div class="outer2 circle"></div>
+                                                                                <figure>
+                                                                                    <img src="images/tpquy/nhansam1.jpg" />
+                                                                                    <figcaption class="caption">Nhân sâm</figcaption>
+                                                                                </figure>
+                                                                            </div>
+                                                                        </a>
+                                                                    </li>
+                                                                    
+                                                                    <li>
+                                                                        <a>
+                                                                            <div class="imgholder">
+                                                                                <div class="outer1 circle"></div>
+                                                                                <div class="outer2 circle"></div>
+                                                                                <figure>
+                                                                                    <img src="images/tpquy/linhchi1.jpg" />
+                                                                                    <figcaption class="caption">Linh chi</figcaption>
+                                                                                </figure>
+                                                                            </div>
+                                                                        </a>
+                                                                    </li>
+
+                                                                    <li>
+                                                                        <a>
+                                                                            <div class="imgholder">
+                                                                                <div class="outer1 circle"></div>
+                                                                                <div class="outer2 circle"></div>
+                                                                                <figure>
+                                                                                    <img src="images/tpquy/yensao.jpg" />
+                                                                                    <figcaption class="caption">Yến sào</figcaption>
+                                                                                </figure>
+                                                                            </div>
+                                                                        </a>
+                                                                    </li>
+
+                                                                    <li>
+                                                                        <a>
+                                                                            <div class="imgholder">
+                                                                                <div class="outer1 circle"></div>
+                                                                                <div class="outer2 circle"></div>
+                                                                                <figure>
+                                                                                    <img src="images/tpquy/khac.jpg" />
+                                                                                    <figcaption class="caption">Thảo dược khác</figcaption>
+                                                                                </figure>
+                                                                            </div>
+                                                                        </a>
+                                                                    </li>
+
+                                                                    
+                                                                </ul>
+                                                            </div>
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="nav-bar" id="navBrowseBy">
+                                        <ul class="browser-nav">
+                                            <li class="new-product"><a href="#">Người đại diện đang dùng</a></li>
+                                            <li class="sale-off"><a href="#">Sản phẩm được bình luận nhiều nhất</a></li>
+                                            <li class="best-sale"><a href="#">Khuyến nghị</a></li>
+
+                                        </ul>
+                                        <script>
+                                            $(document).ready(function () {
+                                                $('.new-product').on('click', function (e) {
+                                                    e.preventDefault();
+                                                    target = $('.show-new-product');
+                                                    $('html, body').stop().animate({
+                                                        scrollTop: target.offset().top
+
+                                                    }, 800);
+                                                });
+                                            })
+
+                                            $(document).ready(function () {
+                                                $('.sale-off').on('click', function (e) {
+                                                    e.preventDefault();
+                                                    target = $('.show-sale-off');
+                                                    $('html, body').stop().animate({
+                                                        scrollTop: target.offset().top
+
+                                                    }, 1000);
+                                                });
+                                            })
+
+                                            $(document).ready(function () {
+                                                $('.best-sale').on('click', function (e) {
+                                                    e.preventDefault();
+                                                    target = $('.show-best-sale');
+                                                    $('html, body').stop().animate({
+                                                        scrollTop: target.offset().top
+
+                                                    }, 1200);
+                                                });
+                                            })
+                                        </script>
+
+                                        <div class="signup-block">
+                                            <div class="holder">
+                                                <div id="NewsletterSignupForm" class="popup-wrap">
+                                                    <a class="open" href="#">Đăng ký nhận tin tức</a>
+                                                    <div class="popup">
+                                                        <div class="holder">
+                                                            <span class="arrow"></span>
+                                                            <h1>
+                                                                Hãy là người đầu tiên biết về sản phẩm mới, các chương trình khuyến mãi đặc biệt của chúng tôi!
+                                                            </h1>
+                                                            <div class="validate-form subscribe-form">
+                                                                <fieldset>
+                                                                    <div class="row">
+                                                                        <div class="inputs-holder">
+                                                                            <a href="#" class="NewsletterSignup_Click">Đăng ký</a>
+                                                                            <input id="subscribe" type="text" class="required-email subscribeEmail" placeholder="Hãy nhập email của bạn!" />
+                                                                        </div>
+                                                                    </div>
+                                                                </fieldset>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                </nav>
+
+                            </div>
+                        </div>
+                    </header>
+
+                    <div id="main">
+                        <nav class="breadcrumbs">
+                            <ul>
+                                <li><a href="#">Trang chủ</a></li>
+                                <li id="ctl00_ctl00_ctl00_RootPageContent_repBreadCrumb_ctl00_liItem"><a href="#">Thương hiệu</a></li>
+                                <li style="font-weight:bold">Herbalife</li>
+                            </ul>
+                        </nav>
+
+                        <div id="skip-wai-content" class="main-holder">
+                            <div class="heading">
+                                <h1>
+                                    Herbalife
+                                    <i>
+                                    </i>
+                                </h1>
+                                <ul class="tabset brandTab">
+                                    <li class="active-link"><a href="#product-list" class="active" id="shopProducts"><span class="tab-item">Sản phẩm</span></a></li>
+                                    <li><a href="#AboutBrandPanel" id="aboutTheBrand"><span class="tab-item">Giới thiệu về Herbalife </span></a></li>
+                                </ul>
+                            </div>
+
+                            <div id="ctl00_ctl00_ctl00_RootPageContent_PageContent_pnlContent" class="template-full-page">
+                                <div id="ctl00_ctl00_ctl00_RootPageContent_PageContent_PageContent_pnlContent">
+                                    <style type="text/css">
+                                        .native-scrollable-area {
+                                            overflow: auto;
+                                            overflow-x: hidden;
+                                            overflow-y: auto;
+                                            height: auto;
+                                            max-height: 163px;
+                                        }
+
+                                        .products-listview .native-scrollable-area .f-line a {
+                                            width: 142px;
+                                            font-size:15px;
+                                        }
+
+                                        @-moz-document url-prefix() {
+                                            .products-listview .native-scrollable-area .f-line a {
+                                                width: 142px;
+                                                font-size:15px;
+                                            }
+                                        }
+                                    </style>
+                                    
+                                    <!--Tab Giới thiệu về Hebarlife-->
+                                    <div id="aboutBrandContent" class="brandContent" style="display: none;">
+                                        <div class="product-section content-banner box-shadow" style="display: block; position: relative;">
+                                            <img src="./danhsachsanpham/product/90300.jpg" alt="">
+                                            <div class="floatIcon">
+                                                <div id="ctl00_ctl00_ctl00_RootPageContent_PageContent_PageContent_ProductListing1_ctl03_divLogo" class="floatIcon-wrapper">
+                                                    <img src="./danhsachsanpham/product/2.jpg" alt="">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="aboutHeader">
+                                            <ul>
+                                                <li><a href="#ourstory">Câu chuyện về chúng tôi</a></li>
+                                                <li><a href="#wellness">Cách nhận biết phân biệt sản phẩm Herbalife</a></li>
+                                                <li><a href="#learn">Ronaldo nói về Herbalife</a></li>
+                                                <li class="last-child"><a href="#">Liên hệ</a></li>
+                                            </ul>
+                                           
+                                        </div>
+                                        <div class="mainBrandPanel" id="AboutBrandPanel">
+                                            <div class="leftPanel">
+                                                <a name="ourstory"></a>
+                                                <div id="ourstory" class="clear">
+                                                    <div>
+                                                        <div>
+                                                            <!--<center>-->
+                                                                <div id="277636501926136445" style="width: 180%; margin-left:160px; overflow-y: hidden;" class="wcustomhtml">
+                                                                    <img src="http://i272.photobucket.com/albums/jj184/hoalan_xinh08/2-6.gif" />
+                                                                </div>
+                                                            <!--</center>-->
+                                                        </div>
+                                                        <center style="color:red; font-weight:bold; font-size:15px; padding-bottom:20px">MARK HUGHES HERBALIFE : CÂU CHUYỆN DINH DƯỠNG LÀNH MẠNH</center>
+
+                                                    </div>
+                                                    <div class="brandContentPanel">
+                                                        <div><p>
+                                                                 <center> <img src="./danhsachsanpham/sanpham/mark3.jpg"></center> 
+                                                            </p>
+                                                        <p style="font-weight:bold">
+                                                         Sau gần 7 năm chính thức có mặt tại thị trường Việt Nam. Herbalife đang dần trở thành một sản phẩm bổ xung dinh dưỡng quen thuộc của nhiều người Việt. Nhưng ít ai biết được rằng đằng sau sự thành công của Herbalife ngày hôm nay bắt đầu từ câu chuyện mơ ước về dinh dưỡng khoa học của nhà sáng lập Mark Hughes : “Đối với tôi, việc giới thiệu các sản phẩm cân bằng dinh dưỡng tới hàng triệu người trên thế giới là một ước mơ trở thành hiện thực”
+                                                         </p>
+                                                       
+                                                        <p>
+                                                                                <br />
+                                                            Với mong ước đó, các sản phẩm bổ xung dinh dưỡng Herbalife trong vòng 36 năm qua đã giúp đỡ hàng triệu người trên toàn thế giới có được cuộc sống chất lượng từ sức khoẻ lẫn tinh thần. Hành trình ước mơ của Mark Hughes khởi đầu khi mẹ ông – một diễn viên Hollywood qua đời ở tuổi 36 vì uống thuốc giảm cân quá liều. Đau khổ trước cái chết của mẹ, Mark Hughes đã bỏ dở dang công việc và cuộc sống riêng, sang Trung Quốc học Đông y để nghiên cứu và bào chế loại thuốc giảm cân an toàn đồng thời tăng cường nhiều dinh dưỡng cho người sử dụng.
+
+                                                            Mark Hughes mang công thức của mình về Mỹ, thành lập công ty Herbalife vào năm 1980 tại Los Angeles và hợp tác với rất nhiều nhà khoa học nổi tiếng thế giới với vai trò cố vấn dinh dưỡng. Nhờ đáp ứng đúng các nhu cầu về dinh dưỡng và sức khỏe, những sản phẩm bổ sung dinh dưỡng của Herbalife đã nhanh chóng được hàng triệu người trên thế giới đón nhận, giúp họ giảm cân khoa học, nâng cao chế độ dinh dưỡng, sức khỏe và chất lượng cuộc sống. 
+                                                            </p>
+                                                        <p><br></p></div>
+                                                    </div>
+                                                </div>
+                                                <a name="wellness"></a>
+                                                <div id="wellness" class="clear">
+                                                    <!--<div>
+                                                        <img src="./danhsachsanpham/spread_wellness.png" alt="spread wellness header" title="spread wellness header">
+                                                    </div>-->
+                                                    <div class="brandContentPanel">
+                                                        <div>
+                                                        <!--<p style="color:red; font-weight:bold; font-size:20px; text-align:center">Cách nhân biệt bộ Herbalife là sản phẩm chính hãng</p>-->
+                                                            <p style="color:red; font-weight:bold; font-size:15px; text-align:center">CÁCH NHẬN BIẾT HERBALIFE LÀ SẢN PHẨM CHÍNH HÃNG</p>
+                                                            <p></p><br>
+                                                            <p>
+                                                                Hiện nay trên thị trường xuất hiện rất nhiều sản phẩm Herbalife làm giả, nhái, sản phẩm hết date kém chất lượng không chỉ ảnh hưởng đến uy tín của các công ty kinh doanh chân chính như Herbalife mà còn khiến người dùng rơi vào tình cảnh tiền mất tật mang.Thủ đoạn của những kẻ sản xuất hàng giả, hàng nhái ngày càng tinh vi, ranh giới giữa thật và giả ngày càng khó phân biệt. Hãy trở thành người tiêu dùng thông minh, mua đúng sản phẩm thật, bằng cách tìm hiểu kỹ càng những thông tin liên quan và điện thoại ngay cho chúng tôi để được giải đáp. Chính vì vậy, chúng tôi khuyến cáo các bạn không nên mua sản phẩm trôi nổi không rõ xuất xứ trên thị trường mà nên tìm đến địa chỉ tin cậy được người tiêu dùng ưa chuộng,tin tưởng trong nhiều năm qua. Herbalife Viet Nam cam kết mang đến cho khách hàng những sản phẩm herbalife chính hãng 100%, đảm bảo chất lượng với mức giá quy định, đã được Bộ Y Tế kiểm định và được các cơ quan nhà nước cho phép lưu hành trên thị trường Việt Nam.
+                                                            </p>
+                                                            <br>
+                                                            <center><img src="./danhsachsanpham/sanpham/phanbiet.jpg"></center>
+                                                            <center>Phân biệt Herbalife qua bao bì của sản phẩm</center> 
+                                                        </div><br>
+                                                    </div>
+                                                </div>
+                                                <a name="learn"></a>
+                                                <div id="learn" class="clear">
+                                                    <div>
+                                                        <!--<img src="./danhsachsanpham/learn.png" alt="learn header" title="learn header">-->
+                                                        <center style="color:red; font-weight:bold; font-size:15px; padding-bottom:20px">RONALDO NÓI VỀ HERBALIFE</center>
+                                                    </div>
+                                               
+                                                    <div class="brandContentPanel">
+                                                        <center> <iframe width="560" height="315" src="https://www.youtube.com/embed/63GocNCkebY" frameborder="0" allowfullscreen></iframe></center>
+                                                       
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="rightPanel">
+                                                <h2 class="topSelling">Sản phẩm bán chạy</h2>
+                                                <!--<div class="subHeader">Sản phẩm</div>-->
+                                                <ul class="results-list">
+                                                    <li style="z-index: 39;">
+                                                        <div class="holder">
+                                                            <div class="frame">
+
+                                                                <div class="img-column">
+                                                                    <a href="#" id="ctl00_ctl00_ctl00_RootPageContent_PageContent_PageContent_ProductListing1_ctl03_rptFeaturedItems_imgLink_0">
+                                                                        <img src="./danhsachsanpham/sanpham/4.jpg" id="ctl00_ctl00_ctl00_RootPageContent_PageContent_PageContent_ProductListing1_ctl03_rptFeaturedItems_imgThumb_0" alt="thumb">
+                                                                    </a>
+                                                                </div>
+
+                                                                <div class="text-column">
+                                                                    <a href="#" id="ctl00_ctl00_ctl00_RootPageContent_PageContent_PageContent_ProductListing1_ctl03_rptFeaturedItems_aLink_0">Beauty Power Drink Herbalife – 300g</a>
+                                                                    <div class="product-info">
+                                                                        <div class="col">
+                                                                            <del id="ctl00_ctl00_ctl00_RootPageContent_PageContent_PageContent_ProductListing1_ctl03_rptFeaturedItems_msrp_0" class="retail msrp-price msrp">650,000 đ</del>
+                                                                            <del id="ctl00_ctl00_ctl00_RootPageContent_PageContent_PageContent_ProductListing1_ctl03_rptFeaturedItems_usualPrice_0" class="retail msrp-price usualPrice" style="color:red">500,000 đ</del>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div id="ctl00_ctl00_ctl00_RootPageContent_PageContent_PageContent_ProductListing1_ctl03_rptFeaturedItems_reviewsDiv_0" class="col">
+                                                                        <div class="reviews-block">
+                                                                            <div class="rating-holder">
+                                                                                <div id="ctl00_ctl00_ctl00_RootPageContent_PageContent_PageContent_ProductListing1_ctl03_rptFeaturedItems_divRating_0" class="rating" style="width: 80%"></div>
+                                                                            </div>
+                                                                            <span id="ctl00_ctl00_ctl00_RootPageContent_PageContent_PageContent_ProductListing1_ctl03_rptFeaturedItems_ratingValue_0"> (4)</span>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                    <li style="z-index: 38;">
+                                                        <div class="holder">
+                                                            <div class="frame">
+
+                                                                <div class="img-column">
+                                                                    <a href="#" id="ctl00_ctl00_ctl00_RootPageContent_PageContent_PageContent_ProductListing1_ctl03_rptFeaturedItems_imgLink_1">
+                                                                        <img src="./danhsachsanpham/sanpham/2.jpg" id="ctl00_ctl00_ctl00_RootPageContent_PageContent_PageContent_ProductListing1_ctl03_rptFeaturedItems_imgThumb_1" alt="thumb">
+                                                                    </a>
+                                                                </div>
+
+                                                                <div class="text-column">
+                                                                    <a href="#" id="ctl00_ctl00_ctl00_RootPageContent_PageContent_PageContent_ProductListing1_ctl03_rptFeaturedItems_aLink_1">Dinh dưỡng thể thao - 450g</a>
+                                                                    <div class="product-info">
+                                                                        <div class="col">
+                                                                            <del id="ctl00_ctl00_ctl00_RootPageContent_PageContent_PageContent_ProductListing1_ctl03_rptFeaturedItems_msrp_1" class="retail msrp-price msrp">540,000 đ</del>
+                                                                            <del id="ctl00_ctl00_ctl00_RootPageContent_PageContent_PageContent_ProductListing1_ctl03_rptFeaturedItems_usualPrice_1" class="retail msrp-price usualPrice" style="color:red">440,000 đ</del>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div id="ctl00_ctl00_ctl00_RootPageContent_PageContent_PageContent_ProductListing1_ctl03_rptFeaturedItems_reviewsDiv_1" class="col">
+                                                                        <div class="reviews-block">
+                                                                            <div class="rating-holder">
+                                                                                <div id="ctl00_ctl00_ctl00_RootPageContent_PageContent_PageContent_ProductListing1_ctl03_rptFeaturedItems_divRating_1" class="rating" style="width: 100%"></div>
+                                                                            </div>
+                                                                            <span id="ctl00_ctl00_ctl00_RootPageContent_PageContent_PageContent_ProductListing1_ctl03_rptFeaturedItems_ratingValue_1"> (5)</span>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                    <li style="z-index: 37;">
+                                                        <div class="holder">
+                                                            <div class="frame">
+
+                                                                <div class="img-column">
+                                                                    <a href="#" id="ctl00_ctl00_ctl00_RootPageContent_PageContent_PageContent_ProductListing1_ctl03_rptFeaturedItems_imgLink_2">
+                                                                        <img src="./danhsachsanpham/sanpham/3.jpg" id="ctl00_ctl00_ctl00_RootPageContent_PageContent_PageContent_ProductListing1_ctl03_rptFeaturedItems_imgThumb_2" alt="thumb">
+                                                                    </a>
+                                                                </div>
+
+                                                                <div class="text-column">
+                                                                    <a href="#" id="ctl00_ctl00_ctl00_RootPageContent_PageContent_PageContent_ProductListing1_ctl03_rptFeaturedItems_aLink_2">Bột Protein F3 - 500g</a>
+                                                                    <div class="product-info">
+                                                                        <div class="col">
+                                                                            <del id="ctl00_ctl00_ctl00_RootPageContent_PageContent_PageContent_ProductListing1_ctl03_rptFeaturedItems_msrp_2" class="retail msrp-price msrp">300,000 đ</del>
+                                                                            <del id="ctl00_ctl00_ctl00_RootPageContent_PageContent_PageContent_ProductListing1_ctl03_rptFeaturedItems_usualPrice_2" class="retail msrp-price usualPrice" style="color:red">250,000 đ</del>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div id="ctl00_ctl00_ctl00_RootPageContent_PageContent_PageContent_ProductListing1_ctl03_rptFeaturedItems_reviewsDiv_2" class="col">
+                                                                        <div class="reviews-block">
+                                                                            <div class="rating-holder">
+                                                                                <div id="ctl00_ctl00_ctl00_RootPageContent_PageContent_PageContent_ProductListing1_ctl03_rptFeaturedItems_divRating_2" class="rating" style="width: 100%"></div>
+                                                                            </div>
+                                                                            <span id="ctl00_ctl00_ctl00_RootPageContent_PageContent_PageContent_ProductListing1_ctl03_rptFeaturedItems_ratingValue_2"> (5)</span>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                    <li style="z-index: 36;">
+                                                        <div class="holder">
+                                                            <div class="frame">
+
+                                                                <div class="img-column">
+                                                                    <a href="#" id="ctl00_ctl00_ctl00_RootPageContent_PageContent_PageContent_ProductListing1_ctl03_rptFeaturedItems_imgLink_3">
+                                                                        <img src="./danhsachsanpham/sanpham/1.jpg" id="ctl00_ctl00_ctl00_RootPageContent_PageContent_PageContent_ProductListing1_ctl03_rptFeaturedItems_imgThumb_3" alt="thumb">
+                                                                    </a>
+                                                                </div>
+
+                                                                <div class="text-column">
+                                                                    <a href="#" id="ctl00_ctl00_ctl00_RootPageContent_PageContent_PageContent_ProductListing1_ctl03_rptFeaturedItems_aLink_3">Hydrate hương cam – 300g</a>
+                                                                    <div class="product-info">
+                                                                        <div class="col">
+                                                                            <del id="ctl00_ctl00_ctl00_RootPageContent_PageContent_PageContent_ProductListing1_ctl03_rptFeaturedItems_msrp_3" class="retail msrp-price msrp">630,000 đ</del>
+                                                                            <del id="ctl00_ctl00_ctl00_RootPageContent_PageContent_PageContent_ProductListing1_ctl03_rptFeaturedItems_usualPrice_3" class="retail msrp-price usualPrice" style="color:red">520,000 đ</del>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div id="ctl00_ctl00_ctl00_RootPageContent_PageContent_PageContent_ProductListing1_ctl03_rptFeaturedItems_reviewsDiv_3" class="col">
+                                                                        <div class="reviews-block">
+                                                                            <div class="rating-holder">
+                                                                                <div id="ctl00_ctl00_ctl00_RootPageContent_PageContent_PageContent_ProductListing1_ctl03_rptFeaturedItems_divRating_3" class="rating" style="width: 80%"></div>
+                                                                            </div>
+                                                                            <span id="ctl00_ctl00_ctl00_RootPageContent_PageContent_PageContent_ProductListing1_ctl03_rptFeaturedItems_ratingValue_3"> (4)</span>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                    <li style="z-index: 35;">
+                                                        <div class="holder">
+                                                            <div class="frame">
+
+                                                                <div class="img-column">
+                                                                    <a href="#" id="ctl00_ctl00_ctl00_RootPageContent_PageContent_PageContent_ProductListing1_ctl03_rptFeaturedItems_imgLink_4">
+                                                                        <img src="./danhsachsanpham/sanpham/herbalife.jpg" id="ctl00_ctl00_ctl00_RootPageContent_PageContent_PageContent_ProductListing1_ctl03_rptFeaturedItems_imgThumb_4" alt="thumb">
+                                                                    </a>
+                                                                </div>
+
+                                                                <div class="text-column">
+                                                                    <a href="#" id="ctl00_ctl00_ctl00_RootPageContent_PageContent_PageContent_ProductListing1_ctl03_rptFeaturedItems_aLink_4">Cell Activator Herbalife - 450g</a>
+                                                                    <div class="product-info">
+                                                                        <div class="col">
+                                                                            <del id="ctl00_ctl00_ctl00_RootPageContent_PageContent_PageContent_ProductListing1_ctl03_rptFeaturedItems_msrp_4" class="retail msrp-price msrp">190,000 đ</del>
+                                                                            <del id="ctl00_ctl00_ctl00_RootPageContent_PageContent_PageContent_ProductListing1_ctl03_rptFeaturedItems_usualPrice_4" class="retail msrp-price usualPrice" style="color:red">150,000 đ</del>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div id="ctl00_ctl00_ctl00_RootPageContent_PageContent_PageContent_ProductListing1_ctl03_rptFeaturedItems_reviewsDiv_4" class="col">
+                                                                        <div class="reviews-block">
+                                                                            <div class="rating-holder">
+                                                                                <div id="ctl00_ctl00_ctl00_RootPageContent_PageContent_PageContent_ProductListing1_ctl03_rptFeaturedItems_divRating_4" class="rating" style="width: 80%"></div>
+                                                                            </div>
+                                                                            <span id="ctl00_ctl00_ctl00_RootPageContent_PageContent_PageContent_ProductListing1_ctl03_rptFeaturedItems_ratingValue_4"> (4)</span>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                    <li style="z-index: 34;">
+                                                        <div class="holder">
+                                                            <div class="frame">
+
+                                                                <div class="img-column">
+                                                                    <a href="#" id="ctl00_ctl00_ctl00_RootPageContent_PageContent_PageContent_ProductListing1_ctl03_rptFeaturedItems_imgLink_5">
+                                                                        <img src="./danhsachsanpham/sanpham/6.jpg" id="ctl00_ctl00_ctl00_RootPageContent_PageContent_PageContent_ProductListing1_ctl03_rptFeaturedItems_imgThumb_5" alt="thumb">
+                                                                    </a>
+                                                                </div>
+
+                                                                <div class="text-column">
+                                                                    <a href="#z" id="ctl00_ctl00_ctl00_RootPageContent_PageContent_PageContent_ProductListing1_ctl03_rptFeaturedItems_aLink_5">Lô hội thảo mộc cô đặc Herbalife - 200g</a>
+                                                                    <div class="product-info">
+                                                                        <div class="col">
+                                                                            <del id="ctl00_ctl00_ctl00_RootPageContent_PageContent_PageContent_ProductListing1_ctl03_rptFeaturedItems_msrp_5" class="retail msrp-price msrp">200,000 đ</del>
+                                                                            <del id="ctl00_ctl00_ctl00_RootPageContent_PageContent_PageContent_ProductListing1_ctl03_rptFeaturedItems_usualPrice_5" class="retail msrp-price usualPrice" style="color:red">199,999 đ</del>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div id="ctl00_ctl00_ctl00_RootPageContent_PageContent_PageContent_ProductListing1_ctl03_rptFeaturedItems_reviewsDiv_5" class="col">
+                                                                        <div class="reviews-block">
+                                                                            <div class="rating-holder">
+                                                                                <div id="ctl00_ctl00_ctl00_RootPageContent_PageContent_PageContent_ProductListing1_ctl03_rptFeaturedItems_divRating_5" class="rating" style="width: 100%"></div>
+                                                                            </div>
+                                                                            <span id="ctl00_ctl00_ctl00_RootPageContent_PageContent_PageContent_ProductListing1_ctl03_rptFeaturedItems_ratingValue_5"> (5)</span>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                    <li style="z-index: 34;">
+                                                        <div class="holder">
+                                                            <div class="frame">
+
+                                                                <div class="img-column">
+                                                                    <a href="#" id="ctl00_ctl00_ctl00_RootPageContent_PageContent_PageContent_ProductListing1_ctl03_rptFeaturedItems_imgLink_5">
+                                                                        <img src="./danhsachsanpham/sanpham/6.jpg" id="ctl00_ctl00_ctl00_RootPageContent_PageContent_PageContent_ProductListing1_ctl03_rptFeaturedItems_imgThumb_5" alt="thumb">
+                                                                    </a>
+                                                                </div>
+
+                                                                <div class="text-column">
+                                                                    <a href="#z" id="ctl00_ctl00_ctl00_RootPageContent_PageContent_PageContent_ProductListing1_ctl03_rptFeaturedItems_aLink_5">Lô hội thảo mộc cô đặc Herbalife - 200g</a>
+                                                                    <div class="product-info">
+                                                                        <div class="col">
+                                                                            <del id="ctl00_ctl00_ctl00_RootPageContent_PageContent_PageContent_ProductListing1_ctl03_rptFeaturedItems_msrp_5" class="retail msrp-price msrp">200,000 đ</del>
+                                                                            <del id="ctl00_ctl00_ctl00_RootPageContent_PageContent_PageContent_ProductListing1_ctl03_rptFeaturedItems_usualPrice_5" class="retail msrp-price usualPrice" style="color:red">199,999 đ</del>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div id="ctl00_ctl00_ctl00_RootPageContent_PageContent_PageContent_ProductListing1_ctl03_rptFeaturedItems_reviewsDiv_5" class="col">
+                                                                        <div class="reviews-block">
+                                                                            <div class="rating-holder">
+                                                                                <div id="ctl00_ctl00_ctl00_RootPageContent_PageContent_PageContent_ProductListing1_ctl03_rptFeaturedItems_divRating_5" class="rating" style="width: 100%"></div>
+                                                                            </div>
+                                                                            <span id="ctl00_ctl00_ctl00_RootPageContent_PageContent_PageContent_ProductListing1_ctl03_rptFeaturedItems_ratingValue_5"> (5)</span>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                                <div class="viewAll"><a href="#" id="ctl00_ctl00_ctl00_RootPageContent_PageContent_PageContent_ProductListing1_ctl03_btnViewAllProds" class="viewAllProdBtn" rel="nofollow">Xem tất cả</a></div>
+                                                
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!--Tab sản phẩm-->
+                                    <div class="products-listview dropdowns-initialised" id="product-list">
+                                        <aside id="sidebar">
+                                            <div class="sidebar-block selection aisle7-hide">
+                                                <h2>
+                                                    <span>Tìm kiếm</span> <i id="ctl00_ctl00_ctl00_RootPageContent_PageContent_PageContent_ProductListing1_lblYourSelection">Lựa chọn của bạn</i>
+                                                </h2>
+                                                <div class="kw-filter-form">
+                                                    <fieldset>
+                                                        <h3>
+                                                            <label for="ctl00_ctl00_ctl00_RootPageContent_PageContent_PageContent_ProductListing1_txtKeywordRefine" id="ctl00_ctl00_ctl00_RootPageContent_PageContent_PageContent_ProductListing1_lblFilterByKeyword">
+                                                                Tìm kiếm theo từ khóa
+                                                            </label>
+                                                        </h3>
+                                                        <div class="input-holder">
+                                                            <span class="submit-btn">
+                                                                <input type="submit" name="ctl00$ctl00$ctl00$RootPageContent$PageContent$PageContent$ProductListing1$btnKeywordRefine" value="Submit" id="ctl00_ctl00_ctl00_RootPageContent_PageContent_PageContent_ProductListing1_btnKeywordRefine" class="refine-button by-keyword-btn">
+                                                            </span>
+                                                            <span class="input-placeholder-text" style="color: rgb(62, 62, 62); position: absolute;"></span><input name="ctl00$ctl00$ctl00$RootPageContent$PageContent$PageContent$ProductListing1$txtKeywordRefine" type="text" id="ctl00_ctl00_ctl00_RootPageContent_PageContent_PageContent_ProductListing1_txtKeywordRefine" class="refine-text by-keyword-txt">
+                                                        </div>
+                                                        <div class="open-close active refinable" id="Department" data-total="7">
+                                                            <h3>
+                                                                <a class="opener" href="#">
+                                                                    Thực phẩm làm đẹp
+                                                                    <span class="arr"></span>
+                                                                </a>
+                                                            </h3>
+                                                            <div class="slide">
+                                                                <div class="native-scrollable-area">
+                                                                    <div class="area">
+                                                                        <div class="f-line">
+                                                                            <a href="#" id="aOption_0" class="fake-check" rel="nofollow">
+                                                                                Chống lão hóa
+                                                                                <span>(61)</span>
+                                                                            </a>
+                                                                        </div>
+                                                                        <div class="f-line">
+                                                                            <a href="#" id="aOption_1" class="fake-check" rel="nofollow">
+                                                                                Trắng da
+                                                                                <span>(42)</span>
+                                                                            </a>
+                                                                        </div>
+                                                                        <div class="f-line">
+                                                                            <a href="#" id="aOption_2" class="fake-check" rel="nofollow">
+                                                                                Giảm cân
+                                                                                <span>(20)</span>
+                                                                            </a>
+                                                                        </div>
+                                                                        <div class="f-line">
+                                                                            <a href="#" id="aOption_3" class="fake-check" rel="nofollow">
+                                                                                Collagen
+                                                                                <span>(13)</span>
+                                                                            </a>
+                                                                        </div>
+                                                                        <div class="f-line">
+                                                                            <a href="#" id="aOption_4" class="fake-check" rel="nofollow">
+                                                                                Tăng cơ
+                                                                                <span>(4)</span>
+                                                                            </a>
+                                                                        </div>
+
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="open-close active refinable" id="Category" data-total="24">
+                                                            <h3>
+                                                                <a class="opener" href="#">
+                                                                    Thực phẩm chữa bệnh
+                                                                    <span class="arr"></span>
+                                                                </a>
+                                                            </h3>
+                                                            <div class="slide">
+                                                                <div class="native-scrollable-area">
+                                                                    <div class="area">
+                                                                        <div class="f-line">
+                                                                            <a href="#" id="aOption_0" class="fake-check" rel="nofollow">
+                                                                                Tim mạch
+                                                                                <span>(29)</span>
+                                                                            </a>
+                                                                        </div>
+                                                                        <div class="f-line">
+                                                                            <a href="#" id="aOption_1" class="fake-check" rel="nofollow">
+                                                                                Gan
+                                                                                <span>(20)</span>
+                                                                            </a>
+                                                                        </div>
+                                                                        <div class="f-line">
+                                                                            <a href="#" id="aOption_2" class="fake-check" rel="nofollow">
+                                                                                Hô hấp
+                                                                                <span>(20)</span>
+                                                                            </a>
+                                                                        </div>
+                                                                        <div class="f-line">
+                                                                            <a href="#" id="aOption_3" class="fake-check" rel="nofollow">
+                                                                                Tiêu hóa
+                                                                                <span>(18)</span>
+                                                                            </a>
+                                                                        </div>
+                                                                        <div class="f-line">
+                                                                            <a href="@" id="aOption_4" class="fake-check" rel="nofollow">
+                                                                                Hệ thần kinh
+                                                                                <span>(18)</span>
+                                                                            </a>
+                                                                        </div>
+
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div id="priceRefine" class="refinables open-close active slider-holder">
+                                                            <h3>
+                                                                <a class="opener">
+                                                                    Giá <span>
+                                                                        <span id="ctl00_ctl00_ctl00_RootPageContent_PageContent_PageContent_ProductListing1_lblMinPrice" class="get-from">0</span> - <span id="ctl00_ctl00_ctl00_RootPageContent_PageContent_PageContent_ProductListing1_lblMaxPrice" class="get-to">1,000,000 đ</span>
+                                                                    </span><span class="arr"></span>
+                                                                </a>
+                                                            </h3>
+                                                            <div class="slide price-slider">
+
+                                                                <input name="ctl00$ctl00$ctl00$RootPageContent$PageContent$PageContent$ProductListing1$txtPriceFrom" type="text" value="0" id="ctl00_ctl00_ctl00_RootPageContent_PageContent_PageContent_ProductListing1_txtPriceFrom" class="price-from hidden">
+                                                              
+                                                                <input type="submit" name="ctl00$ctl00$ctl00$RootPageContent$PageContent$PageContent$ProductListing1$btnPriceRefine" value="Submit" id="ctl00_ctl00_ctl00_RootPageContent_PageContent_PageContent_ProductListing1_btnPriceRefine" class="price-button hidden">
+                                                                <input name="ctl00$ctl00$ctl00$RootPageContent$PageContent$PageContent$ProductListing1$txtPriceTo" type="text" value="100000" id="ctl00_ctl00_ctl00_RootPageContent_PageContent_PageContent_ProductListing1_txtPriceTo" class="price-to hidden">
+                                                                <div class="slider-wrap">
+                                                                    <div id="slider-range" class="ui-slider ui-slider-horizontal ui-widget ui-widget-content ui-corner-all" aria-disabled="false">
+                                                                        <div class="ui-slider-range ui-widget-header ui-corner-all" style="left: 0%; width: 100%;"></div><a class="ui-slider-handle ui-state-default ui-corner-all" href="#" style="left: 0%;"></a><a class="ui-slider-handle ui-state-default ui-corner-all" href="#" style="left: 100%;"></a>
+                                                                    </div>
+                                                                </div>
+                                                              
+                                                            </div>
+                                                        </div>
+
+                                                        <div id="Rating" class="open-close active refinable">
+                                                            <h3>
+                                                                <a class="opener">Đánh giá <span class="arr"></span></a>
+                                                            </h3>
+                                                            <div class="slide rating-holder">
+                                                                <div class="rating-block">
+                                                                    <div class="f-line">
+                                                                        <a href="#" id="ctl00_ctl00_ctl00_RootPageContent_PageContent_PageContent_ProductListing1_repRatings_aOption_0" class="fake-radio" rel="nofollow"><span class="rating-holder"><span class="rating" style="width: 100%"></span></span><span class="rating-value">5</span><i>(<span class="rating-count">23</span>)</i></a>
+                                                                    </div>
+                                                                    <div class="f-line">
+                                                                        <a href="#" id="ctl00_ctl00_ctl00_RootPageContent_PageContent_PageContent_ProductListing1_repRatings_aOption_1" class="fake-radio" rel="nofollow"><span class="rating-holder"><span class="rating" style="width: 80%"></span></span><span class="rating-value">4</span><i>(<span class="rating-count">56</span>)</i></a>
+                                                                    </div>
+                                                                    <div class="f-line">
+                                                                        <a href="#" id="ctl00_ctl00_ctl00_RootPageContent_PageContent_PageContent_ProductListing1_repRatings_aOption_2" class="fake-radio" rel="nofollow"><span class="rating-holder"><span class="rating" style="width: 60%"></span></span><span class="rating-value">3</span><i>(<span class="rating-count">62</span>)</i></a>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="open-close active refinable" id="Specialty" data-total="20">
+                                                            <h3>
+                                                                <a class="opener">
+                                                                    Dạng
+                                                                    <span class="arr"></span>
+                                                                </a>
+                                                            </h3>
+                                                            <div class="slide">
+                                                                <div class="native-scrollable-area">
+                                                                    <div class="area">
+                                                                        <div class="f-line">
+                                                                            <a href="#" id="aOption_0" class="fake-check" rel="nofollow">
+                                                                                Viên
+                                                                                <span>(77)</span>
+                                                                            </a>
+                                                                        </div>
+                                                                        <div class="f-line">
+                                                                            <a href="#" id="aOption_1" class="fake-check" rel="nofollow">
+                                                                                Bột
+                                                                                <span>(76)</span>
+                                                                            </a>
+                                                                        </div>
+                                                                        <div class="f-line">
+                                                                            <a href="#" id="aOption_2" class="fake-check" rel="nofollow">
+                                                                                Nước
+                                                                                <span>(75)</span>
+                                                                            </a>
+                                                                        </div>
+
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="open-close active refinable" id="Form" data-total="6">
+                                                            <h3>
+                                                                <a class="opener">
+                                                                    Trọng lượng
+                                                                    <span class="arr"></span>
+                                                                </a>
+                                                            </h3>
+                                                            <div class="slide">
+                                                                <div class="native-scrollable-area">
+                                                                    <div class="area">
+                                                                        <div class="f-line">
+                                                                            <a href="#" id="aOption_0" class="fake-check" rel="nofollow">
+                                                                                150g
+                                                                                <span>(54)</span>
+                                                                            </a>
+                                                                        </div>
+                                                                        <div class="f-line">
+                                                                            <a href="#" id="aOption_1" class="fake-check" rel="nofollow">
+                                                                                300g
+                                                                                <span>(12)</span>
+                                                                            </a>
+                                                                        </div>
+                                                                        <div class="f-line">
+                                                                            <a href="#" id="aOption_2" class="fake-check" rel="nofollow">
+                                                                                450g
+                                                                                <span>(7)</span>
+                                                                            </a>
+                                                                        </div>
+                                                                        <div class="f-line">
+                                                                            <a href="#" id="aOption_3" class="fake-check" rel="nofollow">
+                                                                                800g
+                                                                                <span>(3)</span>
+                                                                            </a>
+                                                                        </div>
+
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="open-close active refinable" id="Size" data-total="51">
+                                                            <h3>
+                                                                <a class="opener">
+                                                                    Mùi vị
+                                                                    <span class="arr"></span>
+                                                                </a>
+                                                            </h3>
+                                                            <div class="slide">
+                                                                <div class="native-scrollable-area">
+                                                                    <div class="area">
+                                                                        <div class="f-line">
+                                                                            <a href="#" id="aOption_0" class="fake-check" rel="nofollow">
+                                                                                Vanilla
+                                                                                <span>(9)</span>
+                                                                            </a>
+                                                                        </div>
+                                                                        <div class="f-line">
+                                                                            <a href="#" id="aOption_1" class="fake-check" rel="nofollow">
+                                                                                Chocolate
+                                                                                <span>(4)</span>
+                                                                            </a>
+                                                                        </div>
+                                                                        <div class="f-line">
+                                                                            <a href="#" id="aOption_2" class="fake-check" rel="nofollow">
+                                                                                Orange
+                                                                                <span>(4)</span>
+                                                                            </a>
+                                                                        </div>
+                                                                        <div class="f-line">
+                                                                            <a href="#" id="aOption_2" class="fake-check" rel="nofollow">
+                                                                                Socola
+                                                                                <span>(4)</span>
+                                                                            </a>
+                                                                        </div>
+
+                                                                        <a href="#" id="aShowAll" class="more-options">Hiện tất cả</a>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                    </fieldset>
+                                                </div>
+                                            </div>
+
+                                            <section class="sidebar-block recent-view-block side-view-block" id="recentlyViewed">
+                                                <h2>
+                                                    Đã xem gần đây
+                                                </h2>
+                                                <ul class="pro-small-row">
+                                                    <li>
+                                                        <div class="image-holder"><img  src="./danhsachsanpham/sanpham/8.jpg"></div>
+                                                        <div class="description"><a href="#">Hỗn hợp chất xơ: Herbalife Active Fiber</a><span class="price">450,000 đ</span></div>
+                                                    </li>
+                                                </ul>
+                                            </section>
+                                        </aside>
+
+                                        <div id="content">
+
+                                            <div>
+                                                <section class="box-shadow results-section">
+                                                    <div class="holder aisle7-hide">
+                                                        <div class="section-heading">
+                                                            <h1 id="ctl00_ctl00_ctl00_RootPageContent_PageContent_PageContent_ProductListing1_listingIntroStandard">
+                                                                <i>Tìm thấy</i> <b>
+                                                                    80
+                                                                    kết quả
+                                                                </b>
+                                                            </h1>
+                                                           
+                                                            <div id="ctl00_ctl00_ctl00_RootPageContent_PageContent_PageContent_ProductListing1_Panel1" class="sort-form simple-drop" onkeypress="javascript:return WebForm_FireDefaultButton(event, &#39;ctl00_ctl00_ctl00_RootPageContent_PageContent_PageContent_ProductListing1_btnSortBy&#39;)">
+                                                              
+                                                                <div class="bar">
+                                                                    <div id="ctl00_ctl00_ctl00_RootPageContent_PageContent_PageContent_ProductListing1_viewAsBlock" class="view-blok">
+                                                                        <b class="badge">Xem</b>
+                                                                        <div class="thumb">
+                                                                            <a href="#" class="table">table</a> <a href="#" class="list active">list</a>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                     
+                                                        <!--list sản phẩm-->
+
+                                                        <div class="gridview-wrap">
+                                                            <ul class="results-list" id="myList">
+                                                                <li id="232808" itemprop="itemListElement" style="z-index: 33;">
+                                                                    <div class="holder">
+                                                                        <div class="frame">
+                                                                            <div class="img-column">
+                                                                                <span id="ctl00_ctl00_ctl00_RootPageContent_PageContent_PageContent_ProductListing1_repResults_badge_0" class="tag-pos hot-pos"></span>
+                                                                                <a href="#" class="product-link">
+                                                                                    <img src="./danhsachsanpham/sanpham/herbalife.jpg" id="ctl00_ctl00_ctl00_RootPageContent_PageContent_PageContent_ProductListing1_repResults_imgThumb_0" itemprop="image" class="lazy">
+                                                                                    <img id="ctl00_ctl00_ctl00_RootPageContent_PageContent_PageContent_ProductListing1_repResults_imgThumbPrint_0" class="lazyPrint">
+
+                                                                                    <span class="more">Xem Chi Tiết</span>
+                                                                                </a>
+
+                                                                            </div>
+
+                                                                            <div class="text-column">
+                                                                                <h2>
+                                                                                    <a href="#" class="product-link">
+
+                                                                                        <span itemprop="name">
+                                                                                            <span class="listview-prod-name">Beauty Power Drink – 300g</span>
+                                                                                        </span>
+                                                                                      
+                                                                                    </a>
+                                                                                </h2>
+                                                                                <span class="tag manufacturer">
+                                                                                    Nhà sản xuất: Herbalife - Mỹ
+                                                                                </span>
+                                                                                <span class="tag manufacturer">
+                                                                                    Công dụng: Chống lão hóa cho da
+                                                                                </span>
+                                                                                <span class="code" style="padding-top:2px">
+                                                                                    Mã sản phẩm: <span class="sku">
+                                                                                        114638
+                                                                                    </span>
+                                                                                </span>
+                                                                                <div class="product-info">
+                                                                                    <div class="col">
+                                                                                        <span itemprop="offers">
+                                                                                            <del id="ctl00_ctl00_ctl00_RootPageContent_PageContent_PageContent_ProductListing1_repResults_msrp_0" class="retail msrp-price msrp">
+                                                                                                100.000 đ
+                                                                                            </del>
+
+                                                                                            <ins class="new-price selling-price" itemprop="price">54,999 đ</ins>
+
+                                                                                            <span class="save-count">
+                                                                                                Tiết kiệm <span class="save-percent">
+                                                                                                    21
+                                                                                                </span>%
+                                                                                            </span>
+                                                                                        </span>
+                                                                                        <div class="popup-wrap">
+                                                                                            <a class="open reward-points lightbox" href="#">162</a>
+                                                                                        </div>
+                                                                                    </div>
+
+                                                                                </div>
+                                                                                <!--<div class="description-area">
+                                                                                </div>-->
+                                                                            </div>
+
+                                                                            <div id="ctl00_ctl00_ctl00_RootPageContent_PageContent_PageContent_ProductListing1_repResults_pricing_column_wrapper_0" class="pricing-column add-to-cart-fields">
+                                                                                <div class="t-block">
+                                                                                    <div class="popup-wrap ">
+                                                                                        <a class="open reward-points lightbox" href="#">162</a>
+                                                                                    </div>
+                                                                                    <div class="og-offer" data-og-module="category" data-og-product="114638">
+                                                                                        <div class="og-widget og-type-DropdownWidget og-offer-cd36a0f292dd11e5abaef0761ce2cf0a og-locale-en-us og-incentive-10">
+                                                                                            <div class="og-cat-header-first"><span class="og-orange">Save 10% With</span></div>
+                                                                                            <div class="og-cat-header-second"><span class="og-header-auto">auto</span><span class="og-header-ship">ship</span></div>
+
+                                                                                        </div>
+                                                                                    </div>
+
+                                                                                    <div id="ctl00_ctl00_ctl00_RootPageContent_PageContent_PageContent_ProductListing1_repResults_infBlock_0" class="info-block">
+                                                                                        <div class="holder">
+                                                                                            <div class="frame">
+                                                                                                <div id="ctl00_ctl00_ctl00_RootPageContent_PageContent_PageContent_ProductListing1_repResults_txtArea_0" class="txt-area" style="display:block">
+                                                                                                    <div class="backorder-wrap">
+                                                                                                        <div class="popup-wrap">
+                                                                                                            <a href="#" id="ctl00_ctl00_ctl00_RootPageContent_PageContent_PageContent_ProductListing1_repResults_aInStock_0" class="open in-stock"><i class="ico"></i>Còn hàng</a>
+                                                                                                            <div class="popup stock-message">
+                                                                                                                <a href="#" class="close">close</a>
+                                                                                                                <div class="holder back-ordered-message">
+                                                                                                                    <h3>Còn hàng</h3>
+                                                                                                                    <h4>Giao hàng trong vòng <span class="mark">24 - 48 giờ</span></h4>
+                                                                                                                </div>
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+
+                                                                                    <div id="ctl00_ctl00_ctl00_RootPageContent_PageContent_PageContent_ProductListing1_repResults_cartLineBlock_0" class="cart-line" style="display:block">
+                                                                                        <a href="#" id="ctl00_ctl00_ctl00_RootPageContent_PageContent_PageContent_ProductListing1_repResults_aAddToCart_0" class="btn-cart AddToCartButton" rel="nofollow">
+                                                                                            <i class="ico 232808"></i><span class="atc-text 232808">Đặt ngay</span>
+                                                                                        </a>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </li>
+
+                                                                <li id="1599738" itemprop="itemListElement" style="z-index: 28;">
+                                                                    <div class="holder">
+                                                                        <div class="frame">
+                                                                            <div class="img-column">
+                                                                                <span id="ctl00_ctl00_ctl00_RootPageContent_PageContent_PageContent_ProductListing1_repResults_badge_5" class="tag-pos new-pos"></span>
+                                                                                <a href="#" title="Vega - Protein+ Snack Bars Chocolate Caramel - 4 Bars" class="product-link">
+                                                                                    <img src="./danhsachsanpham/sanpham/1.jpg" id="ctl00_ctl00_ctl00_RootPageContent_PageContent_PageContent_ProductListing1_repResults_imgThumb_5" itemprop="image" class="lazy" alt="Vega - Protein+ Snack Bars Chocolate Caramel - 4 Bars" data-original="/images/product/icon/162752.jpg" style="display: block;">
+                                                                                    <img id="ctl00_ctl00_ctl00_RootPageContent_PageContent_PageContent_ProductListing1_repResults_imgThumbPrint_5" class="lazyPrint" alt="Vega - Protein+ Snack Bars Chocolate Caramel - 4 Bars">
+                                                                                    <span class="more">Xem chi tiết</span>
+                                                                                </a>
+                                                                            </div>
+
+                                                                            <div class="text-column">
+                                                                                <h2>
+                                                                                    <a href="#" class="product-link">
+                                                                                        <span itemprop="name">
+                                                                                            <span class="listview-prod-name">Dinh dưỡng thể thao - 450g</span>
+                                                                                        </span>
+                                                                                      
+                                                                                    </a>
+                                                                                </h2>
+                                                                                <span class="tag manufacturer">
+                                                                                    Nhà sản xuất: Herbalife - Mỹ
+                                                                                </span>
+                                                                                <span class="tag manufacturer">
+                                                                                    Công dụng: Giúp hạn chế trạng thái mệt mỏi
+                                                                                </span>
+                                                                                <span class="code" style="padding-top:2px">
+                                                                                    Mã sản phẩm: <span class="sku">
+                                                                                        162752
+                                                                                    </span>
+                                                                                </span>
+                                                                                <div class="product-info">
+                                                                                    <div class="col">
+                                                                                        <span itemprop="offers">
+                                                                                            <del id="ctl00_ctl00_ctl00_RootPageContent_PageContent_PageContent_ProductListing1_repResults_msrp_5" class="retail msrp-price msrp">
+                                                                                                500,000 đ
+                                                                                            </del>
+                                                                                            <ins class="new-price selling-price" itemprop="price">300,000 đ</ins>
+                                                                                            <span class="save-count">
+                                                                                                Tiết kiệm <span class="save-percent">
+                                                                                                    18
+                                                                                                </span>%
+                                                                                            </span>
+                                                                                        </span>
+                                                                                        <div class="popup-wrap">
+                                                                                            <a class="open reward-points lightbox" href="#">21</a>
+                                                                                        </div>
+                                                                                    </div>
+
+                                                                                </div>
+                                                                                <div class="description-area">
+                                                                                </div>
+                                                                            </div>
+
+                                                                            <div id="ctl00_ctl00_ctl00_RootPageContent_PageContent_PageContent_ProductListing1_repResults_pricing_column_wrapper_5" class="pricing-column add-to-cart-fields">
+
+                                                                                <div class="t-block">
+
+                                                                                    <div class="popup-wrap ">
+                                                                                        <a class="open reward-points lightbox" href="#">21</a>
+                                                                                    </div>
+
+                                                                                    <div class="og-offer" data-og-module="category" data-og-product="162752">
+                                                                                        <div class="og-widget og-type-DropdownWidget og-offer-cd36a0f292dd11e5abaef0761ce2cf0a og-locale-en-us og-incentive-10">
+                                                                                            <div class="og-cat-header-first"><span class="og-orange">Save 10% With</span></div>
+                                                                                            <div class="og-cat-header-second"><span class="og-header-auto">auto</span><span class="og-header-ship">ship</span></div>
+                                                                                        </div>
+                                                                                    </div>
+
+                                                                                    <div id="ctl00_ctl00_ctl00_RootPageContent_PageContent_PageContent_ProductListing1_repResults_infBlock_5" class="info-block">
+                                                                                        <div class="holder">
+                                                                                            <div class="frame">
+                                                                                                <div id="ctl00_ctl00_ctl00_RootPageContent_PageContent_PageContent_ProductListing1_repResults_txtArea_5" class="txt-area" style="display:block">
+                                                                                                    <div class="backorder-wrap">
+                                                                                                        <div class="popup-wrap">
+                                                                                                            <a href="#" id="ctl00_ctl00_ctl00_RootPageContent_PageContent_PageContent_ProductListing1_repResults_aBackOrdered_5" class="open back-ordered">Hết hàng<br><span class="leadtime"></span></a>
+                                                                                                            <div class="popup stock-message">
+                                                                                                                <a href="#" class="close">close</a>
+                                                                                                                <div class="holder back-ordered-message">
+                                                                                                                    <h3>Trở lại đặt hàng</h3>
+                                                                                                                    <h4>Trong vòng <span class="mark">2-3 ngày nữa</span></h4>
+                                                                                                                    <p>(Chúng tôi sẽ nhập hàng nhanh nhất có thể)</p>
+                                                                                                                    <div class="order-line">
+                                                                                                                        <b>Tôi sẽ đặt hàng sau. <a href="#" class="lightbox">Gửi mail cho tôi khi có hàng về.</a></b>
+                                                                                                                    </div>
+                                                                                                                </div>
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                                                    </div>
+                                                                                                </div>
+
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+
+                                                                                    <div id="ctl00_ctl00_ctl00_RootPageContent_PageContent_PageContent_ProductListing1_repResults_cartLineBlock_5" class="cart-line" style="display:block">
+                                                                                        <a href="#" id="ctl00_ctl00_ctl00_RootPageContent_PageContent_PageContent_ProductListing1_repResults_aAddToCart_5" class="btn-cart AddToCartButton" rel="nofollow">
+                                                                                            <i class="ico 1599738"></i><span class="atc-text 1599738">Đặt ngay</span>
+                                                                                        </a>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </li>
+
+                                                                <li id="2328081" itemprop="itemListElement" style="z-index: 33;">
+                                                                    <div class="holder">
+                                                                        <div class="frame">
+
+                                                                            <div class="img-column">
+                                                                                <div id="spnBadge" class="badgeSPP"><span>21%<span>OFF</span></span></div>
+                                                                                <a itemprop="item" href="#" title="" class="product-link">
+                                                                                    <img src="./danhsachsanpham/sanpham/6.jpg" id="ctl00_ctl00_ctl00_RootPageContent_PageContent_PageContent_ProductListing1_repResults_imgThumb_0" itemprop="image" class="lazy sppImgThumb">
+                                                                                    <img id="ctl00_ctl00_ctl00_RootPageContent_PageContent_PageContent_ProductListing1_repResults_imgThumbPrint_0" class="lazyPrint">
+                                                                                    <span class="more">Xem chi tiết</span>
+                                                                                </a>
+                                                                            </div>
+
+                                                                            <div class="text-column">
+                                                                                <span itemprop="item">
+                                                                                    <h2>
+                                                                                        <a href="#" class="product-link">
+
+                                                                                            <span itemprop="name">
+                                                                                                <span class="listview-prod-name">Bột Protein F3 - 500g</span>
+                                                                                            </span>
+                                                                                            
+                                                                                        </a>
+                                                                                    </h2>
+                                                                                    <span class="tag manufacturer">
+                                                                                        Nhà sản xuất: Herbalife - Mỹ
+                                                                                    </span>
+                                                                                    <span class="tag manufacturer">
+                                                                                        Công dụng: Ăn kiêng, giảm cân
+                                                                                    </span>
+                                                                                    <span class="code" style="padding-top:2px">
+                                                                                        Mã sản phẩm: <span class="sku">
+                                                                                            114638
+                                                                                        </span>
+                                                                                    </span>
+                                                                                    <div class="product-info">
+                                                                                        <div class="col">
+                                                                                            <span itemprop="offers">
+                                                                                                <del id="ctl00_ctl00_ctl00_RootPageContent_PageContent_PageContent_ProductListing1_repResults_msrp_0" class="retail msrp-price msrp">
+                                                                                                    500,000 đ
+                                                                                                </del>
+                                                                                                <ins class="new-price selling-price" itemprop="price">300,000 đ</ins>
+
+                                                                                                <span class="save-count">
+                                                                                                    Tiết kiệm <span class="save-percent">
+                                                                                                        21
+                                                                                                    </span>%
+                                                                                                </span>
+                                                                                            </span>
+                                                                                            <div class="popup-wrap">
+                                                                                                <a class="open reward-points lightbox" href="#">165</a>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+
+                                                                                </span>
+                                                                            </div>
+
+                                                                            <div id="ctl00_ctl00_ctl00_RootPageContent_PageContent_PageContent_ProductListing1_repResults_pricing_column_wrapper_0" class="pricing-column add-to-cart-fields">
+                                                                                <div class="t-block">
+                                                                                    <div class="popup-wrap ">
+                                                                                        <a class="open reward-points lightbox" href="#">162</a>
+                                                                                    </div>
+                                                                                    <div class="og-offer" data-og-module="category" data-og-product="114638">
+                                                                                        <div class="og-widget og-type-DropdownWidget og-offer-cd36a0f292dd11e5abaef0761ce2cf0a og-locale-en-us og-incentive-10">
+                                                                                            <div class="og-cat-header-first"><span class="og-orange">Save 10% With</span></div>
+                                                                                            <div class="og-cat-header-second"><span class="og-header-auto">auto</span><span class="og-header-ship">ship</span></div>
+
+                                                                                        </div>
+                                                                                    </div>
+
+                                                                                    <div id="ctl00_ctl00_ctl00_RootPageContent_PageContent_PageContent_ProductListing1_repResults_infBlock_0" class="info-block">
+                                                                                        <div class="holder">
+                                                                                            <div class="frame">
+                                                                                                <div id="ctl00_ctl00_ctl00_RootPageContent_PageContent_PageContent_ProductListing1_repResults_txtArea_0" class="txt-area" style="display:block">
+                                                                                                    <div class="backorder-wrap">
+                                                                                                        <div class="popup-wrap">
+                                                                                                            <a href="#" id="ctl00_ctl00_ctl00_RootPageContent_PageContent_PageContent_ProductListing1_repResults_aInStock_0" class="open in-stock"><i class="ico"></i>Còn hàng</a>
+                                                                                                            <div class="popup stock-message">
+                                                                                                                <a href="#" class="close">close</a>
+                                                                                                                <div class="holder back-ordered-message">
+                                                                                                                    <h3>Còn hàng</h3>
+                                                                                                                    <h4>Giao hàng trong vòng <span class="mark">24 - 48 giờ</span></h4>
+                                                                                                                </div>
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+
+                                                                                    <div id="ctl00_ctl00_ctl00_RootPageContent_PageContent_PageContent_ProductListing1_repResults_cartLineBlock_0" class="cart-line" style="display:block">
+                                                                                        <a href="#" id="ctl00_ctl00_ctl00_RootPageContent_PageContent_PageContent_ProductListing1_repResults_aAddToCart_0" class="btn-cart AddToCartButton" rel="nofollow">
+                                                                                            <i class="ico 232808"></i><span class="atc-text 232808">Đặt ngay</span>
+                                                                                        </a>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </li>
+
+                                                                <!--thêm-->
+                                                                <li id="232808" itemprop="itemListElement" style="z-index: 33;">
+                                                                    <div class="holder">
+                                                                        <div class="frame">
+                                                                            <div class="img-column">
+                                                                                <span id="ctl00_ctl00_ctl00_RootPageContent_PageContent_PageContent_ProductListing1_repResults_badge_0" class="tag-pos hot-pos"></span>
+                                                                                <a href="#" class="product-link">
+                                                                                    <img src="./danhsachsanpham/sanpham/2.jpg" id="ctl00_ctl00_ctl00_RootPageContent_PageContent_PageContent_ProductListing1_repResults_imgThumb_0" itemprop="image" class="lazy">
+                                                                                    <img id="ctl00_ctl00_ctl00_RootPageContent_PageContent_PageContent_ProductListing1_repResults_imgThumbPrint_0" class="lazyPrint">
+
+                                                                                    <span class="more">Xem Chi Tiết</span>
+                                                                                </a>
+
+                                                                            </div>
+
+                                                                            <div class="text-column">
+                                                                                <h2>
+                                                                                    <a href="#" class="product-link">
+
+                                                                                        <span itemprop="name">
+                                                                                            <span class="listview-prod-name">Hydrate Hương cam – 300g</span>
+                                                                                        </span>
+                                                                                     
+                                                                                    </a>
+                                                                                </h2>
+                                                                                <span class="tag manufacturer">
+                                                                                    Nhà sản xuất: Herbalife - Mỹ
+                                                                                </span>
+                                                                                <span class="tag manufacturer">
+                                                                                    Công dụng: Dinh dưỡng cho vận động viên
+                                                                                </span>
+                                                                                <span class="code" style="padding-top:2px">
+                                                                                    Mã sản phẩm: <span class="sku">
+                                                                                        114638
+                                                                                    </span>
+                                                                                </span>
+                                                                                <div class="product-info">
+                                                                                    <div class="col">
+                                                                                        <span itemprop="offers">
+                                                                                            <del id="ctl00_ctl00_ctl00_RootPageContent_PageContent_PageContent_ProductListing1_repResults_msrp_0" class="retail msrp-price msrp">
+                                                                                                693,000 đ
+                                                                                            </del>
+
+                                                                                            <ins class="new-price selling-price" itemprop="price">390,000 đ</ins>
+
+                                                                                            <span class="save-count">
+                                                                                                Tiết kiệm <span class="save-percent">
+                                                                                                    21
+                                                                                                </span>%
+                                                                                            </span>
+                                                                                        </span>
+                                                                                        <div class="popup-wrap">
+                                                                                            <a class="open reward-points lightbox" href="#">162</a>
+                                                                                        </div>
+                                                                                    </div>
+
+                                                                                </div>
+                                                                                <!--<div class="description-area">
+                                                                                </div>-->
+                                                                            </div>
+
+                                                                            <div id="ctl00_ctl00_ctl00_RootPageContent_PageContent_PageContent_ProductListing1_repResults_pricing_column_wrapper_0" class="pricing-column add-to-cart-fields">
+                                                                                <div class="t-block">
+                                                                                    <div class="popup-wrap ">
+                                                                                        <a class="open reward-points lightbox" href="#">162</a>
+                                                                                    </div>
+                                                                                    <div class="og-offer" data-og-module="category" data-og-product="114638">
+                                                                                        <div class="og-widget og-type-DropdownWidget og-offer-cd36a0f292dd11e5abaef0761ce2cf0a og-locale-en-us og-incentive-10">
+                                                                                            <div class="og-cat-header-first"><span class="og-orange">Save 10% With</span></div>
+                                                                                            <div class="og-cat-header-second"><span class="og-header-auto">auto</span><span class="og-header-ship">ship</span></div>
+
+                                                                                        </div>
+                                                                                    </div>
+
+                                                                                    <div id="ctl00_ctl00_ctl00_RootPageContent_PageContent_PageContent_ProductListing1_repResults_infBlock_0" class="info-block">
+                                                                                        <div class="holder">
+                                                                                            <div class="frame">
+                                                                                                <div id="ctl00_ctl00_ctl00_RootPageContent_PageContent_PageContent_ProductListing1_repResults_txtArea_0" class="txt-area" style="display:block">
+                                                                                                    <div class="backorder-wrap">
+                                                                                                        <div class="popup-wrap">
+                                                                                                            <a href="#" id="ctl00_ctl00_ctl00_RootPageContent_PageContent_PageContent_ProductListing1_repResults_aInStock_0" class="open in-stock"><i class="ico"></i>Còn hàng</a>
+                                                                                                            <div class="popup stock-message">
+                                                                                                                <a href="#" class="close">close</a>
+                                                                                                                <div class="holder back-ordered-message">
+                                                                                                                    <h3>Còn hàng</h3>
+                                                                                                                    <h4>Giao hàng trong vòng <span class="mark">24 - 48 giờ</span></h4>
+                                                                                                                </div>
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+
+                                                                                    <div id="ctl00_ctl00_ctl00_RootPageContent_PageContent_PageContent_ProductListing1_repResults_cartLineBlock_0" class="cart-line" style="display:block">
+                                                                                        <a href="#" id="ctl00_ctl00_ctl00_RootPageContent_PageContent_PageContent_ProductListing1_repResults_aAddToCart_0" class="btn-cart AddToCartButton" rel="nofollow">
+                                                                                            <i class="ico 232808"></i><span class="atc-text 232808">Đặt ngay</span>
+                                                                                        </a>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </li>
+ 
+
+                                                                
+                                                            </ul>
+                                                        </div>
+                                                        <div id="loadMore">Xem thêm</div>
+                                                    </div>
+                                                </section>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                    <script type="text/javascript">
+                                        $(function () {
+                                            $('#product-list').ajaxList({
+                                                keywords: '',
+                                                entityName: 'Manufacturer',
+                                                entityID: '1755',
+                                                searchType: 'Product',
+                                                //792 - this code has been redundant since 528 went live, so commenting it to try and improve performance
+                                                sections: new Array(),
+                                                ajaxEnabled: true,
+                                                allowBackOrder: 1
+                                            });
+                                            //listing.testMethod();
+                                            sessionStorage.clear();
+                                            if(sessionStorage['PageCategory'] != undefined)
+                                            {
+                                                var PageCategory = sessionStorage['PageCategory'];
+                                                sessionStorage[PageCategory]='';
+                                            }
+                                            sessionStorage['PageCategory'] = '1755';
+                                        });
+                                    </script>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- bottom of the page -->
+            <div id="footer" class="noPrintFriendly">
+                <div class="holder">
+                    <div class="frame">
+                        <div class="frame-slice">
+                            <footer class="footer-content">
+                                <div class="footer-holder whitebanner">
+                                   
+                                    <div>
+                                        <img src="images/90dayCalendar.png" /><h2>90 ngày đổi trả</h2>
+                                        <p>Trả lại tiền nếu bạn không hài lòng với sản phẩm của chúng tôi!</p>
+                                    </div>
+                                    <div>
+                                        <img src="images/callcentre.png" /><h2>Hỗ trợ khách hàng</h2>
+                                        <p>Chúng tôi hỗ trợ 24/7</p>
+                                    </div>
+                                    <div>
+                                        <img src="images/truck.png" /><h2>Free Shipping</h2>
+                                        <p>Vận chuyển miễn phí trên toàn quốc</p>
+                                    </div>
+                                    <div class="endTab">
+                                        <img src="images/secure.png" /><h2>Mua sắm an toàn</h2>
+                                        <p>
+                                            Đảm bảo an toàn 100%.<br />
+                                            Xác thực hàng ngày.<br />
+                                        </p>
+                                    </div>
+
+                                </div>
+                                <div class="footer-holder top-line hfeed">
+
+                                    <div class="random-block hentry">
+                                        <span class="badge">Blog</span>
+                                        <div class="blog-post-intro entry-content">
+                                            <div class="title">
+                                                <h1 class="entry-title"><a href="#">5 lý do bạn phải bổ sung vitamin</a></h1>
+                                                <span class="meta published">04/12/2016</span>
+                                            </div>
+                                            <!--<a href="#" class="link-more" target="_blank">Đọc thêm bài viết</a>-->
+                                        </div>
+                                    </div>
+
+
+                                    <div class="social-block">
+                                        <div class="title">
+                                            <h1>Kết nối</h1>
+                                        </div>
+                                        <ul>
+                                            <li><a class="facebook" href="#">facebook</a></li>
+                                            <li><a class="twitter" href="#">twitter</a></li>
+                                            <li><a class="google-plus" href="#">Google+</a></li>
+                                            <li><a class="pinterest" href="#">pinterest</a></li>
+                                            <li><a class="instagram" href="#">instagram</a></li>
+                                            <li><a class="youtube" href="#">youtube</a></li>
+                                        </ul>
+                                    </div>
+
+                                </div>
+                                <div class="footer-holder">
+
+                                    <div class="block subscribe">
+                                        <div class="head">
+                                            <h2>ĐĂNG KÝ NHẬN TIN KHUYẾN MÃI</h2>
+
+                                            <p>
+                                                Nhận ngay phiếu giảm giá 100.000 VND
+                                            </p>
+                                        </div>
+                                        <div class="subscribe-form">
+                                            <fieldset>
+                                                <a href="javascript:void(0);" class="NewsletterSignup_Click_2">Đăng ký</a>
+                                                <div class="input-holder">
+                                                    <input id="subscribe2" type="text" class="subscribeEmail_2" placeholder="Hãy nhập email của bạn!" />
+                                                </div>
+                                            </fieldset>
+                                        </div>
+                                        <label id="errsubscribe2" title="The email address is not in correct format" class="validator hidden" style="color: Red;">The email address is not in correct format</label>
+                                        <div id="NewsletterSignup2_ThankYou" class="block hidden holder" style="color: Green; background-color: #FFFFCC">
+                                            Thanks for signing up!
+                                        </div>
+                                    </div>
+
+
+                                    <div class="block payment">
+                                        <div class="head">
+                                            <h2>
+                                                Thanh toán
+                                            </h2>
+                                            <p>
+                                                Chúng tôi chấp nhận loại thanh toán
+                                            </p>
+                                        </div>
+                                        <ul class="payment-list">
+                                            <li><span class="pay-pal">Pay Pal</span></li>
+                                            <li><span class="master-card">master card</span></li>
+                                            <li><span class="visa">visa</span></li>
+                                            <li><span class="discover">discover</span></li>
+                                            <li><span class="american-exchange">american-exchange</span></li>
+                                        </ul>
+                                    </div>
+
+
+
+
+                                </div>
+                                <div class="footer-holder">
+
+                                    <div class="block contact vcard">
+                                        <div class="head fn">
+                                            <h2>THÔNG TIN LIÊN HỆ</h2>
+                                        </div>
+                                        <span class="phone tel">
+                                            Điện thoại: 0949512609
+                                        </span>
+
+                                        <p><a href="#">Email: luckyvitamin@gmail.com</a></p>
+                                        <p><a href="#">Website: www.luckyvitamin.com</a></p>
+                                        <p>Địa chỉ: 271B/1 khu phố 1, phường Tân Biên, Biên Hòa, Đồng Nai</p>
+
+                                    </div>
+
+
+                                    <div class="block info">
+                                        <div class="head">
+                                            <h2>
+                                                Hỗ Trợ Khách Hàng
+                                            </h2>
+                                        </div>
+                                        <nav class="footer-nav">
+                                            <ul>
+                                                <li><a accesskey="5" href="#">Liên hệ góp ý</a></li>
+                                                <li><a href="#">Hướng dẫn mua hàng online</a></li>
+                                                <li><a href="#">Chất lượng phục vụ</a></li>
+                                                <li><a href="#">Bảo mật thông tin</a></li>
+                                                <li><a href="#">Khuyến mãi</a></li>
+
+
+                                            </ul>
+                                        </nav>
+                                        <nav class="footer-nav">
+                                            <ul>
+                                                <li><a href="#">Chính sách mua hàng</a></li>
+                                                <li><a href="#">Vận chuyển trên toàn quốc</a></li>
+                                                <li><a href="#">Tư vấn sức khỏe miễn phí</a></li>
+                                                <li><a href="#">Cam kết</a></li>
+
+                                            </ul>
+                                        </nav>
+                                    </div>
+
+
+                                    <div class="block info last">
+                                        <div class="head">
+                                            <h2>
+                                                Thương hiệu
+                                            </h2>
+                                        </div>
+                                        <nav class="footer-nav">
+                                            <ul>
+                                                <li><a href="#">Nutrilite</a></li>
+                                                <li><a href="#">Herbalife</a></li>
+                                                <li><a href="#">Vision</a></li>
+                                                <li><a href="#">Good Health</a></li>
+                                                <li><a href="#">Amaway</a></li>
+                                            </ul>
+                                        </nav>
+                                    </div><!-- END OF FILE -->
+                                    <!-- end contain footer nav links -->
+                                </div>
+                                <div class="footer-holder">
+                                    <!-- contain security products block -->
+                                    <div class="security-block">
+                                        <div class="holder">
+
+                                        </div>
+                                    </div>
+                                    <!-- end contain security products block -->
+                                </div>
+                                <!-- contain copyrite and address info -->
+                                <div class="footer-holder bottom-line vcard">
+
+                                    <div id=GTS_CONTAINER align=center></div><p>CÔNG TY LUCKYVITAMIN</p>
+                                    <div id=GTS_CONTAINER align=center></div><p>Copyright &copy; 2017 LuckyVitamin Corporation. All Rights Reserved.</p>
+                                    <div id=GTS_CONTAINER align=center></div><p>Giấy chứng nhận đăng ký doanh nghiệp số 0500391400 do Sở kế hoạch và Đầu tư tỉnh Đồng Nai cấp lần đầu ngày 13/01/2017</p>
+                                </div>
+                                <!-- end contain copyrite and address info -->
+                            </footer>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </form>
+
+    <link rel='stylesheet' id='popup-messenger-css' href='wp-content/plugins/facebook-messenger/frontend/css/popup.css?ver=1.0.0' type='text/css' media='all' />
+    <link rel='stylesheet' id='messenger-css' href='wp-content/plugins/facebook-messenger/frontend/css/messenger.css?ver=1.0.1' type='text/css' media='all' />
+    <script type='text/javascript' src='wp-includes/js/jquery/jquery.js'></script>
+
+  
+
+    <a href="javascript:void(0);" id="rocketmeluncur" class="showrocket"><i></i></a>
+
+    <script type='text/javascript'>
+        //<![CDATA[
+        jQuery(window).scroll(function () { jQuery(window).scrollTop() < 50 ? jQuery("#rocketmeluncur").slideUp(500) : jQuery("#rocketmeluncur").slideDown(500); var e = jQuery("#ft")[0] ? jQuery("#ft")[0] : jQuery(document.body)[0], t = $("rocketmeluncur"), n = (parseInt(document.documentElement.clientHeight), parseInt(document.body.getBoundingClientRect().top), parseInt(e.clientWidth)), r = t.clientWidth; if (1e3 > n) { var l = parseInt(fetchOffset(e).left); l = r > l ? 2 * l - r : l, t.style.left = n + l + "px" } else t.style.left = "auto", t.style.right = "10px" }), jQuery("#rocketmeluncur").click(function () { jQuery("html, body").animate({ scrollTop: "0px", display: "none" }, { duration: 600, easing: "linear" }); var e = this; this.className += " launchrocket", setTimeout(function () { e.className = "showrocket" }, 800) });
+        //]]>
+    </script>
+
+    <!--</form>-->
+    <script type="text/javascript" xmlns:omnica="urn:omnica">
+        var cid = 'ed441d95dfb1990ae79c4ba957447dcd';
+        (function () {
+            var jnxtac = jQuery.noConflict(true);
+            jnxtac('header .search-form input[type="text"]').autocomplete({ cid: cid });
+        })();
+    </script>
+    <script type='text/javascript' src='wp-content/themes/ask-me/js/custom.js'></script>
+    <div class="drag-wrapper drag-wrapper-right">
+        <div data-drag="data-drag" class="thing">
+            <div class="circle facebook-messenger-avatar facebook-messenger-avatar-type0">
+                <img class="facebook-messenger-avatar" src="http://opencarttricks.com/wp-content/plugins/facebook-messenger/frontend/images/facebook-messenger.svg" />
+            </div>
+            <div class="content">
+                <div class="inside">
+                    <div class="fb-page" data-width="310" data-height="310" data-href="https://www.facebook.com/opencarttricks/" data-tabs="messages" data-small-header="false" data-hide-cover="false" data-show-facepile="true" data-adapt-container-width="true"><div class="fb-xfbml-parse-ignore"><blockquote cite="https://www.facebook.com/opencarttricks/"><a href="https://www.facebook.com/opencarttricks/">Loading...</a></blockquote></div></div>
+                </div>
+            </div>
+        </div>
+        <div class="magnet-zone">
+            <div class="magnet"></div>
+        </div>
+    </div>
+
+    <script type='text/javascript' src='wp-content/plugins/facebook-messenger/frontend/js/popup.js'></script>
+    <script type='text/javascript' src='wp-content/plugins/facebook-messenger/frontend/js/jquery.event.move.js'></script>
+    <script type='text/javascript' src='wp-content/plugins/facebook-messenger/frontend/js/rebound.min.js'></script>
+    <script type='text/javascript' src='wp-content/plugins/facebook-messenger/frontend/js/index.js'></script>
+</body>
+</html>

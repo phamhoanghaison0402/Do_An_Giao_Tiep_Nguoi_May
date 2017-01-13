@@ -1,0 +1,180 @@
+@import url(https://fonts.googleapis.com/css?family=Noto+Serif);
+
+.section-team .tab-content .tab:after {
+    content: " ";
+    display: block;
+    clear: both;
+}
+
+.image-holder img {
+    vertical-align: top;
+}
+
+.section-team {
+    background: #ffc658;
+    width:870px;
+    float:left;
+}
+
+    .section-team * {
+        box-sizing: border-box;
+    }
+
+    .section-team .holder {
+        margin: 0 auto;
+        max-width: 900px;
+        padding: 15px 0 10px;
+    }
+
+    .section-team h1 {
+        color: #fff;
+        font: bold 35px/59px Noto Serif,Noto Serif,Noto Serif,serif;
+        margin: 0 15px 40px;
+        text-align: center;
+        text-transform: uppercase;
+    }
+
+    .section-team .tabset > li {
+        overflow: hidden;
+        padding: 0 19px 46px;
+        vertical-align: top;
+    }
+
+    .section-team .tabset .tab-opener {
+        color: #fff;
+        display: inline-block;
+        text-transform: uppercase;
+        -webkit-transition: color .3s ease-in-out,opacity .3s ease-in-out;
+        transition: color .3s ease-in-out,opacity .3s ease-in-out;
+        vertical-align: top;
+    }
+
+        .section-team .tabset .tab-opener:hover {
+            color: #54585a;
+            text-decoration: none;
+        }
+
+            .section-team .tabset .tab-opener:hover .image-holder {
+                border-color: #fff;
+            }
+
+                .section-team .tabset .tab-opener:hover .image-holder img.default {
+                    opacity: 0;
+                }
+
+                .section-team .tabset .tab-opener:hover .image-holder img.hover {
+                    opacity: 1;
+                }
+
+        .section-team .tabset .tab-opener .image-holder {
+            border: 5px solid #fbdfa8;
+            border-radius: 181px;
+            display: block;
+            margin: 0 0 21px;
+            overflow: hidden;
+            position: relative;
+            -webkit-transition: border-color .3s ease-in-out;
+            transition: border-color .3s ease-in-out;
+        }
+
+            .section-team .tabset .tab-opener .image-holder img {
+                border-radius: 181px;
+                display: inline-block;
+                vertical-align: top;
+                -webkit-transition: opacity .5s ease-in-out;
+                transition: opacity .5s ease-in-out;
+            }
+
+                .section-team .tabset .tab-opener .image-holder img.hover {
+                    left: 0;
+                    opacity: 0;
+                    position: absolute;
+                    top: 0;
+                    z-index: 5;
+                }
+
+        .section-team .tabset .tab-opener .name {
+            display: block;
+            font: bold 28px/32px "Noto Serif",Noto Serif,Noto Serif,serif;
+        }
+
+    .section-team .tabset ul li {
+        display: inline-block;
+        vertical-align: top;
+        margin: 0 -3px 0 0;
+        text-align: center;
+        width: 25%;
+    }
+
+        .section-team .tabset ul li.active .tab-opener {
+            color: #54585a;
+            text-decoration: none;
+        }
+
+            .section-team .tabset ul li.active .tab-opener .image-holder {
+                border-color: #fff;
+            }
+
+                .section-team .tabset ul li.active .tab-opener .image-holder img.default {
+                    opacity: 0;
+                }
+
+                .section-team .tabset ul li.active .tab-opener .image-holder img.hover {
+                    opacity: 1;
+                }
+
+    .section-team .tab-content {
+        color: #333;
+        font: 25px/34px Noto Serif,Noto Serif,"Noto Serif",serif;
+    }
+
+        .section-team .tab-content [id*="tab"] {
+            padding: 34px 10px 2px;
+            -webkit-transition: opacity .5s ease-in-out;
+            transition: opacity .5s ease-in-out;
+        }
+
+            .section-team .tab-content [id*="tab"].effect-div {
+                opacity: 0;
+            }
+
+        .section-team .tab-content .tab {
+            position: relative;
+            width: 862px !important;
+        }
+
+            .section-team .tab-content .tab:before {
+                background: #ffe3a0;
+                bottom: 0;
+                content: "";
+                left: 212px;
+                position: absolute;
+                top: 0;
+                width: 3px;
+            }
+
+        .section-team .tab-content header {
+            color: #fff;
+            float: left;
+            padding: 7px 31px 20px 0;
+            text-align: right;
+            width: 212px;
+        }
+
+            .section-team .tab-content header h2 {
+                font: bold 34px/40px "Noto Serif",Noto Serif,Noto Serif,serif;
+                margin: 0 0 8px;
+            }
+
+            .section-team .tab-content header .subtitle {
+                display: block;
+                font-size: 22px;
+                font-style: italic;
+                font-weight: bold;
+                line-height: 26px;
+            }
+
+        .section-team .tab-content .content {
+            overflow: hidden;
+            padding: 9px 10px 22px 37px;
+        }

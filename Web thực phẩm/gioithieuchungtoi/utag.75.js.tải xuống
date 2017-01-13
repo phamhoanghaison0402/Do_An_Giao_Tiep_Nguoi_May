@@ -1,0 +1,59 @@
+//~~tv:6015.20140514
+//~~tc: Updated to support disabling email screen
+
+var fby = fby || [];
+
+//tealium universal tag - utag.sender.6015 ut4.0.201507082146, Copyright 2015 Tealium.com Inc. All Rights Reserved.
+try{
+  (function(id,loader,u){
+    try{u=utag.o[loader].sender[id]={}}catch(e){u=utag.sender[id]};
+    u.ev={'view':1};
+      u.map={};
+  u.extend=[];
+
+    u.send=function(a,b){
+      if(u.ev[a]||typeof u.ev.all!="undefined"){
+        //##UTENABLEDEBUG##utag.DB("send:##UTID##");
+
+        var c,d,e,f;
+
+        u.data = {
+          "qsp_delim" : "&",
+          "kvp_delim" : "=",
+          "base_url" : "//cdn.feedbackify.com/f.js",
+          "id" : "7868",
+          "position" : "right",
+          "color" : "#43B02A",
+          "setemail" : "yes"
+        };
+
+        
+
+        c=[];
+
+        for (d in utag.loader.GV(u.map)) {
+          if (b[d] !== undefined && b[d] !== "") {
+            e = u.map[d].split(",");
+            for (f = 0; f < e.length; f++) {
+              u.data[e[f]] = b[d];
+            }
+          }
+        }
+
+        fby.push(["showTab", {id : u.data.id, position : u.data.position, color : u.data.color}]);
+
+        if (u.data.setemail === "no") {
+          fby.push(["setEmail", "noemail"]);
+        }
+
+        u.s=document.getElementsByTagName("script")[0];u.scr=document.createElement("script");u.scr.type="text/javascript";u.scr.src=u.data.base_url;
+        u.s.parentNode.insertBefore(u.scr,u.s);
+
+        //##UTENABLEDEBUG##utag.DB("send:##UTID##:COMPLETE");
+      }
+    };
+    try{utag.o[loader].loader.LOAD(id)}catch(e){utag.loader.LOAD(id)}
+  })('75','luckyvitamin.luckyvitamin');
+}catch(e){}
+//end tealium universal tag
+

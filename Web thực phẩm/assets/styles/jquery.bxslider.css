@@ -1,0 +1,369 @@
+/**
+ * BxSlider v4.1.2 - Fully loaded, responsive content slider
+ * http://bxslider.com
+ *
+ * Written by: Steven Wanderski, 2014
+ * http://stevenwanderski.com
+ * (while drinking Belgian ales and listening to jazz)
+ *
+ * CEO and founder of bxCreative, LTD
+ * http://bxcreative.com
+ */
+
+
+/** RESET AND LAYOUT
+===================================*/
+
+.bx-wrapper {
+	position: relative;
+	margin: 0 auto;
+	padding: 0;
+	*zoom: 1;
+	width: 100%;
+}
+
+.bx-wrapper img {
+	max-width: 100%;
+	display: block;
+}
+
+/** THEME
+===================================*/
+
+.bx-wrapper .bx-viewport {
+	left: 0;
+	background: #fff;
+	
+	/*fix other elements on the page moving (on Chrome)*/
+	-webkit-transform: translatez(0);
+	-moz-transform: translatez(0);
+    	-ms-transform: translatez(0);
+    	-o-transform: translatez(0);
+    	transform: translatez(0);
+}
+#listPro .bx-viewport, .wrap-asiber .bx-viewport,
+#collectionList .bx-viewport
+{
+    background: #fff;
+}
+#banner .bx-wrapper
+{
+    position: relative;
+    z-index: 1;
+}
+#banner .bx-wrapper .bx-viewport 
+{
+    background: #f1dde8 url(../images/bg-bg.png) repeat-y center top;
+}
+.wrap-collection .bx-viewport
+{
+    background:none;
+}
+.bx-wrapper .bx-pager,
+.bx-wrapper .bx-controls-auto {
+	position: absolute;
+	bottom: -30px;
+	width: 100%;
+}
+
+/* LOADER */
+
+.bx-wrapper .bx-loading
+{
+    min-height: 50px;
+    background: url('../images/bx_loader.gif') no-repeat center center;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2000;
+}
+
+/* PAGER */
+
+.bx-wrapper .bx-pager {
+	text-align: center;
+	font-size: .85em;
+	font-family: Arial;
+	font-weight: bold;
+	color: #666;
+	padding-top: 20px;
+}
+
+.bx-wrapper .bx-pager .bx-pager-item,
+.bx-wrapper .bx-controls-auto .bx-controls-auto-item {
+	display: inline-block;
+	*zoom: 1;
+	*display: inline;
+}
+
+.bx-wrapper .bx-pager.bx-default-pager a {
+	background: #666;
+	text-indent: -9999px;
+	display: block;
+	width: 10px;
+	height: 10px;
+	margin: 0 5px;
+	outline: 0;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+}
+
+.bx-wrapper .bx-pager.bx-default-pager a:hover,
+.bx-wrapper .bx-pager.bx-default-pager a.active {
+	background: #000;
+}
+
+/* DIRECTION CONTROLS (NEXT / PREV) */
+
+.bx-wrapper .bx-controls-direction a {
+	background: url(../images/controls.png) no-repeat left top;
+	position: absolute;
+	top: 50%;
+	margin-top: -16px;
+	outline: 0;
+	width: 32px;
+	height: 32px;
+	text-indent: -9999px;
+	z-index: 9999;
+}
+.bx-wrapper .bx-controls-direction .bx-prev {
+	left: 10px;
+	background-position: 0 -32px;
+}
+
+.bx-wrapper .bx-controls-direction .bx-next {
+	right: 10px;
+	background-position: -43px -32px;
+}
+
+.bx-wrapper .bx-controls-direction .bx-prev:hover {
+	background-position: 0 0;
+}
+
+.bx-wrapper .bx-controls-direction .bx-next:hover {
+	background-position: -43px 0;
+}
+/*=============*/
+.box-parent .bx-controls-direction a
+{
+	background: url(../images/controls-2.png) no-repeat left top;
+    height: 20px;
+    margin-top: -10px;
+    width: 10px;
+}
+.box-parent .bx-controls-direction .bx-prev 
+{
+    background-position: 0 0;
+	left: -15px;
+}
+.box-parent .bx-controls-direction .bx-prev:hover
+{
+    background-position: 0 -20px;
+}
+.box-parent .bx-controls-direction .bx-next
+{
+    background-position: -10px 0;
+    right: -15px;
+}
+.box-parent .bx-controls-direction .bx-next:hover
+{
+    background-position: -10px -20px;
+}
+
+.bx-wrapper .bx-controls-direction a.disabled {
+	display: none;
+}
+/*===============*/
+.wrap-asiber .bx-controls-direction a
+{
+    background: url(../images/controls-3.png) no-repeat left top;
+    margin-top: -12px;
+    height: 23px;
+    width: 12px;
+}
+.wrap-asiber .bx-controls-direction .bx-prev 
+{
+    background-position: 0 0;
+    left: 0;
+}
+.wrap-asiber .bx-controls-direction .bx-prev:hover
+{
+    background-position: 0 -23px;
+}
+.wrap-asiber .bx-controls-direction .bx-next
+{
+    background-position: -12px 0;
+    right: 0;
+}
+.wrap-asiber .bx-controls-direction .bx-next:hover
+{
+    background-position: -12px -23px;
+}
+/*===========*/
+.collec-control
+{
+    position: absolute;
+    margin-top: -12px;
+    top: 50%;
+}
+.collec-control a, .list-collec .bx-controls-direction a
+{
+    background: url(../images/controls-3.png) no-repeat left top;
+    display: block;
+    height: 23px;
+    text-indent: -9999em;
+    width: 12px;
+}
+#collec-prev
+{
+    left: 30px;
+}
+#collec-next
+{
+    right: 20px;
+}
+.slider-collec .bx-controls-direction .bx-prev 
+{
+    left: -15px;
+}
+.slider-collec .bx-controls-direction .bx-next 
+{
+    right: -15px;
+}
+.list-collec .bx-controls-direction .bx-prev 
+{
+    left: -25px;
+}
+.list-collec .bx-controls-direction .bx-next 
+{
+    right: -25px;
+}
+#collec-prev a, .list-collec .bx-controls-direction .bx-prev 
+{
+    background-position: 0 0;
+}
+#collec-prev a:hover, .list-collec .bx-controls-direction .bx-prev:hover
+{
+    background-position: 0 -23px;
+}
+#collec-next a, .list-collec .bx-controls-direction .bx-next 
+{
+    background-position: -12px 0;
+}
+#collec-next a:hover, .list-collec .bx-controls-direction .bx-next:hover 
+{
+    background-position: -12px -23px;
+}
+/* AUTO CONTROLS (START / STOP) */
+
+.bx-wrapper .bx-controls-auto {
+	text-align: center;
+}
+
+.bx-wrapper .bx-controls-auto .bx-start {
+	display: block;
+	text-indent: -9999px;
+	width: 10px;
+	height: 11px;
+	outline: 0;
+	background: url(images/controls.png) -86px -11px no-repeat;
+	margin: 0 3px;
+}
+
+.bx-wrapper .bx-controls-auto .bx-start:hover,
+.bx-wrapper .bx-controls-auto .bx-start.active {
+	background-position: -86px 0;
+}
+
+.bx-wrapper .bx-controls-auto .bx-stop {
+	display: block;
+	text-indent: -9999px;
+	width: 9px;
+	height: 11px;
+	outline: 0;
+	background: url(images/controls.png) -86px -44px no-repeat;
+	margin: 0 3px;
+}
+
+.bx-wrapper .bx-controls-auto .bx-stop:hover,
+.bx-wrapper .bx-controls-auto .bx-stop.active {
+	background-position: -86px -33px;
+}
+
+/* PAGER WITH AUTO-CONTROLS HYBRID LAYOUT */
+
+.bx-wrapper .bx-controls.bx-has-controls-auto.bx-has-pager .bx-pager {
+	text-align: left;
+	width: 80%;
+}
+
+.bx-wrapper .bx-controls.bx-has-controls-auto.bx-has-pager .bx-controls-auto {
+	right: 0;
+	width: 35px;
+}
+
+/* IMAGE CAPTIONS */
+
+.bx-wrapper .bx-caption {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	background: #666\9;
+	background: rgba(80, 80, 80, 0.75);
+	width: 100%;
+}
+
+.bx-wrapper .bx-caption span {
+	color: #fff;
+	font-family: Arial;
+	display: block;
+	font-size: .85em;
+	padding: 10px;
+}
+
+#footerBottom .bx-wrapper
+{
+    padding-top: 5px;
+}
+
+
+.img-coll
+{
+    text-align: center;
+    width: 100%;
+    position: relative;
+}
+.img-coll img
+{
+    display: inline-block;
+    max-height: 560px;
+    max-width: 100%;
+    vertical-align: top;
+}
+.box-title-collection {
+    position: absolute;
+    left: 253px;
+    bottom: 0;
+    background-color: #fff;
+    padding: 10px;
+    width: 390px;
+    opacity: 0.7;
+    filter: alpha(opacity=70); /* For IE8 and earlier */
+}
+.box-title-collection p {
+    font-size: 16px;
+    font-family: Calibri;
+}
+.box-title-collection p.title-collection {
+    font-size: 20px;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+#collectionList .collec-control .disabled 
+{
+    display: none;
+}
+
